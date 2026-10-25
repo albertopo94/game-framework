@@ -12,6 +12,11 @@
 | **personaje-3d-hero** | Protagonista, jefes, NPCs importantes | Alta (hero quality) | High-poly sculpt → retopo → bake completo (color+normal+AO) → texturizado low-poly |
 | **personaje-3d-secondary** | NPCs, enemigos genéricos | Media (game-ready) | Smart mesh + UV → mapas desde color map → retopo opcional |
 | **personaje-3d-stylized** | RTS, top-down, low-poly | Velocidad > detalle | Smart mesh + color map → normal/roughness/metallic desde color → decimate |
+| **entorno-procedural-infinito** | MMO browser, mundos infinitos | Perlin noise + chunk loading + InstancedMesh | Perlin noise 3D/2D, chunk system, distance culling, InstancedMesh |
+| **vegetacion-shader** | Grama, árboles, bushes | Shader-based (GPU) | Alpha maps, vertex shader wind, InstancedMesh, distance culling |
+| **entorno-procedural-infinito** | MMO browser, mundos infinitos | Perlin noise + chunk loading + InstancedMesh | Perlin noise 3D/2D, chunk system, distance culling, InstancedMesh |
+| **vegetacion-shader** | Grama, árboles, bushes | Shader-based (GPU) | Alpha maps, vertex shader wind, InstancedMesh, distance culling |
+| **entorno-procedural-infinito** | MMO browser, mundos infinitos | Perlin noise + chunk loading + InstancedMesh | Perlin noise 3D/2D, chunk system, distance culling, InstancedMesh |
 | **entorno-tileable** | Suelos, muros, arena, arena, rocas grandes | Tileable PBR | Patina AI / seamless texture AI → tileable + displacement |
 | **entorno-modular** | Muros, cercas, postes, props repetibles | Modular + cohesivo | Piezas base + array/curve modifiers en Blender/UE |
 | **entorno-unique** | Hero props, landmark, cueva, jefe | Alta (hero) | High-poly sculpt → retopo → bake completo |
@@ -172,6 +177,7 @@ Ver `produccion-vfx.md` para pipeline completo. Resumen:
 | `ciclo-produccion.md` | Fases Prototipo / Producción / QA |
 | `escalas-aceptacion.md` | Estados de aceptación por asset |
 | `conocimiento/` | Lecciones aprendidas por perfil |
+| `pipeline-mmo-procedural.md` | MMO procedural browser: Perlin noise + chunk loading + InstancedMesh + shaders + Colyseus multiplayer; perfiles `entorno-procedural-infinito`, `vegetacion-shader`, `personaje-3d-stylized` |
 
 ---
 

@@ -150,6 +150,8 @@
 ## Dónde Encaja en el Framework
 
 | Documento | Relación |
+| `pipeline-mmo-procedural.md` | MMO procedural browser: chunk loading, infinite terrain, procedural vegetation, multiplayer Colyseus |
+| `pipeline-mmo-procedural.md` | MMO procedural browser: chunk loading, infinite terrain, procedural vegetation, multiplayer Colyseus |
 | :--- | :--- |
 | `pipeline-assets.md` | Proveedor de piezas (kit) |
 | `produccion-vfx.md` | Iluminación, niebla, atmósfera, VFX ambientales |

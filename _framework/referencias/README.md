@@ -319,3 +319,72 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 - Nombres de productos (Tripo, AccuRig, Patina, UE template $50, Ultra Dynamic Sky/Weather, styled forest $20, water $50) — agenda de herramientas = criterios de `herramientas-y-apis.md`.
 - Cifras de tiempo como presupuesto propio — datos de flujo experto.
 - "Join my course" — marketing.
+
+---
+
+## Tanda 12 - MMO Procedural Browser en 30 días (Game Jam)
+
+- **Archivo verbatim:** `notas-creador/tanda-12-mmo-gamejam.md`
+- **Calidad de la evidencia: alta.** MMO jugable en navegador (Three.js) con mundo infinito procedural, multiplayer, survival, building, climbing — construido en 30 días y mostrado funcionando. Contra: **vende curso** — incentivo de fluidez. **Restricción:** 30 días, 90% IA.
+- **Resultado:** 1º en votación comunitaria (4.6/5, 310 reviews); no top 30 en jurados expertos (2 personas cortaron 900 juegos). Un jurado en live dijo "top 10/top 3".
+
+### Lo que tomamos (estructura)
+
+| Práctica | Va a |
+| :--- | :--- |
+| **Debuggers/parameter UIs para la IA** (UI > prompts) | `pipeline-mmo-procedural.md` + `reglas-sistema.md` |
+| **Perlin noise = navaja suiza** (terreno, grass wind, trees, smoke, water, clouds) | `pipeline-mmo-procedural.md` |
+| **Chunk loading + distance culling = mundo infinito viable en browser** | `pipeline-mmo-procedural.md` + `pipeline-nivel.md` (perfil `procedural-asistido`) |
+| **Alpha maps > geometría para foliage** (árboles = plano + alpha map) | `pipeline-mmo-procedural.md` + `pipeline-assets.md` (perfil `vegetacion-shader`) |
+| **Verticalidad = interés visual + gameplay (escalar con IK pie)** | `pipeline-mmo-procedural.md` |
+| **Day/night + post-process + cartoon shader = "mitad del look"** | `pipeline-mmo-procedural.md` + `produccion-vfx.md` |
+| **IK pie sí, mano no** (tradeoff velocidad/calidad) | `pipeline-mmo-procedural.md` |
+| **Multiplayer = complejidad exponencial** (Colyseus ayuda pero no magia) | `pipeline-mmo-procedural.md` |
+| **IA degrada con codebase grande (contexto window)** | `reglas-sistema.md` + `pipeline-mmo-procedural.md` |
+| **Debuggers/parameter UIs propios > prompts de texto** | `reglas-sistema.md` + `pipeline-mmo-procedural.md` |
+| **Evaluación: fun vs polish = sesgo si métrica única** | `pipeline-mmo-procedural.md` |
+| **Comunidad vs jurados = resultados divergentes** | `pipeline-mmo-procedural.md` |
+| **Cortar features sin piedad para cumplir deadline** | `pipeline-mmo-procedural.md` + `reglas-sistema.md` |
+| **IA degrada con codebase grande (contexto window)** | `reglas-sistema.md` |
+| **UI/debugger propio > prompts de texto** | `reglas-sistema.md` + `pipeline-mmo-procedural.md` |
+
+### Lo que NO tomamos
+
+- **Nombres de productos** (Three.js, Colyseus, Perlin noise libs, Opus 5, etc.) — agenda de herramientas = criterios de `herramientas-y-apis.md`.
+- **Cifras de tiempo** ("30 días", "7 días multiplayer") — datos de flujo experto con time-lapse; útiles como orden de magnitud, no presupuesto propio.
+- **"Join my course"** — marketing.
+- **Resultados de premios** — no son metodología.
+
+---
+
+## Tanda 12 - MMO Procedural Browser en 30 días (Game Jam)
+
+- **Archivo verbatim:** `notas-creador/tanda-12-mmo-gamejam.md`
+- **Calidad de la evidencia: alta.** MMO jugable en navegador (Three.js) con mundo infinito procedural, multiplayer, survival, building, climbing — construido en 30 días y mostrado funcionando. Contra: **vende curso** — incentivo de fluidez. **Restricción:** 30 días, 90% IA.
+- **Resultado:** 1º en votación comunitaria (4.6/5, 310 reviews); no top 30 en jurados expertos (2 personas cortaron 900 juegos). Un jurado en live dijo "top 10/top 3".
+
+### Lo que tomamos (estructura)
+
+| Práctica | Va a |
+| :--- | :--- |
+| **Debuggers/parameter UIs para la IA** (UI > prompts) | `pipeline-mmo-procedural.md` + `reglas-sistema.md` |
+| **Perlin noise = navaja suiza** (terreno, grass wind, trees, smoke, water, clouds) | `pipeline-mmo-procedural.md` |
+| **Chunk loading + distance culling = mundo infinito viable en browser** | `pipeline-mmo-procedural.md` + `pipeline-nivel.md` (perfil `procedural-asistido`) |
+| **Alpha maps > geometría para foliage** (árboles = plano + alpha map) | `pipeline-mmo-procedural.md` + `pipeline-assets.md` (perfil `vegetacion-shader`) |
+| **Verticalidad = interés visual + gameplay (escalar con IK pie)** | `pipeline-mmo-procedural.md` |
+| **Day/night + post-process + cartoon shader = "mitad del look"** | `pipeline-mmo-procedural.md` + `produccion-vfx.md` |
+| **IK pie sí, mano no** (tradeoff velocidad/calidad) | `pipeline-mmo-procedural.md` |
+| **Multiplayer = complejidad exponencial** (Colyseus ayuda pero no magia) | `pipeline-mmo-procedural.md` |
+| **IA degrada con codebase grande (contexto window)** | `reglas-sistema.md` + `pipeline-mmo-procedural.md` |
+| **Debuggers/parameter UIs propios > prompts de texto** | `reglas-sistema.md` + `pipeline-mmo-procedural.md` |
+| **Evaluación: fun vs polish = sesgo si métrica única** | `pipeline-mmo-procedural.md` |
+| **Comunidad vs jurados = resultados divergentes** | `pipeline-mmo-procedural.md` |
+| **IA degrada con codebase grande (contexto window)** | `reglas-sistema.md` |
+| **UI/debugger propio > prompts de texto** | `reglas-sistema.md` + `pipeline-mmo-procedural.md` |
+
+### Lo que NO tomamos
+
+- **Nombres de productos** (Three.js, Colyseus, Perlin noise libs, Opus 5, etc.) — agenda de herramientas = criterios de `herramientas-y-apis.md`.
+- **Cifras de tiempo** ("30 días", "7 días multiplayer") — datos de flujo experto con time-lapse; útiles como orden de magnitud, no presupuesto propio.
+- **"Join my course"** — marketing.
+- **Resultados de premios** — no son metodología.
