@@ -9,7 +9,7 @@
 - Cambiar `_framework/` (reglas, roles, plantillas, dimensiones).
 - Cambiar una mecánica núcleo o una decisión de diseño ya aprobada.
 - Añadir una herramienta al catálogo.
-- Cualquier cambio cuyo alcance no cabe en una sessión.
+- Cualquier cambio cuyo alcance no cabe en una sesión.
 
 No hace falta para: fixes acotados, trabajo de documentación, tareas reversibles dentro del scope ya aprobado.
 

@@ -15,6 +15,7 @@ Protocolo para agentes de IA que trabajan en este repositorio.
    - Ejecutar operaciones destructivas (borrar trabajo, reescribir historial).
 4. **Regla de N Alternativas:** Para decisiones creativas clave (nombres, conceptos, mecánicas núcleo, dirección de arte), presentar opciones fundamentadas antes de decidir.
 5. **Cambio de estructura = propuesta primero:** tocar `_framework/` (reglas, roles, plantillas, dimensiones) o revertir una decisión de diseño aprobada requiere antes una **propuesta de cambio** (`_framework/plantillas/propuesta-cambio.md`) con su bloque de “qué dejo afuera a propósito”.
+6. **Nunca se pide el proyecto entero en un solo paso:** el agente ejecuta **una tarea chica, la verifica, y sigue**. Un entregable que no cabe en una tarea verificable está mal cortado (ver Protocolo de Sesión). El prompt maestro define el contrato; no es una orden de construir todo.
 
 ## Agnosticidad
 
@@ -34,6 +35,7 @@ Protocolo para agentes de IA que trabajan en este repositorio.
 ## Estado persistente
 
 - Todo juego en `mis-juegos/` mantiene su archivo de estado de producción actualizado; es la primera lectura al retomar cualquier trabajo.
+- **Sin bloqueos silenciosos:** si el agente queda esperando una aprobación o una acción del creador, lo dice al momento y sigue preparando lo que pueda en paralelo. Esperar sin avisar gasta tiempo del proyecto.
 - Los hallazgos (bugs, auditorías, deudas) se registran como tracker padre + un ítem por fix, y solo se arreglan hallazgos **confirmados** por revisión independiente: ver `_framework/higiene-de-trabajo.md`.
 - Este framework está en construcción: los roles y plantillas se definen con el conocimiento del creador, no se inventan.
 
@@ -67,7 +69,7 @@ Una línea por sesión (no notas largas):
 | Fecha | Sesión | Feature | Resultado | Evidencia | Pendiente para la próxima sesión |
 ```
 
-- **Sesión (id):** lo genera **Pi**, es el identificador estable que permite retomar esa sessión concretamente si se desea en otro momento (ej. `2026-10-25-a`). No lo inventa el agente de IA: lo genera el runtime.
+- **Sesión (id):** lo genera **Pi**, es el identificador estable que permite retomar esa sesión concretamente si se desea en otro momento (ej. `2026-10-25-a`). No lo inventa el agente de IA: lo genera el runtime.
 - **Feature:** la tajada de esa sesión, con la dimensión/subsistema que mapea (ej. "5 — bucle y controles: dash").
 - **Resultado:** `completado` / `pausado` / `en curso` / `abandonado`.
 - **Evidencia:** commit, gate superado, archivo creado, comparativa contra referente.

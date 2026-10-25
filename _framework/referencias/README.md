@@ -73,3 +73,36 @@
 Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo empaquetado), sino **la disciplina con la que separan "lo hice" de "lo verifiqué" de "el dueño lo aceptó"**. Eso es lo que un framework de agentes necesita más que ninguna lista de herramientas, y es lo que adoptamos como documento canónico.
 
 > ⚠️ Nota: este repo es un **producto de terceros**. No se forkéa ni se copia su código ni sus skills. Se documenta aquí solo el análisis de su flujo, igual que con Mass Flux.
+
+---
+
+## Tanda 04 — "Cómo hacer un juego con Claude y publicarlo en Steam" (video de terceros)
+
+- **Archivo verbatim:** `notas-creador/tanda-04-agente-y-steam.md` (transcripción del creador)
+- **Qué es:** video de YouTube que agrega workflows de otros creadores + pasos para publicar en Steam.
+- **Calidad de la evidencia (importante):** **baja para los datos, útil para la estructura.** El propio autor declara no haber hecho el juego ni pagado la tarifa de Steam. Es un agregado de afirmaciones de terceros sin metodología ni fuentes enlazadas.
+
+### Lo que tomamos (estructura, no cifras)
+
+| Afirmación del video | Va a | Qué hace ahí |
+| :--- | :--- | :--- |
+| "El error más grande es pedir el juego entero en un solo prompt" (GDD completo → menús rotos, objetos volando) | `AGENTS.md` regla 6; refuerza prompt-maestro como solo-arranque | **Valida una decisión propia** |
+| "Sé el arquitecto: una tarea chica a la vez, prueba cada una" | `AGENTS.md` regla 6 | Idem |
+| "Terminá el prompt con '¿entendiste?' para que explique el plan antes de construir" | `ruta-produccion.md` gate de comprensión |Nuevo: repetir el plan antes de ejecutar |
+| Greybox con cubos antes del arte ("si no es divertido con cubos, no lo será con arte") | `reglas-sistema.md` + `dimensiones-juego.md` §5 | Regla de greybox antes de arte |
+| Juice (screen shake, hit flash, daño) como parte del feel, después del greybox | `dimensiones-juego.md` #5 | Juice es diseño, no decoración |
+| 34k → 2.8k triángulos; un slider de sombras que tiró 100→40 fps | `dimensiones-juego.md` presupuesto de rendimiento | Presupuesto de asset medible, verificado en motor |
+| Verificación de identidad, datos fiscales, espera de 30 días, página "próximamente" con anticipación | `ciclo-produccion.md` §Lead times no técnicos | Lead times no técnicos en el camino crítico de calendario |
+| Divulgación de contenido generado por IA; la plataforma revisa | `roles/05-release-distribucion.md` §5 | Leer la política vigente el día de publicar; declarar con honestidad específica |
+| Página de tienda temprana, wishlists, demo en eventos, construir en público | `roles/05-release-distribucion.md` §6 | Visibilidad previa es trabajo de Release, planificado en Diseño |
+| Investigar un juego que funciona: por qué es divertido **y** por qué vende; conservar el core loop, agregar **un** twist | `roles/01-concepto-y-mercado.md` §6 | Método de validación referente + un twist |
+| Elige género que venda: hay géneros superbien reseñados que casi no venden | `roles/01-concepto-y-mercado.md` §6 check de mercado | Separar "gusta" de "compra" |
+| El agente rinde bien en código/sistemas y mal en niveles/arte/música | `herramientas-y-apis.md` matriz de capacidad | Registrada como **hipótesis a verificar**, no como regla |
+| "La IA no puede decir si tu juego es divertido: solo jugadores reales"** | `escalas-aceptacion.md` estado 5 | **Ya era nuestra regla** — el video la corrobora |
+| Criterios: Godot es texto plano (editable por agente); Blender MCP; MCP de editor para Unity/Unreal | `herramientas-y-apis.md` criterios de selección | Criterios agnósticos: editabilidad por agente y puente al motor |
+
+### Lo que NO tomamos
+
+- **Todos los números** (ingreso típico, porcentaje de juegos con IA, comisión, umbral de wishlists, caída de ventas por declarar IA). Ninguno tiene fuente primaria; el autor no hizo el juego. Quedan en `conocimiento/entrada-pendiente-verificacion-mercado-steam.md` con estado `observacion` y la advertencia de **no usarlos en decisiones** hasta verificarlos.
+- **Los productos como obligación** (Claude, Tripo, planes "max"): agnosticidad. Cuando algo de eso entre, entra como capability evaluada contra la tabla de criterios, con visto bueno del creador.
+- **El workflow de un fin de semana** como meta: choca con el espíritu de proyecto largo y con la regla de no automatizar/automatizar prematuramente.

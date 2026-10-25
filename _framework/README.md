@@ -26,12 +26,12 @@ El framework tiene **dos modos** que no se mezclan:
 1. **Modo Creación (Prompt Maestro):** arranca un proyecto desde cero con un único prompt que define el contrato (referencia visual, restricciones duras, assets, herramientas, scope, referentes). Plantilla: `_framework/plantillas/prompt-maestro-creacion.md`.
 2. **Modo Producción (Checkpoints):** una vez el proyecto existe, se desarrolla con checkpoints humanos (concepto aprobado, diseño aprobado, etc.). El prompt maestro **no sustituye los checkpoints**: define el contrato inicial; el desarrollo sigue las puertas de calidad de `AGENTS.md`.
 
-## Sesiones (1 feature = 1 sessión)
+## Sesiones (1 feature = 1 sesión)
 
 - **`00-estado-produccion.md`** = instantánea de verdad (fase, siguiente acción, decisiones).
 - **`bitacora-sesiones.md`** = historial (quién, cuándo, qué feature, qué evidencia, qué pendiente).
 
-La bitácora **resume** el traspaso; el estado lo **contiene** completo. Si hay conflicto, el estado manda y la bitácora se corrige en la próxima sessión. Ver `AGENTS.md` §Protocolo de Sesión.
+La bitácora **resume** el traspaso; el estado lo **contiene** completo. Si hay conflicto, el estado manda y la bitácora se corrige en la próxima sesión. Ver `AGENTS.md` §Protocolo de Sesión.
 
 ## Qué este framework NO es (límites declarados)
 

@@ -13,6 +13,33 @@ Las herramientas son **ejemplos, no dependencias obligatorias** (heredado del Yo
 - **Comprobar la capacidad antes de proponer:** antes de proponer un flujo dependiente de una función específica, el agente debe comprobar si la herramienta elegida la ofrece o existe un procedimiento equivalente.
 - **Nunca asumir gratuidad:** ningún modo «Draft», «Preview» o «Borrador» es gratuito por definición; el costo real se registra en el registro de recursos del juego (`04-registro-recursos.md`, plantilla pendiente de pipeline) antes de escalar a la versión definitiva.
 
+## Criterios para elegir herramienta en un flujo con agentes
+
+La agnosticidad no significa elegir a ciegas. Criterios estructurales, verificables por inspección antes de adoptar nada:
+
+| Criterio | Por qué importa con agentes |
+| :--- | :--- |
+| **Archivos de proyecto legibles como texto** | Un agente puede leer, interpretar y editar el estado del proyecto directamente. Un formato binario opaco lo deja ciego y obliga a intermediarios. |
+| **Editor controlable por script o puente (CLI/MCP)** | El agente puede abrir, modificar y verificar en el motor real, no solo proponer código. Sin esto, la verificación en motor (estado 4 de `escalas-aceptacion.md`) queda fuera de su alcance. |
+| **Salida exportable al formato del motor** | Un asset generado que no importa limpio al motor no es un asset; es una imagen simpática. |
+| **Costo y límites de uso conocidos** | El presupuesto de agente es un recurso del proyecto, no infinito. |
+| **Licencia compatible con publicar** | Especialmente con assets: la trazabilidad legal sigue vigente. |
+
+Estos criterios son **agnósticos**: describen capacidades, no nombran productos como obligatorios. Cuando se evalúa una herramienta concreta, se la puntúa contra esta tabla y se registra el resultado.
+
+## Matriz de capacidad del agente (hipótesis a verificar en práctica)
+
+Registrada como hipótesis de terceros (`_framework/referencias/notas-creador/tanda-04-agente-y-steam.md`), **no como regla**. Se confirma o descarta con práctica en juegos reales y entonces se mueve a `conocimiento/`.
+
+| Área | Ipótesis inicial | Verificado en |
+| :--- | :--- | :--- |
+| Código, controles, sistemas | El agente rinde bien | pendiente |
+| Diseño de niveles | Rinde mal: la disposición espacial pide criterio humano | pendiente |
+| Arte y música | Rinde mal o inconsistente; assets propios o comprados rinden mejor | pendiente |
+| ¿Es divertido? | **Nunca**: solo jugadores reales (**esta sí está confirmada**: es la regla de estado 5 de `escalas-aceptacion.md`) | confirmado |
+
+**Dato de entrada, no decisión:** si la hipótesis se confirma, el efecto práctico es que arte y audio se resuelven con producción propia o assets comprados con licencia registrada, y el agente se concentra en código y sistemas.
+
 ## Categorías de herramientas
 
 | Categoría | Herramienta | Estado | Notas |

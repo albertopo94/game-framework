@@ -11,12 +11,14 @@
 | 2 | **Dirección de arte** | Estilo visual, paleta, tipografía, coherencia estética; fijada por referencia visual (ver `reglas-sistema.md`) | Diseño | Vertical Slice, QA |
 | 3 | **Recursos (assets) y sprites** | Sprites, modelos, texturas, efectos, audio — handcrafted por defecto, procedural solo si se pide explícitamente | Producción | QA |
 | 4 | **Mapas / niveles** | Layout, progresión, densidad de contenido. **No procedurales por defecto** salvo pedido explícito | Diseño + Producción | Playtest, QA |
-| 5 | **Bucle (loop) y controles** | Core loop, respuesta al input, feel de movimiento, ergonomía de controles | Prototipo | Prototipo (gate "¿es divertido?"), QA |
+| 5 | **Bucle (loop) y controles** | Core loop, respuesta al input, feel de movimiento, ergonomía de controles. Incluye el **juice** (sacudida de pantalla, destello de impacto, números de daño, retroalimentación sensorial): es parte del feel, no decoración | Prototipo (greybox, sin juice) | Prototipo (gate "¿es divertido?"), QA |
 | 6 | **Combate y profundidad** | Sistemas de conflicto, balance, curva de dificultad, capas de maestría | Diseño | Vertical Slice, playtests |
 | 7 | **Entrega al usuario** | Build final, store page, onboarding, UX de menús/settings, documentación, compliance de plataforma. Método: `roles/05-release-distribucion.md` | Release | Release (gate) |
 
 ## Reglas de uso
 
+- **Greybox primero, juice después:** la dimensión 5 se valida **sin** arte ni juice (ver `reglas-sistema.md`). El juice se agrega una vez que el bucle funciona con cubos; así se sabe que lo divertido viene de la mecánica y no del efecto.
+- **Presupuesto de rendimiento por asset:** la dimensión 3 declara límites medibles (polígonos por mesh, resolución de textura, costo de draw) y la QA los verifica en el motor. Un mesh que llega 10 veces sobre su presupuesto es un bug de asset, no un detalle estético. *(Origen del patrón: `_framework/referencias/notas-creador/tanda-04-agente-y-steam.md`.)*
 - **Aplicabilidad variable:** no todas las dimensiones existen en todos los juegos. Un puzzle game puede no tener combate; un visual novel puede fusionar dirección de arte y narrativa. El juego declara cuáles aplican y cuáles se saltan, con justificación de una línea.
 - **Target por dimensión, no global:** "se ve AAA" no es criterio (ver `reglas-sistema.md`). Cada dimensión activa tiene su referente y su comparativa side-by-side.
 - **Una dimensión puede bloquear el gate de una fase:** si la dimensión 5 (bucle/controles) falla en Prototipo, el gate no pasa aunque las demás estén bien. La dimensión crítica depende del género y se declara en Concepto.

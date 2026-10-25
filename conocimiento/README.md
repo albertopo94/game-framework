@@ -65,4 +65,6 @@ Cuándo NO aplica. Qué es hipótesis y qué está comprobado.
 
 ## Índice
 
-*(vacío — la primera entrada se registra con la primera lección de un juego real)*
+| Entrada | Type | Estado |
+| :--- | :--- | :--- |
+| `entrada-pendiente-verificacion-mercado-steam.md` | discovery | `observacion` — **sin verificar**: no usar en decisiones |

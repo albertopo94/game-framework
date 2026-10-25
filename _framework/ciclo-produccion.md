@@ -6,12 +6,23 @@ Análogo al ciclo de producción de un video, aplicado a un juego. **Borrador �
 
 1. **Concepto** — idea + mercado + referentes + pitch. Checkpoint humano: aprobar/derivar a estudio.
 2. **Diseño** — GDD, mecánicas, sistemas, target, scope. Checkpoint humano: aprobar diseño.
-3. **Prototipo** — jugable feo pero real. Gate: ¿es divertido? Si no, volver a Diseño o matar.
+3. **Prototipo (greybox)** — jugable feo pero real: cubos, sin arte definitivo. Gate: ¿es divertido? Si no, volver a Diseño o matar. **Prohibido producir arte definitivo antes de pasar este gate.**
 4. **Vertical Slice** — quality bar completa en miniatura. Gate: decide si sigue a producción.
 5. **Producción** — construcción por hitos con estado persistente.
-6. **QA / Cierre** — bugs, balance, performance, licencias, compliance de plataforma.
+6. **QA / Cierre** — bugs, balance, performance contra el presupuesto declarado, licencias, compliance de plataforma (política leída en la fuente oficial ese día: ver `roles/05-release-distribucion.md` §5).
 7. **Release** — store page, builds, distribución, lanzamiento.
 8. **Post-release** — métricas, reviews, parches, contenido, live ops.
+
+## Lead times no técnicos (arrancan antes de lo que parece)
+
+La publicación tiene trámites con tiempos de espera que **no dependen de que el juego esté listo**. Descubrirlos en la fase Release cuesta semanas de calendario perdidas. En cada juego se listan en su `00-estado-produccion.md` con su duración aproximada y cuándo hay que iniciarlos:
+
+- Cuentas de tienda/distribución, verificación de identidad y datos fiscales/bancarios (los procesos de verificación de terceros pueden tardar semanas).
+- Períodos de espera obligatorios tras el pago o tras la creación de la cuenta antes del primer lanzamiento.
+- Ventanán de página de tienda visible tipo “próximamente” para acumular deseo antes del lanzamiento.
+- Revisión de la plataforma del build y de la página antes de publicar.
+
+**Regla:** se planifican en Diseño (fase 2), no en Release. Son camino crítico de calendario aunque no lo sean de producción. Los valores concretos de cada tienda se **verifican en la fuente oficial al momento de usarlos** (cambian; ver `conocimiento/README.md`: los datos de terceros sin verificación no son reglas).
 
 ## Disciplina de alcance (Scope)
 

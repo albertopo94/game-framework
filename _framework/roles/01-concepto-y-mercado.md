@@ -50,11 +50,23 @@ El scope se define en Concepto/Diseño y **no se expande en Producción**. Si su
 
 > "Scope creep" es la causa número 1 de muerte de juegos indie.
 
-## 6. Referentes de calidad
+## 6. Método de validación: referente + un twist
+
+La vía más barata de validar una idea no es inventar de cero: es **tomar un juego que ya funciona y entenderlo de verdad**.
+
+1. Elegir un juego existente y **investigarlo**: qué lo hace divertido **y por qué vende**. Las dos preguntas, separadas: hay géneros muy bien reseñados que casi no venden.
+2. **Conservar el core loop** que ya demostró funcionar.
+3. Agregar **un solo twist** diferenciador. Uno. No cinco.
+
+Esto no es copiar: es la puerta de originalidad de `reglas-sistema.md` aplicada al diseño. El referente explica el mercado; el twist es el valor propio. Si el twist no se puede nombrar en una frase, el concepto no está listo.
+
+**Check de realidad de mercado (obligatorio en Concepto):** registrar por escrito qué se espera que compre esta gente, en qué plataforma y a qué precio, y **qué evidencia externa** sostiene esa expectativa. Sin evidencia, se declara hipótesis y se anota en `00-estado-produccion.md` como riesgo. *(Origen: `_framework/referencias/notas-creador/tanda-04-agente-y-steam.md`; los números de ese video son de un tercero sin verificar y **no** entran como datos válidos: ver `conocimiento/entrada-pendiente-verificacion-mercado-steam.md`.)*
+
+## 7. Referentes de calidad
 
 1-3 juegos reales contra los que se va a comparar el proyecto. No son inspiración: son **punto de referencia medible**. Ningún "se ve bien" es un criterio; el criterio es el comparado explícito contra la referencia.
 
-## 7. Salida verificables (Definition of Done)
+## 8. Salida verificables (Definition of Done)
 
 Para que el Concepto se considere `APROBADO`:
 
@@ -64,6 +76,8 @@ Para que el Concepto se considere `APROBADO`:
 - [ ] Herramientas declaradas por juego
 - [ ] Scope acotado y escrito
 - [ ] 1-3 referentes de calidad declarados
+- [ ] Core loop del referente identificado y **twist propio nombrado en una frase**
+- [ ] Expectativa de mercado escrita con su evidencia (o declarada hipótesis)
 - [ ] Checkpoint humano: el creador aprueba o mata la idea
 
 ## 8. Ficha del estudio de concepto

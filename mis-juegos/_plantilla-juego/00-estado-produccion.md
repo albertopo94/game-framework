@@ -33,6 +33,18 @@ _Estas son las herramientas de ESTE juego. El framework no las impone a otros._
 
 ## Siguiente acción permitida
 
+## Costo y tiempo de agentes
+
+> El trabajo de agente es un recurso del proyecto con costo real (planes, créditos, horas de revisión del creador). Se registra, no se lo descubre al final.
+
+| Concepto | Valor | Última actualización |
+| :--- | :--- | :--- |
+| Plan/herramienta de agente usada | | |
+| Costo atribuible a ESTE juego (est.) | | |
+| Horas del creador revisando (est.) | | |
+
+**Regla:** un número de costo sin fuente se marca como estimación; el costo real verificado es el que figura en la factura o el panel del proveedor, no el que estimó el agente.
+
 ## Estado de features activas
 
 | Feature | Estado escalera | Dueño | Handoff |

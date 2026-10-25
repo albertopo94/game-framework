@@ -42,4 +42,5 @@ Cuando hay que planificar trabajo amplio:
 - **Separar lo obligatorio de lo opcional** (MVP vs. Beyond, como en `00-estado-produccion.md`).
 - Respetar scope, presupuesto, choices de herramienta y restricciones de reinicio del creador.
 - **Solo se pide información que cambie materialmente el trabajo.** Si falta un dato pero hay trabajo independiente preparable, se prepara mientras se espera.
+- **Gate de compresión antes de ejecutar:** antes de construir, el agente **repite el plan en sus propias palabras** y espera señal de OK. Cuesta dos líneas y detecta el malentendido antes de gastar una sesión construyendo la cosa equivocada. *(Refuerzo del hallazgo de tanda-04: pedir el juego entero en un solo prompt produce menús rotos y objetos volando.)*
 - El plan vive en el juego (`00-estado-produccion.md`), no en el chat. Se actualiza cuando la evidencia cambia el enfoque.
