@@ -1,3 +1,9 @@
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+
+**Licencia:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — podés usar, adaptar y vender derivados, pero con **atribución** y liberando el derivado **con esta misma licencia**. Ver `LICENSE` y `NOTICE.md` (que incluye lo que la licencia **no** cubre).
+
+---
+
 # Game Framework 🎮 (Oficina de Producción de Juegos)
 
 Espacio de trabajo modular y pipeline de ingeniería de contenidos para la conceptualización, diseño, producción, QA, publicación y operación de videojuegos con agentes de IA.
