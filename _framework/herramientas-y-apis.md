@@ -34,7 +34,8 @@ Registrada como hipótesis de terceros (`_framework/referencias/notas-creador/ta
 | Área | Ipótesis inicial | Verificado en |
 | :--- | :--- | :--- |
 | Código, controles, sistemas | El agente rinde bien | pendiente |
-| Diseño de niveles | Rinde mal: la disposición espacial pide criterio humano | pendiente |
+| Diseño de niveles | Rinde mal: la disposición espacial pide criterio humano. **Dos fuentes de terceros coinciden en que el placement suelto produce *slop*** (ver `montaje-de-niveles.md`) | pendiente |
+| Ensamblado de ambientes (kit → nivel) | El agente prepara y procesa el kit; el montaje con intención es humano o propuesta etiquetada estado 2 | pendiente |
 | Arte y música | Rinde mal o inconsistente **hecho por el LLM**; el camino es generar assets con generadores especializados + remate humano. Ver `produccion-assets.md` | pendiente |
 | VFX/partículas en motores code-first | Vía código funciona bien en juegos chicos; con puente al sistema de partículas del motor, da base sólida que el humano retoca | pendiente |
 | Audio (SFX/música) | El agente **orquesta APIs de generación especializada** y elige el modelo; no genera audio "con el LLM" | pendiente |

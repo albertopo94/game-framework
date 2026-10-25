@@ -134,3 +134,30 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 - **Nombres de productos y plataformas** (llegaron deformados por la transcripción y el video es patrocinado): la agenda de herramientas se decide con criterios, no con menciones de video.
 - Las cifras de adopción de IA en Steam/GDC (mismo criterio que tanda-04: sin fuente primaria, no entran).
 - "Es más fácil que antes / divertite aprendiendo": motivación, no método.
+
+---
+
+## Tanda 06 - Nivel 3D completo con IA (video de terceros, mismo canal que tanda-05)
+
+- **Archivo verbatim:** `notas-creador/tanda-06-ensamblado-de-niveles.md`
+- **Calidad de la evidencia: media-alta para el workflow.** Nivel ensamblado completo en pantalla con tiempos reales (kit → montaje en Blender → setup en motor). Contra: **vende un curso del propio workflow** (incentivo de mostrarlo fluido) y menciona herramientas con links de sponsor. Igual que tanda-05: práctica sí, productos no.
+
+### Lo que tomamos (estructura)
+
+| Práctica | Va a |
+| :--- | :--- |
+| **El placement suelto por IA produce *slop***: generar piezas es producción, ensamblar es diseño | `montaje-de-niveles.md` (regla central) + fila en la matriz de capacidad |
+| **Starter kit iterativo**: no predecir todas las piezas; faltar en ensamblado → volver y generar | `montaje-de-niveles.md` |
+| **Ancla de escala**: arrancar por el elemento de tamaño conocido, no por el grande indefinido | `montaje-de-niveles.md` |
+| **Grandes primero, accesorios en la última milla** | `montaje-de-niveles.md` |
+| **Reutilizar > generar** (cortar una roca para stalactitas; curva Bézier para la soga = 5x más rápido); reuso = optimización gratis de materiales | `montaje-de-niveles.md` |
+| **Pregunta de camino antes de generar**: generar / modificar / primitiva / comprado — gana el más barato que cumple | `montaje-de-niveles.md` (hermano de "representación más simple" de `produccion-assets.md`) |
+| **Recortar lo invisible, consolidar atlases, agrupar la escena, referencia visible en el área de trabajo** | `montaje-de-niveles.md` |
+| **La pasada de luz/atmósfera es parte del gate visual**, no decoración posterior | `montaje-de-niveles.md` + conexión con `escalas-aceptacion.md` |
+| **División de trabajo**: agente prepara/procesa el kit; el montaje con intención es humano o propuesta en estado 2 | `montaje-de-niveles.md` |
+
+### Lo que NO tomamos
+
+- Nombres de productos/plataformas/add-ons (sponsor + venta de curso): la agenda de herramientas sigue los criterios de `herramientas-y-apis.md`.
+- "Solo necesitás saber unas pocas herramientas de Blender": acompaña, no es método; la parte útil (saber el 10% que remata) ya está en `produccion-assets.md`.
+- Tiempos concretos (1 hora de montaje, 25 min de cueva): datos de un flujo ajeno con cortado de time-lapse; útiles como orden de magnitud, no como presupuesto propio hasta tener un piloto.

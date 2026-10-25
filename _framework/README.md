@@ -13,6 +13,7 @@ A diferencia del YouTube Creator Hub (donde roles y plantillas ya estaban estudi
 | `ruta-produccion.md` | Router: qué documento leer según el resultado necesario | ✅ Canónico |
 | `higiene-de-trabajo.md` | Cómo se registran hallazgos, fixes y commits para que sean trazables | ✅ Canónico |
 | `produccion-assets.md` | Cómo producir assets con agentes: descomponer por piezas, remate humano presupuestado, dead-ends | 🟡 Hipótesis de terceros a verificar |
+| `montaje-de-niveles.md` | Kit + ensamblado de niveles: ancla de escala, grandes-primero, slop como fracaso, pasada de presentación | 🟡 Hipótesis de terceros a verificar |
 | `ciclo-produccion.md` | Ciclo macro de producción de un juego | 🚧 Borrador |
 | `roles/` | Roles que intervienen según tamaño/tipo de juego | 🚧 `roles/01-concepto-y-mercado.md`, `roles/02-diseno-juego.md`, `roles/05-release-distribucion.md` (01-02: tandas 1-3 + Mass Flux; 05: patrón de sus releases) |
 | `plantillas/` | Plantillas de pipeline por juego | 🚧 `plantillas/prompt-maestro-creacion.md` (arranque) + `plantillas/maquina-subsistema.md` (una por mecánica) + `plantillas/handoff-sesion.md` (traspaso) + `plantillas/propuesta-cambio.md` (scoping) + `plantillas/ficha-recurso-manual.md` (traspaso sin acceso) |

@@ -46,3 +46,4 @@ Para audio (y análogo para otras familias de assets), el patrón que se propone
 - `escalas-aceptacion.md`: un asset generado está en estado 3 cuando corre en el motor; el remate humano y la aceptación del creador son los estados 4 y 5.
 - `herramientas-y-apis.md`: los generadores concretos entran por ahí, evaluados contra los criterios de selección, nunca desde este documento.
 - `dimensiones-juego.md` #3: este documento es el "cómo" de la dimensión de assets.
+- `montaje-de-niveles.md`: consume las piezas que este documento produce; comparte "pregunta de camino" y presupuesto de rendimiento.

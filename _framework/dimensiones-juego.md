@@ -10,7 +10,7 @@
 | 1 | **Concepto original** | Idea núcleo, promesa de gameplay, diferenciador vs. referentes | Concepto | Concepto (gate), Prototipo |
 | 2 | **Dirección de arte** | Estilo visual, paleta, tipografía, coherencia estética; fijada por referencia visual (ver `reglas-sistema.md`) | Diseño | Vertical Slice, QA |
 | 3 | **Recursos (assets) y sprites** | Sprites, modelos, texturas, efectos, audio — handcrafted por defecto, procedural solo si se pide explícitamente. Cómo producirlos con agentes (descomponer por piezas, remate humano presupuestado, dead-ends): `produccion-assets.md` | Producción | QA |
-| 4 | **Mapas / niveles** | Layout, progresión, densidad de contenido. **No procedurales por defecto** salvo pedido explícito | Diseño + Producción | Playtest, QA |
+| 4 | **Mapas / niveles** | Layout, progresión, densidad de contenido. **No procedurales por defecto** salvo pedido explícito. Cómo armarlos con agentes (kit, ancla de escala, slop como fracaso): `montaje-de-niveles.md` | Diseño + Producción | Playtest, QA |
 | 5 | **Bucle (loop) y controles** | Core loop, respuesta al input, feel de movimiento, ergonomía de controles. Incluye el **juice** (sacudida de pantalla, destello de impacto, números de daño, retroalimentación sensorial): es parte del feel, no decoración | Prototipo (greybox, sin juice) | Prototipo (gate "¿es divertido?"), QA |
 | 6 | **Combate y profundidad** | Sistemas de conflicto, balance, curva de dificultad, capas de maestría | Diseño | Vertical Slice, playtests |
 | 7 | **Entrega al usuario** | Build final, store page, onboarding, UX de menús/settings, documentación, compliance de plataforma. Método: `roles/05-release-distribucion.md` | Release | Release (gate) |
