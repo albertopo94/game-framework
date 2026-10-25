@@ -68,3 +68,4 @@ Cuándo NO aplica. Qué es hipótesis y qué está comprobado.
 | Entrada | Type | Estado |
 | :--- | :--- | :--- |
 | `entrada-pendiente-verificacion-mercado-steam.md` | discovery | `observacion` — **sin verificar**: no usar en decisiones |
+| `truncado-por-script-de-edicion.md` | bugfix | `comprobado` — `regla-candidata`: batch edits con script sobre estado commiteado + check de archivos vacíos |

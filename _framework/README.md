@@ -36,7 +36,7 @@ La bitácora **resume** el traspaso; el estado lo **contiene** completo. Si hay 
 
 ## Qué este framework NO es (límites declarados)
 
-Siguiendo nuestra propia regla de declarar límites (`higiene-de-trabajo.md` §6):
+Siguiendo nuestra propia regla de declarar límites (`higiene-de-trabajo.md` §7):
 
 | Fuerte hoy | Débil / en borrador hoy | Explícitamente afuera por ahora |
 | :--- | :--- | :--- |

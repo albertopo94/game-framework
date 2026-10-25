@@ -57,7 +57,7 @@
 | **Commits de integración que nombran lo que integran** (`Integrate PR #57 for the community update`) y unidad revisable por commit | `higiene-de-trabajo.md` §3 |
 | **Honestidad de green-run** (“without it they skip, so a green run has not proven the emitted code compiles”) | `higiene-de-trabajo.md` §4 |
 | **Modos asistidos explícitos, opt-in y aislados** (prohibido descargar assets en silencio; dependencias aisladas del núcleo; se saltea si no se cumple la condición) | `higiene-de-trabajo.md` §5 |
-| **Límites declarados** (Strong / Stylized-only / Out of scope today, con análisis del porqué) | `higiene-de-trabajo.md` §6 + sección de límites del `_framework/README.md` |
+| **Límites declarados** (Strong / Stylized-only / Out of scope today, con análisis del porqué) | `higiene-de-trabajo.md` §7 + sección de límites del `_framework/README.md` |
 | **Propuestas de cambio con scope explícito de exclusiones** (“what you will intentionally leave out”, “does not assign, reserve, or guarantee acceptance”) | `plantillas/propuesta-cambio.md` |
 | **Títulos de issue/PR como resultado** (“Let the user choose...”, “Show native context usage...”) | `plantillas/propuesta-cambio.md` |
 | **Disciplina de releases** (14 releases observados): línea de validación explícita, **evidencia negativa** ("no se probó X", "not interactively validated", "notarization not included"), ítems abiertos declarados, "qué NO incluye el paquete", checksums de artefactos, enlaces pinneados al tag, CHANGELOG ≠ release notes | `roles/05-release-distribucion.md` + sección de evidencia negativa en `escalas-aceptacion.md` |
