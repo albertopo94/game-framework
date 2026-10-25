@@ -159,6 +159,7 @@
 | `ciclo-produccion.md` | Fases Prototipo / Producción / QA |
 | `escalas-aceptacion.md` | Estados de aceptación por nivel |
 | `conocimiento/` | Lecciones aprendidas por perfil |
+| `agentes-especializados.md` | Agente artista especializado: sandbox isolation, self-healing, blend shapes, decoupling |
 
 ---
 

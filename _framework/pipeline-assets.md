@@ -14,6 +14,7 @@
 | **personaje-3d-stylized** | RTS, top-down, low-poly | Velocidad > detalle | Smart mesh + color map → normal/roughness/metallic desde color → decimate |
 | **entorno-procedural-infinito** | MMO browser, mundos infinitos | Perlin noise + chunk loading + InstancedMesh | Perlin noise 3D/2D, chunk system, distance culling, InstancedMesh |
 | **vegetacion-shader** | Grama, árboles, bushes | Shader-based (GPU) | Alpha maps, vertex shader wind, InstancedMesh, distance culling |
+| **agent-sandbox-artist** | Agente artista con sandbox propio (modelado, texturizado, rigging, anim, VFX) | Sandbox aislado, herramientas propias, experiencia acumulada, self-healing, blend shapes, decoupling |
 | **entorno-procedural-infinito** | MMO browser, mundos infinitos | Perlin noise + chunk loading + InstancedMesh | Perlin noise 3D/2D, chunk system, distance culling, InstancedMesh |
 | **vegetacion-shader** | Grama, árboles, bushes | Shader-based (GPU) | Alpha maps, vertex shader wind, InstancedMesh, distance culling |
 | **entorno-procedural-infinito** | MMO browser, mundos infinitos | Perlin noise + chunk loading + InstancedMesh | Perlin noise 3D/2D, chunk system, distance culling, InstancedMesh |
@@ -177,6 +178,7 @@ Ver `produccion-vfx.md` para pipeline completo. Resumen:
 | `ciclo-produccion.md` | Fases Prototipo / Producción / QA |
 | `escalas-aceptacion.md` | Estados de aceptación por asset |
 | `conocimiento/` | Lecciones aprendidas por perfil |
+| `agentes-especializados.md` | Patrones de agentes especializados: artist agent sandbox, self-healing, blend shapes, decoupling |
 
 ---
 
