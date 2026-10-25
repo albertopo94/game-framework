@@ -47,3 +47,4 @@ Para audio (y análogo para otras familias de assets), el patrón que se propone
 - `herramientas-y-apis.md`: los generadores concretos entran por ahí, evaluados contra los criterios de selección, nunca desde este documento.
 - `dimensiones-juego.md` #3: este documento es el "cómo" de la dimensión de assets.
 - `montaje-de-niveles.md`: consume las piezas que este documento produce; comparte "pregunta de camino" y presupuesto de rendimiento.
+- `produccion-vfx.md`: asset preparado (UV, separación, naming, optimizado) es prerequisito para VFX que el agente pueda implementar.

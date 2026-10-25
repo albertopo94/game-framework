@@ -161,3 +161,32 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 - Nombres de productos/plataformas/add-ons (sponsor + venta de curso): la agenda de herramientas sigue los criterios de `herramientas-y-apis.md`.
 - "Solo necesitás saber unas pocas herramientas de Blender": acompaña, no es método; la parte útil (saber el 10% que remata) ya está en `produccion-assets.md`.
 - Tiempos concretos (1 hora de montaje, 25 min de cueva): datos de un flujo ajeno con cortado de time-lapse; útiles como orden de magnitud, no como presupuesto propio hasta tener un piloto.
+
+---
+
+## Tanda 07 - VFX workflow completo con agentes (video de terceros, mismo canal 5-6)
+
+- **Archivo verbatim:** `notas-creador/tanda-07-vfx-workflow.md`
+- **Calidad de la evidencia: media-alta.** Demo completa en pantalla del personaje + todos sus VFX funcionando en motor (Unreal). Contra: **vende un curso de 3D AI** (mismo patrón que tandas 5-6). Transcripción razonablemente limpia salvo nombres de productos.
+- **Regla aplicada:** práctica sí, productos no. El creador declara no ser artista de VFX ("I'm not a VFX artist at all") — el workflow es desde la perspectiva de un no-especialista que delega a agentes.
+
+### Lo que tomamos (estructura)
+
+| Práctica | Va a |
+| :--- | :--- |
+| **Concepting 2D obligatorio antes de implementar VFX** (lista de conceptos, iterar en 2D, validar, luego motor) | `produccion-vfx.md` (regla central) |
+| **VFX Library del juego** (catálogo vivo: nombre, ref visual, timing, capas, trigger, estado) | `produccion-vfx.md` |
+| **Referencia visual antes que descripción** (librerías como Cartoon Effects de Jean Moreno + delta) | `produccion-vfx.md` |
+| **VFX Concept = referencia + timing + capas + trigger + bordes** | `produccion-vfx.md` |
+| **Asset optimizado para agente** (UV lógico, partes separadas, naming, decimate, single armature) | `produccion-vfx.md` + refuerza `produccion-assets.md` |
+| **Pipeline textura: AI base + retoque humano (Moondiff) + bake** | `produccion-vfx.md` |
+| **Rigging híbrido**: Mixamo/AccuRig (humanoide) + GPT (custom: ramas, raíces, hojas) → single armature | `produccion-vfx.md` |
+| **Animación: referencias video → GPT corrige lo que video AI falla** | `produccion-vfx.md` |
+| **Implementación en motor: playground + iteración verbal con agente** | `produccion-vfx.md` |
+| **Leaves como objetos/materiales separados** (animación viento, color, transparencia, exportables para VFX) | `produccion-vfx.md` + refuerza `produccion-assets.md` |
+
+### Lo que NO tomamos
+
+- **Nombres de productos** (Tripo P2, Nano Banana Pro, Moondiff, Mixamo, AccuRig, Astra, Kling/Runway/Hunyuan, Cartoon Effects de Jean Moreno, Patina AI, Motive, 3DI Studio, Houdini, Ultra Dynamic Sky/Weather): el video vende curso y tiene sponsors. La agenda de herramientas sigue los criterios de `herramientas-y-apis.md`.
+- **Cifras de tiempo** ("1.5 days", "1 hour", "25 minutes"): datos de un flujo ajeno con time-lapse; útiles como orden de magnitud, no como presupuesto propio hasta piloto.
+- **"Join my 3D AI course"**: marketing, no método.
