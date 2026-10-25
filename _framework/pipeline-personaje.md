@@ -55,6 +55,7 @@
 ## Dónde encaja en el framework
 
 | Documento | Relación |
+| `prototipo-fin-de-semana.md` | Rigging AccuRig + retarget UE (vs Mixamo+GPT); animaciones via retarget de plantilla |
 | :--- | :--- |
 | `produccion-assets.md` | Partes + Smart UV + texturizado agente + ensamblaje = pipeline de asset de personaje |
 | `produccion-vfx.md` | Emissive mask + VFX en motor; hojas/partículas separadas para VFX |

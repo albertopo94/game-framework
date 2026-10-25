@@ -52,5 +52,6 @@ Si el agente hace un placement de borrador, se etiqueta como **propuesta (estado
 ## Dónde encaja (actualizado)
 
 | Documento | Relación |
+| `prototipo-fin-de-semana.md` | Layout con primitivas en UE; foliage/agua comprados; decimate para low-poly rápido |
 | :--- | :--- |
 | `pipeline-soulslike-72h.md` | Modular level design con primitivas + modificadores (array/curve); referencia de escala exportada del motor; tileables para grandes superficies |

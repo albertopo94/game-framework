@@ -18,6 +18,7 @@ A diferencia del YouTube Creator Hub (donde roles y plantillas ya estaban estudi
 | `pipeline-personaje.md` | Pipeline end-to-end de personaje: partes + smart UV → mapas desde color → rig híbrido → anim + VFX → motor | 🟡 Hipótesis de terceros a verificar |
 | `pipeline-soulslike-72h.md` | Nivel Souls-like jugable en 72h: high-poly bake → tileables → modular level → plantilla UE + MCP + agente navegador | 🟡 Hipótesis de terceros a verificar |
 | `prompting-puro-browser.md` | 7 pasos: prompt + target + loop + play + score/revise + skills + ship; solo LLM + Three.js | 🟡 Hipótesis de terceros a verificar |
+| `prototipo-fin-de-semana.md` | Prototipo jugable 2 días: plantilla UE + AccuRig + retarget + Patina + foliage/agua comprados | 🟡 Hipótesis de terceros a verificar |
 | `ciclo-produccion.md` | Ciclo macro de producción de un juego | 🚧 Borrador |
 | `roles/` | Roles que intervienen según tamaño/tipo de juego | 🚧 `roles/01-concepto-y-mercado.md`, `roles/02-diseno-juego.md`, `roles/05-release-distribucion.md` (01-02: tandas 1-3 + Mass Flux; 05: patrón de sus releases) |
 | `plantillas/` | Plantillas de pipeline por juego | 🚧 `plantillas/prompt-maestro-creacion.md` (arranque) + `plantillas/maquina-subsistema.md` (una por mecánica) + `plantillas/handoff-sesion.md` (traspaso) + `plantillas/propuesta-cambio.md` (scoping) + `plantillas/ficha-recurso-manual.md` (traspaso sin acceso) 

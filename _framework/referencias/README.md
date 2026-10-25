@@ -290,3 +290,32 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 - **Modelos específicos** (Opus 5.5, GPT-6, Astra, Kimi K3) — agnósticos; el patrón funciona con el "modelo frontera actual".
 - **Cifras de tiempo de builds específicos** — datos de su flujo, no presupuesto propio.
 - **Arcade propia** — infraestructura propia, no método.
+
+---
+
+## Tanda 11 - Prototipo jugable en fin de semana (video de terceros, mismo canal 5-10)
+
+- **Archivo verbatim:** `notas-creador/tanda-11-weekend-prototype.md`
+- **Calidad de la evidencia: alta.** Shooter top-down jugable en Unreal mostrado funcionando, construido en 2 días por 1 persona. Contra: **vende curso 3D AI** — incentivo de fluidez. Transcripción limpia.
+- **Enfoque:** "prototype, no perfección" — usa plantilla UE ($50), retarget, assets comprados para foliage/agua.
+
+### Lo que tomamos (estructura)
+
+| Práctica | Va a |
+| :--- | :--- |
+| **Plantilla base + iterar > empezar de cero** (UE template $50 con basics) | `prototipo-fin-de-semana.md` |
+| **Retarget de animaciones de plantilla > animar desde cero** (15 min/personaje) | `prototipo-fin-de-semana.md` |
+| **AccuRig (gratis) + retarget UE** para rigging | `prototipo-fin-de-semana.md` |
+| **Poly count por propósito** (2-5k props, 10-12k grandes) | `prototipo-fin-de-semana.md` |
+| **Smart mesh + multi-view (back/side obligatorio)** | `prototipo-fin-de-semana.md` |
+| **Patina AI tileables (pay-per-use, 8¢/gen)** para superficies grandes | `prototipo-fin-de-semana.md` |
+| **Foliage/agua dinámicos: comprar, no generar IA** ("mejor comprar hoy") | `prototipo-fin-de-semana.md` |
+| **Wireframe perfecto no necesario para estáticos** | `prototipo-fin-de-semana.md` |
+| **Decimate en Blender para low-poly rápido** | `prototipo-fin-de-semana.md` |
+| **Prototipo jugable > perfección** ("punto de partida para iterar") | `prototipo-fin-de-semana.md` |
+
+### Lo que NO tomamos
+
+- Nombres de productos (Tripo, AccuRig, Patina, UE template $50, Ultra Dynamic Sky/Weather, styled forest $20, water $50) — agenda de herramientas = criterios de `herramientas-y-apis.md`.
+- Cifras de tiempo como presupuesto propio — datos de flujo experto.
+- "Join my course" — marketing.
