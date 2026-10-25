@@ -12,6 +12,7 @@
 | Diseñar mecánicas, sistemas, tema interpretado | `roles/02-diseno-juego.md` + `plantillas/maquina-subsistema.md` |
 | Fijar o revisar estética | `banco-visual.md` + `reglas-sistema.md` (referencia visual) |
 | Decidir motor, art o audio | `herramientas-y-apis.md` |
+| Producir assets (personajes, ambientes, props, audio) con agentes | `produccion-assets.md` |
 | Saber en qué fase estoy y qué sigue | `00-estado-produccion.md` del juego + `ciclo-produccion.md` |
 | Documentar una mecánica concreta | `plantillas/maquina-subsistema.md` |
 | Verificar que algo se ve o se comporta bien | `escalas-aceptacion.md` (protocolo de comparación justa) |

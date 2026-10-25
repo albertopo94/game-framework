@@ -35,6 +35,7 @@ Protocolo para agentes de IA que trabajan en este repositorio.
 ## Estado persistente
 
 - Todo juego en `mis-juegos/` mantiene su archivo de estado de producción actualizado; es la primera lectura al retomar cualquier trabajo.
+- **Todo el contexto vive en el proyecto, no en la memoria del chat:** imágenes de referencia, prompts aceptados, decisiones y estados se guardan en las carpetas del juego. Cada iteración es más barata porque la anterior está en disco; una memoria de chat que no se puede versionar no existe.
 - **Sin bloqueos silenciosos:** si el agente queda esperando una aprobación o una acción del creador, lo dice al momento y sigue preparando lo que pueda en paralelo. Esperar sin avisar gasta tiempo del proyecto.
 - Los hallazgos (bugs, auditorías, deudas) se registran como tracker padre + un ítem por fix, y solo se arreglan hallazgos **confirmados** por revisión independiente: ver `_framework/higiene-de-trabajo.md`.
 - Este framework está en construcción: los roles y plantillas se definen con el conocimiento del creador, no se inventan.

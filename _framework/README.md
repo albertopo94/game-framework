@@ -12,11 +12,12 @@ A diferencia del YouTube Creator Hub (donde roles y plantillas ya estaban estudi
 | `escalas-aceptacion.md` | Los 5 estados de "está listo" + qué prueba cada evidencia + comparación justa | ✅ Canónico |
 | `ruta-produccion.md` | Router: qué documento leer según el resultado necesario | ✅ Canónico |
 | `higiene-de-trabajo.md` | Cómo se registran hallazgos, fixes y commits para que sean trazables | ✅ Canónico |
+| `produccion-assets.md` | Cómo producir assets con agentes: descomponer por piezas, remate humano presupuestado, dead-ends | 🟡 Hipótesis de terceros a verificar |
 | `ciclo-produccion.md` | Ciclo macro de producción de un juego | 🚧 Borrador |
 | `roles/` | Roles que intervienen según tamaño/tipo de juego | 🚧 `roles/01-concepto-y-mercado.md`, `roles/02-diseno-juego.md`, `roles/05-release-distribucion.md` (01-02: tandas 1-3 + Mass Flux; 05: patrón de sus releases) |
 | `plantillas/` | Plantillas de pipeline por juego | 🚧 `plantillas/prompt-maestro-creacion.md` (arranque) + `plantillas/maquina-subsistema.md` (una por mecánica) + `plantillas/handoff-sesion.md` (traspaso) + `plantillas/propuesta-cambio.md` (scoping) |
 | `dimensiones-juego.md` | Las 7 dimensiones de un juego (concepto, arte, assets, mapas, bucle, combate, entrega) — checklist transversal de gates | ✅ `tanda-03` |
-| `referencias/` | Material externo conservado + ficha de análisis | ✅ `notas-creador/` (tandas verbatim) + `README.md` (Mass Flux GDD 2022, mr-mak-workspace) |
+| `referencias/` | Material externo conservado + ficha de análisis | ✅ `notas-creador/` (tandas verbatim) + `README.md` (análisis de Mass Flux GDD, mr-mak-workspace y las 5 tandas del creador) |
 | `herramientas-y-apis.md` | Directorio de herramientas por capability | ✅ Inicial (Blender MCP oficial como principal de assets) |
 
 ## Modos de trabajo

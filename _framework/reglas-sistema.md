@@ -12,6 +12,8 @@ Reglas operativas para agentes. Se expanden con el conocimiento del creador.
 ## Reglas propias de desarrollo de juegos (borrador, a confirmar con el creador)
 
 - **Playtest antes de polish**: ningún sistema se pule antes de ser jugable y jugado.
+- **Enfoque antes que herramienta:** un mal resultado se atribuye primero al enfoque (descomposición incorrecta, flujo equivocado, herramienta mal configurada) y solo después a la herramienta. Antes de descartar un generador, se prueba con el flujo correcto: evaluar una herramienta con un flujo torpe da falsos negativos. *(Origen: `_framework/referencias/notas-creador/tanda-05-workflow-3d-ai.md`; ver `produccion-assets.md`)*
+- **Preguntar la práctica antes de pedir la tarea:** además de qué se quiere, el agente consulta cómo se hace usualmente eso, cuáles son las buenas prácticas y qué enfoque usar. La experiencia del creador y del proyecto **multiplica** la eficacia del agente; el agente también la invoca en vez de asumirla.
 - **Greybox antes de arte**: la mecánica se prueba con cubos y geometría provisoria **antes** de producir arte definitivo. Si no es interesante con cubos, no lo va a ser con arte bonito. El arte no salva una mecánica débil. *(Origen: `_framework/referencias/notas-creador/tanda-04-agente-y-steam.md`, corroborado por la práctica de greybox común en la industria)*
 - **Scope es ley**: el scope se define en diseño y solo el humano lo expande.
 - **Commits pequeños y jugables**: el repo de cada juego debe estar siempre en estado ejecutable.

@@ -19,7 +19,7 @@ La agnosticidad no significa elegir a ciegas. Criterios estructurales, verificab
 
 | Criterio | Por qué importa con agentes |
 | :--- | :--- |
-| **Archivos de proyecto legibles como texto** | Un agente puede leer, interpretar y editar el estado del proyecto directamente. Un formato binario opaco lo deja ciego y obliga a intermediarios. |
+| **Archivos de proyecto legibles como texto (code-first)** | Un agente puede leer, interpretar y editar el estado del proyecto directamente. Un formato binario opaco lo deja ciego y obliga a intermediarios. La evidencia de la práctica indica que el trabajo con agentes es sensiblemente más fluido en motores code-first; no es una prohibición de los demás, es un criterio de costo de fricción. *(Origen: tanda-05; verificar en nuestro entorno.)* |
 | **Editor controlable por script o puente (CLI/MCP)** | El agente puede abrir, modificar y verificar en el motor real, no solo proponer código. Sin esto, la verificación en motor (estado 4 de `escalas-aceptacion.md`) queda fuera de su alcance. |
 | **Salida exportable al formato del motor** | Un asset generado que no importa limpio al motor no es un asset; es una imagen simpática. |
 | **Costo y límites de uso conocidos** | El presupuesto de agente es un recurso del proyecto, no infinito. |
@@ -35,7 +35,9 @@ Registrada como hipótesis de terceros (`_framework/referencias/notas-creador/ta
 | :--- | :--- | :--- |
 | Código, controles, sistemas | El agente rinde bien | pendiente |
 | Diseño de niveles | Rinde mal: la disposición espacial pide criterio humano | pendiente |
-| Arte y música | Rinde mal o inconsistente; assets propios o comprados rinden mejor | pendiente |
+| Arte y música | Rinde mal o inconsistente **hecho por el LLM**; el camino es generar assets con generadores especializados + remate humano. Ver `produccion-assets.md` | pendiente |
+| VFX/partículas en motores code-first | Vía código funciona bien en juegos chicos; con puente al sistema de partículas del motor, da base sólida que el humano retoca | pendiente |
+| Audio (SFX/música) | El agente **orquesta APIs de generación especializada** y elige el modelo; no genera audio "con el LLM" | pendiente |
 | ¿Es divertido? | **Nunca**: solo jugadores reales (**esta sí está confirmada**: es la regla de estado 5 de `escalas-aceptacion.md`) | confirmado |
 
 **Dato de entrada, no decisión:** si la hipótesis se confirma, el efecto práctico es que arte y audio se resuelven con producción propia o assets comprados con licencia registrada, y el agente se concentra en código y sistemas.

@@ -106,3 +106,31 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 - **Todos los números** (ingreso típico, porcentaje de juegos con IA, comisión, umbral de wishlists, caída de ventas por declarar IA). Ninguno tiene fuente primaria; el autor no hizo el juego. Quedan en `conocimiento/entrada-pendiente-verificacion-mercado-steam.md` con estado `observacion` y la advertencia de **no usarlos en decisiones** hasta verificarlos.
 - **Los productos como obligación** (Claude, Tripo, planes "max"): agnosticidad. Cuando algo de eso entre, entra como capability evaluada contra la tabla de criterios, con visto bueno del creador.
 - **El workflow de un fin de semana** como meta: choca con el espíritu de proyecto largo y con la regla de no automatizar/automatizar prematuramente.
+
+---
+
+## Tanda 05 - Workflow 3D con IA para indies (video de terceros)
+
+- **Archivo verbatim:** `notas-creador/tanda-05-workflow-3d-ai.md`
+- **Calidad de la evidencia: media.** El autor es un artista 3D profesional que sí construyó una demo propia con sus workflows (mejor que tanda-04), **pero el video está patrocinado** por una de las plataformas que recomienda, y la transcripción deformó casi todos los nombres de productos. Se porta la práctica; los nombres no.
+- **Regla aplicada:** ningún producto de la tanda entra al catálogo. Si un juego necesita una de esas capacidades, la herramienta se evalúa contra los criterios de `herramientas-y-apis.md`, con nombre verificado en la fuente, no desde esta ficha.
+
+### Lo que tomamos (estructura)
+
+| Práctica | Va a |
+| :--- | :--- |
+| **Descomponer el asset por piezas y combinar** (árbol = tronco+ramas+hojas alpha; personaje = cuerpo+accesorios) — la descomposición por subsistemas aplicada a arte | `produccion-assets.md` |
+| **"Generar todo junto y quejarse" es error de enfoque, no del modelo** | `reglas-sistema.md` (enfoque antes que herramienta) |
+| **Remate humano presupuestado**: la generación llega al 80-90 %, el cierre (topología, pesos, PBR) es edición planeada; una tasa de fallos es parte del plan | `produccion-assets.md` |
+| **Representación más simple**: tileable texture con displacement en vez de geometría generada | `produccion-assets.md` |
+| **El agente orquesta generadores especializados por API** (audio y afines), no genera "con el LLM" | `produccion-assets.md` + matriz en `herramientas-y-apis.md` |
+| **Dead-ends del 3D generado** (hair cards, rig de animales, PBR final, agua/entidades con lógica) | `produccion-assets.md`, como foto de un momento a re-verificar |
+| **Motores code-first = menos fricción para agentes** (criterio, no dogma) | `herramientas-y-apis.md` criterios |
+| **La experiencia multiplica la eficacia del agente**; preguntar buenas prácticas además de pedir tareas | `reglas-sistema.md` |
+| **Contexto todo dentro del proyecto** (referencias, prompts, decisiones en carpetas del juego) | `AGENTS.md` |
+
+### Lo que NO tomamos
+
+- **Nombres de productos y plataformas** (llegaron deformados por la transcripción y el video es patrocinado): la agenda de herramientas se decide con criterios, no con menciones de video.
+- Las cifras de adopción de IA en Steam/GDC (mismo criterio que tanda-04: sin fuente primaria, no entran).
+- "Es más fácil que antes / divertite aprendiendo": motivación, no método.
