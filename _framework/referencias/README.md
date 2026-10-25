@@ -190,3 +190,43 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 - **Nombres de productos** (Tripo P2, Nano Banana Pro, Moondiff, Mixamo, AccuRig, Astra, Kling/Runway/Hunyuan, Cartoon Effects de Jean Moreno, Patina AI, Motive, 3DI Studio, Houdini, Ultra Dynamic Sky/Weather): el video vende curso y tiene sponsors. La agenda de herramientas sigue los criterios de `herramientas-y-apis.md`.
 - **Cifras de tiempo** ("1.5 days", "1 hour", "25 minutes"): datos de un flujo ajeno con time-lapse; útiles como orden de magnitud, no como presupuesto propio hasta piloto.
 - **"Join my 3D AI course"**: marketing, no método.
+
+---
+
+## Tanda 08 - Pipeline completo de personaje en 1 día (video de terceros, mismo canal 5-7)
+
+- **Archivo verbatim:** `notas-creador/tanda-08-personaje-completo-pipeline.md`
+- **Calidad de la evidencia: media-alta.** Personaje completo (unidad voladora) con animaciones, VFX y lógica de vuelo funcionando en Unity, visible en pantalla. Contra: **vende su curso 3D AI** y su **workspace Mr. Mak** (Overlord agents, skills en GitHub, plugin "set pose"); incentivo de mostrar pipeline fluido y destacar sus herramientas. Transcripción limpia salvo nombres de productos.
+- **Enfoque del creador:** "character ready in one day" — pipeline optimizado por velocidad, no por calidad AAA. Admite atajos declarados (normal maps desde color map en vez de high-poly bake).
+
+### Lo que tomamos (estructura)
+
+| Práctica | Va a |
+| :--- | :--- |
+| **Separación de partes antes de generar** (cabeza, cuerpo, piernas, armadura, cabello, alas) → control posterior de animación, LOD, materiales | `pipeline-personaje.md` |
+| **Smart UV es prerequisito** (UV legible = agente entiende islas → mapas desde color map funcionan) | `pipeline-personaje.md` + refuerza `produccion-assets.md` |
+| **Generar 4 variantes de poly count por parte y elegir** (rango + elegir por wireframe/uso) | `pipeline-personaje.md` |
+| **Normal/roughness/metallic desde color map** (horas de baking → minutos de agente; requiere buen UV) | `pipeline-personaje.md` |
+| **Emissive/glow via mask en motor** (pedir al agente "mask this area and make it glow") | `pipeline-personaje.md` |
+| **Rigging híbrido**: Mixamo (cuerpo) + GPT (partes custom: alas) → single armature | `pipeline-personaje.md` |
+| **Ajustes finos en Blender nativo (sculpt grab) > agente** (5 seg vs horas) | `pipeline-personaje.md` |
+| **Animación: referencias video → GPT → corrección por plugin "set pose" (feedback visual)"** | `pipeline-personaje.md` |
+| **VFX concept = HTML viz + timing** (validar idea antes de código) | `pipeline-personaje.md` + `produccion-vfx.md` |
+| **Agentes especializados por etapa** (Overlord Animation → Overlord Unity) | `pipeline-personaje.md` |
+
+### Hacks / atajos declarados (tradeoffs de velocidad, no best practices)
+
+| Atajo | Qué ahorra | Qué arriesga |
+| :--- | :--- | :--- |
+| Normal/roughness/metallic desde color map (no high-poly bake) | 4-6h baking | Detalle fino en metálicos/complejos; "para RTS suficiente" |
+| Alas: imagen menos detallada → modelo → textura da detalle | Geometría de plumas = problema topología | Menos detalle geométrico real; válido si se ve a distancia |
+| Mixamo (cuerpo) + GPT (alas) → single armature | Mixamo no hace custom; GPT sí | Pesos de alas pueden necesitar iteración |
+| Moondiff para fix texturas vs regenerar | Segundos vs minutos | Requiere saber pintar en Moondiff; no arregla geometría |
+| Blender ensamblaje (12 min) vs Agente (1-2h + tokens) | Tiempo + tokens masivos | Requiere Blender básico (hotkeys, knife, boolean, UV packer) |
+
+### Lo que NO tomamos
+
+- **Nombres de productos** (Tripo P2 4 variantes, GPT-6 Astra/Opus 5.5, Mixamo, Moondiff, "Overlord workspace", plugin "set pose"): el video promociona su curso y workspace. La agenda de herramientas sigue criterios de `herramientas-y-apis.md`.
+- **Cifras de tiempo** ("12 min assembly", "2h animaciones", "4-6h baking ahorrado"): datos de un flujo experto con time-lapse; útiles como orden de magnitud, no como presupuesto propio hasta piloto.
+- **"Join my 3D AI course"**: marketing, no método.
+- **Trucos específicos** (knife tool elastic grab, boolean, UV packer addon): acompañan, no son método; la parte útil (saber el 10% que remata) ya está en `produccion-assets.md`.

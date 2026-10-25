@@ -15,6 +15,7 @@
 | Producir assets (personajes, ambientes, props, audio) con agentes | `produccion-assets.md` |
 | Ensamblar un nivel/ambiente a partir de assets | `montaje-de-niveles.md` |
 | Diseñar e implementar VFX (concepting → motor) | `produccion-vfx.md` |
+| Pipeline completo de personaje (partes → UV → textura → rig → anim → VFX → motor) | `pipeline-personaje.md` |
 | Saber en qué fase estoy y qué sigue | `00-estado-produccion.md` del juego + `ciclo-produccion.md` |
 | Documentar una mecánica concreta | `plantillas/maquina-subsistema.md` |
 | Verificar que algo se ve o se comporta bien | `escalas-aceptacion.md` (protocolo de comparación justa) |

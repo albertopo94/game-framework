@@ -38,6 +38,7 @@ Registrada como hipótesis de terceros (`_framework/referencias/notas-creador/ta
 | Ensamblado de ambientes (kit → nivel) | El agente prepara y procesa el kit; el montaje con intención es humano o propuesta etiquetada estado 2 | pendiente |
 | VFX (partículas, shaders, timelines, triggers) | El agente escribe código del motor a partir de VFX concept + asset preparado; iteración visual en playground | pendiente |
 | VFX concepting (2D) | El agente genera conceptos 2D + timing + capas antes de implementar; validado por creador | pendiente |
+| Pipeline completo de personaje (partes → UV → textura → rig → anim → VFX → motor) | Agente genera partes + UV + mapas; humano ensambla en Blender (12 min) + rigging híbrido Mixamo+GPT; animaciones y VFX por agente especializado; integra en motor | pendiente (2 fuentes: tanda-05 + tanda-08) |
 | Arte y música | Rinde mal o inconsistente **hecho por el LLM**; el camino es generar assets con generadores especializados + remate humano. Ver `produccion-assets.md` | pendiente |
 | VFX/partículas en motores code-first | Vía código funciona bien en juegos chicos; con puente al sistema de partículas del motor, da base sólida que el humano retoca | pendiente |
 | Audio (SFX/música) | El agente **orquesta APIs de generación especializada** y elige el modelo; no genera audio "con el LLM" | pendiente |

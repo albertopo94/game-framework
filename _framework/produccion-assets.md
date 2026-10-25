@@ -48,3 +48,5 @@ Para audio (y análogo para otras familias de assets), el patrón que se propone
 - `dimensiones-juego.md` #3: este documento es el "cómo" de la dimensión de assets.
 - `montaje-de-niveles.md`: consume las piezas que este documento produce; comparte "pregunta de camino" y presupuesto de rendimiento.
 - `produccion-vfx.md`: asset preparado (UV, separación, naming, optimizado) es prerequisito para VFX que el agente pueda implementar.
+- `pipeline-personaje.md`: este documento detalla el pipeline de asset; el pipeline-personaje orquesta este + rig + anim + VFX.
+- `produccion-vfx.md`: asset preparado (UV, separación, naming, optimizado) es prerequisito para VFX que el agente pueda implementar.
