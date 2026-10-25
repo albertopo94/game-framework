@@ -9,18 +9,18 @@
 | :--- | :--- |
 | Arrancar un proyecto de cero (contrato inicial) | `plantillas/prompt-maestro-creacion.md` |
 | Validar o matar una idea de juego | `roles/01-concepto-y-mercado.md` |
-| Diseñar mecánicas, sistemas, tema interpretado | `roles/02-diseno-juego.md` + `plantillas/maquina-subsistema.md` |
+| Diseñar mecánicas, sistemas, tema interpretado | `roles/02-diseno-juego.md` + `plantillas/sub-sistema-juego.md` |
 | Fijar o revisar estética | `banco-visual.md` + `reglas-sistema.md` (referencia visual) |
 | Decidir motor, art o audio | `herramientas-y-apis.md` |
 | Producir assets (personajes, ambientes, props, audio) con agentes | `produccion-assets.md` |
 | Ensamblar un nivel/ambiente a partir de assets | `montaje-de-niveles.md` |
 | Diseñar e implementar VFX (concepting → motor) | `produccion-vfx.md` |
-| Pipeline completo de personaje (partes → UV → textura → rig → anim → VFX → motor) | `pipeline-personaje.md` |
-| Proyecto completo bajo restricción de tiempo con plantilla + MCP + agente navegador | `pipeline-soulslike-72h.md` |
+| Pipeline completo de personaje (partes → UV → textura → rig → anim → VFX → motor) | `pipeline-assets.md` (perfil `personaje-3d-hero` / `personaje-3d-secondary` / `personaje-3d-stylized`) |
+| Proyecto completo bajo restricción de tiempo con plantilla + MCP + agente navegador | `pipeline-assets.md` (perfil `entorno-unique` + `pipeline-nivel.md` perfil `modular-manual`) |
 | Desarrollo browser-game solo con prompting (Three.js, sin motor) | `prompting-puro-browser.md` |
-| Prototipo jugable en fin de semana (plantilla + retarget + assets comprados) | `prototipo-fin-de-semana.md` |
+| Prototipo jugable en fin de semana (plantilla + retarget + assets comprados) | `pipeline-assets.md` (perfil `prototipo-rapido`) |
 | Saber en qué fase estoy y qué sigue | `00-estado-produccion.md` del juego + `ciclo-produccion.md` |
-| Documentar una mecánica concreta | `plantillas/maquina-subsistema.md` |
+| Documentar una mecánica concreta | `plantillas/sub-sistema-juego.md` |
 | Verificar que algo se ve o se comporta bien | `escalas-aceptacion.md` (protocolo de comparación justa) |
 | Decir si algo "está listo" | `escalas-aceptacion.md` (los 5 estados) |
 | Cerrar una sesión / pasarle el trabajo a otra | `plantillas/handoff-sesion.md` + `bitacora-sesiones.md` |

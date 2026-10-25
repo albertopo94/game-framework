@@ -113,9 +113,9 @@ El agente (GPT) recibe el VFX concept + asset preparado + animaciones y **escrib
 
 | Documento | Relación |
 | `produccion-assets.md` | Asset del personaje listo para VFX (UV, separación, naming, optimización) |
-| `pipeline-personaje.md` | Orquesta asset + rig + anim + VFX en pipeline end-to-end |
-| `pipeline-soulslike-72h.md` | Cinemáticas via agente (Opus 5); iluminación/niebla como "mitad del look"; ropa/física UE 5.8 |
-| `prototipo-fin-de-semana.md` | VFX gratuitos + Ultra Dynamic Sky/Weather para atmósfera; cloth physics UE 5.8 |
+| `pipeline-assets.md` (perfil `personaje-3d-hero` / `personaje-3d-secondary` / `personaje-3d-stylized`) | Orquesta asset + rig + anim + VFX en pipeline end-to-end |
+| `pipeline-assets.md` (perfil `entorno-unique` + `pipeline-nivel.md` perfil `modular-manual`) | Cinemáticas via agente (Opus 5); iluminación/niebla como "mitad del look"; ropa/física UE 5.8 |
+| `pipeline-assets.md` (perfil `prototipo-rapido`) | VFX gratuitos + Ultra Dynamic Sky/Weather para atmósfera; cloth physics UE 5.8 |
 | :--- | :--- |
 | `produccion-assets.md` | Asset del personaje listo para VFX (UV, separación, naming, optimización) |
 | `montaje-de-niveles.md` | VFX de ambiente (aura de edificios, clima) se ensamblan igual que props |

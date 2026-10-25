@@ -15,7 +15,7 @@ Un GDD monolítico se vuelve obsoleto rápido. En este framework, el diseño se 
 | Documento | Qué contiene |
 | :--- | :--- |
 | `roles/01-concepto-y-mercado.md` | Concepto, referente visual, restricciones, scope, referentes de calidad |
-| `plantillas/maquina-subsistema.md` | Una por mecánica/subsistema: regla, dependencias, mockup, edge cases, estado |
+| `plantillas/sub-sistema-juego.md` | Una por mecánica/subsistema: regla, dependencias, mockup, edge cases, estado |
 | `banco-visual.md` | Estilo visual, paleta, referencias artísticas |
 | `00-estado-produccion.md` | Hitos, fase actual, siguiente acción |
 | `roles/02-diseno-juego.md` | Este documento: método, tema interpretado, gates de diseño |
@@ -34,7 +34,7 @@ Un buen tema no es un adjetivo: es una **interpretación** del concepto que guí
 
 ## 3. Diseño por subsistema
 
-Cada subsistema/mecánica se diseña con la plantilla `plantillas/maquina-subsistema.md`:
+Cada subsistema/mecánica se diseña con la plantilla `plantillas/sub-sistema-juego.md`:
 
 - Una mecánica = un archivo.
 - Cada mecánica tiene su **mockup o referencia visual** (no "art not necessarily final").
@@ -67,7 +67,7 @@ Para que el Diseño se considere `APROBADO`:
 ## 6. Relación con otros documentos
 
 - `roles/01-concepto-y-mercado.md`: el concepto aprobado es la entrada.
-- `plantillas/maquina-subsistema.md`: formato de cada subsistema.
+- `plantillas/sub-sistema-juego.md`: formato de cada subsistema.
 - `dimensiones-juego.md`: qué dimensiones activas hay.
 - `ciclo-produccion.md`: los gates de Prototipo y Vertical Slice validan los subsistemas.
 - `referencias/README.md`: ficha del Mass Flux GDD, ejemplo de GDD por subsistema (no es un juego nuestro).

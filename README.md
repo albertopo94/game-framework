@@ -54,7 +54,7 @@ game-framework/
 │   ├── ciclo-produccion.md
 │   ├── herramientas-y-apis.md
 │   ├── roles/           # 01-concepto-y-mercado, 02-diseno-juego
-│   ├── plantillas/      # prompt-maestro, maquina-subsistema, handoff-sesion
+│   ├── plantillas/      # prompt-maestro, sub-sistema-juego, handoff-sesion
 │   └── referencias/     # Material externo + ficha de análisis
 ├── conocimiento/          # Lecciones de la práctica (no teoría previa)
 ├── juegos-en-estudio/     # Incubadora: conceptos en validación

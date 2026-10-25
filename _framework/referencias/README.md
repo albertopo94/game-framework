@@ -12,13 +12,13 @@
 - **Tipo:** GDD de game jam, desarrollado en solitario en 8 días
 - **Herramientas del original:** GameMaker Studio 2.3, Aseprite, FL Studio 12
 - **Qué es:** puzzle de celdas tile-based, 15 niveles, sobre reducir/manipular la forma de una masa de celdas para llegar a la meta
-- **Por qué se conserva:** ejemplo de GDD por subsistema (no monolítico). Cada mecánica (Walls, Spikes, Holes, Fruit, Independence, Set Spikes) tiene nombre, tipo, mockup y descripción. Eso es el formato que inspiró `plantillas/maquina-subsistema.md`.
+- **Por qué se conserva:** ejemplo de GDD por subsistema (no monolítico). Cada mecánica (Walls, Spikes, Holes, Fruit, Independence, Set Spikes) tiene nombre, tipo, mockup y descripción. Eso es el formato que inspiró `plantillas/sub-sistema-juego.md`.
 
 ### Lo que tomamos de él
 
 | Sección | Va a |
 | :--- | :--- |
-| Primary/Secondary Mechanics | `plantillas/maquina-subsistema.md` (una por mecánica) |
+| Primary/Secondary Mechanics | `plantillas/sub-sistema-juego.md` (una por mecánica) |
 | Theme Interpretation (Sacrifice Is Strength) | `roles/02-diseno-juego.md` §2 (tema interpretado, no genérico) |
 | Development Timeline (MVP + Beyond) | `00-estado-produccion.md` hitos |
 | Platform / Dev Software / Genre / Target Audience | `00-estado-produccion.md` ficha + `roles/01` §4 |
@@ -203,16 +203,16 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 
 | Práctica | Va a |
 | :--- | :--- |
-| **Separación de partes antes de generar** (cabeza, cuerpo, piernas, armadura, cabello, alas) → control posterior de animación, LOD, materiales | `pipeline-personaje.md` |
-| **Smart UV es prerequisito** (UV legible = agente entiende islas → mapas desde color map funcionan) | `pipeline-personaje.md` + refuerza `produccion-assets.md` |
-| **Generar 4 variantes de poly count por parte y elegir** (rango + elegir por wireframe/uso) | `pipeline-personaje.md` |
-| **Normal/roughness/metallic desde color map** (horas de baking → minutos de agente; requiere buen UV) | `pipeline-personaje.md` |
-| **Emissive/glow via mask en motor** (pedir al agente "mask this area and make it glow") | `pipeline-personaje.md` |
-| **Rigging híbrido**: Mixamo (cuerpo) + GPT (partes custom: alas) → single armature | `pipeline-personaje.md` |
-| **Ajustes finos en Blender nativo (sculpt grab) > agente** (5 seg vs horas) | `pipeline-personaje.md` |
-| **Animación: referencias video → GPT → corrección por plugin "set pose" (feedback visual)"** | `pipeline-personaje.md` |
-| **VFX concept = HTML viz + timing** (validar idea antes de código) | `pipeline-personaje.md` + `produccion-vfx.md` |
-| **Agentes especializados por etapa** (Overlord Animation → Overlord Unity) | `pipeline-personaje.md` |
+| **Separación de partes antes de generar** (cabeza, cuerpo, piernas, armadura, cabello, alas) → control posterior de animación, LOD, materiales | `pipeline-assets.md` (perfil `personaje-3d-hero` / `personaje-3d-secondary` / `personaje-3d-stylized`) |
+| **Smart UV es prerequisito** (UV legible = agente entiende islas → mapas desde color map funcionan) | `pipeline-assets.md` (perfil `personaje-3d-hero` / `personaje-3d-secondary` / `personaje-3d-stylized`) + refuerza `produccion-assets.md` |
+| **Generar 4 variantes de poly count por parte y elegir** (rango + elegir por wireframe/uso) | `pipeline-assets.md` (perfil `personaje-3d-hero` / `personaje-3d-secondary` / `personaje-3d-stylized`) |
+| **Normal/roughness/metallic desde color map** (horas de baking → minutos de agente; requiere buen UV) | `pipeline-assets.md` (perfil `personaje-3d-hero` / `personaje-3d-secondary` / `personaje-3d-stylized`) |
+| **Emissive/glow via mask en motor** (pedir al agente "mask this area and make it glow") | `pipeline-assets.md` (perfil `personaje-3d-hero` / `personaje-3d-secondary` / `personaje-3d-stylized`) |
+| **Rigging híbrido**: Mixamo (cuerpo) + GPT (partes custom: alas) → single armature | `pipeline-assets.md` (perfil `personaje-3d-hero` / `personaje-3d-secondary` / `personaje-3d-stylized`) |
+| **Ajustes finos en Blender nativo (sculpt grab) > agente** (5 seg vs horas) | `pipeline-assets.md` (perfil `personaje-3d-hero` / `personaje-3d-secondary` / `personaje-3d-stylized`) |
+| **Animación: referencias video → GPT → corrección por plugin "set pose" (feedback visual)"** | `pipeline-assets.md` (perfil `personaje-3d-hero` / `personaje-3d-secondary` / `personaje-3d-stylized`) |
+| **VFX concept = HTML viz + timing** (validar idea antes de código) | `pipeline-assets.md` (perfil `personaje-3d-hero` / `personaje-3d-secondary` / `personaje-3d-stylized`) + `produccion-vfx.md` |
+| **Agentes especializados por etapa** (Overlord Animation → Overlord Unity) | `pipeline-assets.md` (perfil `personaje-3d-hero` / `personaje-3d-secondary` / `personaje-3d-stylized`) |
 
 ### Hacks / atajos declarados (tradeoffs de velocidad, no best practices)
 
@@ -243,15 +243,15 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 
 | Práctica | Va a |
 | :--- | :--- |
-| **High-poly sculpt → retopo → bake (color+normal+AO) para héroes/jefe**; tileables para entorno | `pipeline-soulslike-72h.md` |
-| **Texturas tileables (Patina) + displacement para superficies grandes**; no geometría | `pipeline-soulslike-72h.md` |
-| **Modular level design con primitivas + modificadores (array/curve)**; no IA placement | `pipeline-soulslike-72h.md` + `montaje-de-niveles.md` |
-| **Referencia de escala exportada del motor** antes de modelar | `pipeline-soulslike-72h.md` |
-| **Plantilla UE (Lyra/Souls) + MCP nativo + Vibe UE + agente navegador (Claude Code + Opus 5)**; agente NO construye, navega y sugiere | `pipeline-soulslike-72h.md` |
-| **Cámara / cinemáticas via agente (Opus 5)** — caso de uso sorpresa | `pipeline-soulslike-72h.md` |
-| **Ropa/física UE 5.8** (retargeting, cloth assets, colliders) | `pipeline-soulslike-72h.md` |
-| **Realidad económica**: Opus 5 API = fortuna; 72h = límite duro | `pipeline-soulslike-72h.md` |
-| **Honestidad de alcance**: 72h ejecución ≠ 72h totales (ideación 2-3 días extra) | `pipeline-soulslike-72h.md` |
+| **High-poly sculpt → retopo → bake (color+normal+AO) para héroes/jefe**; tileables para entorno | `pipeline-assets.md` (perfil `entorno-unique` + `pipeline-nivel.md` perfil `modular-manual`) |
+| **Texturas tileables (Patina) + displacement para superficies grandes**; no geometría | `pipeline-assets.md` (perfil `entorno-unique` + `pipeline-nivel.md` perfil `modular-manual`) |
+| **Modular level design con primitivas + modificadores (array/curve)**; no IA placement | `pipeline-assets.md` (perfil `entorno-unique` + `pipeline-nivel.md` perfil `modular-manual`) + `montaje-de-niveles.md` |
+| **Referencia de escala exportada del motor** antes de modelar | `pipeline-assets.md` (perfil `entorno-unique` + `pipeline-nivel.md` perfil `modular-manual`) |
+| **Plantilla UE (Lyra/Souls) + MCP nativo + Vibe UE + agente navegador (Claude Code + Opus 5)**; agente NO construye, navega y sugiere | `pipeline-assets.md` (perfil `entorno-unique` + `pipeline-nivel.md` perfil `modular-manual`) |
+| **Cámara / cinemáticas via agente (Opus 5)** — caso de uso sorpresa | `pipeline-assets.md` (perfil `entorno-unique` + `pipeline-nivel.md` perfil `modular-manual`) |
+| **Ropa/física UE 5.8** (retargeting, cloth assets, colliders) | `pipeline-assets.md` (perfil `entorno-unique` + `pipeline-nivel.md` perfil `modular-manual`) |
+| **Realidad económica**: Opus 5 API = fortuna; 72h = límite duro | `pipeline-assets.md` (perfil `entorno-unique` + `pipeline-nivel.md` perfil `modular-manual`) |
+| **Honestidad de alcance**: 72h ejecución ≠ 72h totales (ideación 2-3 días extra) | `pipeline-assets.md` (perfil `entorno-unique` + `pipeline-nivel.md` perfil `modular-manual`) |
 
 ### Lo que NO tomamos
 
@@ -303,16 +303,16 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 
 | Práctica | Va a |
 | :--- | :--- |
-| **Plantilla base + iterar > empezar de cero** (UE template $50 con basics) | `prototipo-fin-de-semana.md` |
-| **Retarget de animaciones de plantilla > animar desde cero** (15 min/personaje) | `prototipo-fin-de-semana.md` |
-| **AccuRig (gratis) + retarget UE** para rigging | `prototipo-fin-de-semana.md` |
-| **Poly count por propósito** (2-5k props, 10-12k grandes) | `prototipo-fin-de-semana.md` |
-| **Smart mesh + multi-view (back/side obligatorio)** | `prototipo-fin-de-semana.md` |
-| **Patina AI tileables (pay-per-use, 8¢/gen)** para superficies grandes | `prototipo-fin-de-semana.md` |
-| **Foliage/agua dinámicos: comprar, no generar IA** ("mejor comprar hoy") | `prototipo-fin-de-semana.md` |
-| **Wireframe perfecto no necesario para estáticos** | `prototipo-fin-de-semana.md` |
-| **Decimate en Blender para low-poly rápido** | `prototipo-fin-de-semana.md` |
-| **Prototipo jugable > perfección** ("punto de partida para iterar") | `prototipo-fin-de-semana.md` |
+| **Plantilla base + iterar > empezar de cero** (UE template $50 con basics) | `pipeline-assets.md` (perfil `prototipo-rapido`) |
+| **Retarget de animaciones de plantilla > animar desde cero** (15 min/personaje) | `pipeline-assets.md` (perfil `prototipo-rapido`) |
+| **AccuRig (gratis) + retarget UE** para rigging | `pipeline-assets.md` (perfil `prototipo-rapido`) |
+| **Poly count por propósito** (2-5k props, 10-12k grandes) | `pipeline-assets.md` (perfil `prototipo-rapido`) |
+| **Smart mesh + multi-view (back/side obligatorio)** | `pipeline-assets.md` (perfil `prototipo-rapido`) |
+| **Patina AI tileables (pay-per-use, 8¢/gen)** para superficies grandes | `pipeline-assets.md` (perfil `prototipo-rapido`) |
+| **Foliage/agua dinámicos: comprar, no generar IA** ("mejor comprar hoy") | `pipeline-assets.md` (perfil `prototipo-rapido`) |
+| **Wireframe perfecto no necesario para estáticos** | `pipeline-assets.md` (perfil `prototipo-rapido`) |
+| **Decimate en Blender para low-poly rápido** | `pipeline-assets.md` (perfil `prototipo-rapido`) |
+| **Prototipo jugable > perfección** ("punto de partida para iterar") | `pipeline-assets.md` (perfil `prototipo-rapido`) |
 
 ### Lo que NO tomamos
 

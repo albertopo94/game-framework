@@ -48,8 +48,8 @@ Para audio (y análogo para otras familias de assets), el patrón que se propone
 - `dimensiones-juego.md` #3: este documento es el "cómo" de la dimensión de assets.
 - `montaje-de-niveles.md`: consume las piezas que este documento produce; comparte "pregunta de camino" y presupuesto de rendimiento.
 - `produccion-vfx.md`: asset preparado (UV, separación, naming, optimizado) es prerequisito para VFX que el agente pueda implementar.
-- `pipeline-personaje.md`: este documento detalla el pipeline de asset; el pipeline-personaje orquesta este + rig + anim + VFX.
-- `pipeline-soulslike-72h.md`: enfoque high-poly sculpt → retopo → bake completo para héroes/jefes (vs. atajos de color-map en tanda-08).
-- `pipeline-soulslike-72h.md`: tileables para entorno (Patina) + modular level design con primitivas + modificadores.
-- `prototipo-fin-de-semana.md`: poly count por props, decimate para low-poly, materiales comprados para foliage/agua.
+- `pipeline-assets.md` (perfil `personaje-3d-hero` / `personaje-3d-secondary` / `personaje-3d-stylized`): este documento detalla el pipeline de asset; el perfil `personaje-3d-*` de este documento orquesta el asset + rig + anim + VFX.
+- `pipeline-assets.md` (perfil `entorno-unique` + `pipeline-nivel.md` perfil `modular-manual`): enfoque high-poly sculpt → retopo → bake completo para héroes/jefes (vs. atajos de color-map en tanda-08).
+- `pipeline-assets.md` (perfil `entorno-unique` + `pipeline-nivel.md` perfil `modular-manual`): tileables para entorno (Patina) + modular level design con primitivas + modificadores.
+- `pipeline-assets.md` (perfil `prototipo-rapido`): poly count por props, decimate para low-poly, materiales comprados para foliage/agua.
 - `produccion-vfx.md`: asset preparado (UV, separación, naming, optimizado) es prerequisito para VFX que el agente pueda implementar.

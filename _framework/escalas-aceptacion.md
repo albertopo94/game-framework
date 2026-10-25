@@ -79,6 +79,6 @@ Para cada verificación: **revisión de origen (commit), configuración exacta, 
 ## Dónde se refleja
 
 - `00-estado-produccion.md`: la tabla de hitos usa los estados 1-5 por ítem.
-- `plantillas/maquina-subsistema.md`: el estado de la mecánica (diseñada/prototipada/...) es **ortogonal** a la escalera. Una mecánica puede estar `Integrada` (estado 3) y `PENDIENTE_APROBACION` (todavía no llegó a 5).
+- `plantillas/sub-sistema-juego.md`: el estado de la mecánica (diseñada/prototipada/...) es **ortogonal** a la escalera. Una mecánica puede estar `Integrada` (estado 3) y `PENDIENTE_APROBACION` (todavía no llegó a 5).
 - `ciclo-produccion.md`: ningún gate cierra en estado 4; el gate exige estado 5 del creador.
 - `AGENTS.md`: los checkpoints humanos son exactamente la transición 4 → 5.
