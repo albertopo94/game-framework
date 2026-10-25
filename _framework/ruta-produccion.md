@@ -18,8 +18,6 @@
 | Pipeline completo de personaje (partes → UV → textura → rig → anim → VFX → motor) | `pipeline-assets.md` (perfil `personaje-3d-hero` / `personaje-3d-secondary` / `personaje-3d-stylized`) |
 | Proyecto completo bajo restricción de tiempo con plantilla + MCP + agente navegador | `pipeline-assets.md` (perfil `entorno-unique` + `pipeline-nivel.md` perfil `modular-manual`) |
 | Desarrollo browser-game solo con prompting (Three.js, sin motor) | `prompting-puro-browser.md` |
-| MMO Procedural Browser (Three.js, infinite world, multiplayer) | `pipeline-mmo-procedural.md` |
-| MMO Procedural Browser (Three.js, infinite world, multiplayer) | `pipeline-mmo-procedural.md` |
 | Prototipo jugable en fin de semana (plantilla + retarget + assets comprados) | `pipeline-assets.md` (perfil `prototipo-rapido`) |
 | Saber en qué fase estoy y qué sigue | `00-estado-produccion.md` del juego + `ciclo-produccion.md` |
 | Documentar una mecánica concreta | `plantillas/sub-sistema-juego.md` |

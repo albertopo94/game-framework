@@ -177,7 +177,6 @@ Ver `produccion-vfx.md` para pipeline completo. Resumen:
 | `ciclo-produccion.md` | Fases Prototipo / Producción / QA |
 | `escalas-aceptacion.md` | Estados de aceptación por asset |
 | `conocimiento/` | Lecciones aprendidas por perfil |
-| `pipeline-mmo-procedural.md` | MMO procedural browser: Perlin noise + chunk loading + InstancedMesh + shaders + Colyseus multiplayer; perfiles `entorno-procedural-infinito`, `vegetacion-shader`, `personaje-3d-stylized` |
 
 ---
 

@@ -332,21 +332,21 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 
 | Práctica | Va a |
 | :--- | :--- |
-| **Debuggers/parameter UIs para la IA** (UI > prompts) | `pipeline-mmo-procedural.md` + `reglas-sistema.md` |
-| **Perlin noise = navaja suiza** (terreno, grass wind, trees, smoke, water, clouds) | `pipeline-mmo-procedural.md` |
-| **Chunk loading + distance culling = mundo infinito viable en browser** | `pipeline-mmo-procedural.md` + `pipeline-nivel.md` (perfil `procedural-asistido`) |
-| **Alpha maps > geometría para foliage** (árboles = plano + alpha map) | `pipeline-mmo-procedural.md` + `pipeline-assets.md` (perfil `vegetacion-shader`) |
-| **Verticalidad = interés visual + gameplay (escalar con IK pie)** | `pipeline-mmo-procedural.md` |
-| **Day/night + post-process + cartoon shader = "mitad del look"** | `pipeline-mmo-procedural.md` + `produccion-vfx.md` |
-| **IK pie sí, mano no** (tradeoff velocidad/calidad) | `pipeline-mmo-procedural.md` |
-| **Multiplayer = complejidad exponencial** (Colyseus ayuda pero no magia) | `pipeline-mmo-procedural.md` |
-| **IA degrada con codebase grande (contexto window)** | `reglas-sistema.md` + `pipeline-mmo-procedural.md` |
-| **Debuggers/parameter UIs propios > prompts de texto** | `reglas-sistema.md` + `pipeline-mmo-procedural.md` |
-| **Evaluación: fun vs polish = sesgo si métrica única** | `pipeline-mmo-procedural.md` |
-| **Comunidad vs jurados = resultados divergentes** | `pipeline-mmo-procedural.md` |
-| **Cortar features sin piedad para cumplir deadline** | `pipeline-mmo-procedural.md` + `reglas-sistema.md` |
+| **Debuggers/parameter UIs para la IA** (UI > prompts) | `reglas-sistema.md` |
+| **Perlin noise = navaja suiza** (terreno, grass wind, trees, smoke, water, clouds) | `pipeline-assets.md` (perfil `entorno-procedural-infinito`), `pipeline-nivel.md` (perfil `procedural-asistido`) |
+| **Chunk loading + distance culling = mundo infinito viable en browser** | `pipeline-nivel.md` (perfil `procedural-asistido`) |
+| **Alpha maps > geometría para foliage** (árboles = plano + alpha map) | `pipeline-assets.md` (perfil `vegetacion-shader`) |
+| **Verticalidad = interés visual + gameplay (escalar con IK pie)** | `pipeline-assets.md` (perfil `personaje-3d-*`), `produccion-vfx.md` |
+| **Day/night + post-process + cartoon shader = "mitad del look"** | `produccion-vfx.md` |
+| **IK pie sí, mano no** (tradeoff velocidad/calidad) | `pipeline-assets.md` (perfil `personaje-3d-*`), `produccion-vfx.md` |
+| **Multiplayer = complejidad exponencial** (Colyseus ayuda pero no magia) | `herramientas-y-apis.md` (matriz capacidad), `pipeline-nivel.md` (perfil `procedural-asistido`) |
 | **IA degrada con codebase grande (contexto window)** | `reglas-sistema.md` |
-| **UI/debugger propio > prompts de texto** | `reglas-sistema.md` + `pipeline-mmo-procedural.md` |
+| **Debuggers/parameter UIs propios > prompts de texto** | `reglas-sistema.md` |
+| **Evaluación: fun vs polish = sesgo si métrica única** | `reglas-sistema.md` |
+| **Comunidad vs jurados = resultados divergentes** | `reglas-sistema.md` (divergencia confirmada en tanda-12) |
+| **Cortar features sin piedad para cumplir deadline** | `reglas-sistema.md` |
+| **IA degrada con codebase grande (contexto window)** | `reglas-sistema.md` |
+| **UI/debugger propio > prompts de texto** | `reglas-sistema.md` |
 
 ### Lo que NO tomamos
 
@@ -367,20 +367,19 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 
 | Práctica | Va a |
 | :--- | :--- |
-| **Debuggers/parameter UIs para la IA** (UI > prompts) | `pipeline-mmo-procedural.md` + `reglas-sistema.md` |
-| **Perlin noise = navaja suiza** (terreno, grass wind, trees, smoke, water, clouds) | `pipeline-mmo-procedural.md` |
-| **Chunk loading + distance culling = mundo infinito viable en browser** | `pipeline-mmo-procedural.md` + `pipeline-nivel.md` (perfil `procedural-asistido`) |
-| **Alpha maps > geometría para foliage** (árboles = plano + alpha map) | `pipeline-mmo-procedural.md` + `pipeline-assets.md` (perfil `vegetacion-shader`) |
-| **Verticalidad = interés visual + gameplay (escalar con IK pie)** | `pipeline-mmo-procedural.md` |
-| **Day/night + post-process + cartoon shader = "mitad del look"** | `pipeline-mmo-procedural.md` + `produccion-vfx.md` |
-| **IK pie sí, mano no** (tradeoff velocidad/calidad) | `pipeline-mmo-procedural.md` |
-| **Multiplayer = complejidad exponencial** (Colyseus ayuda pero no magia) | `pipeline-mmo-procedural.md` |
-| **IA degrada con codebase grande (contexto window)** | `reglas-sistema.md` + `pipeline-mmo-procedural.md` |
-| **Debuggers/parameter UIs propios > prompts de texto** | `reglas-sistema.md` + `pipeline-mmo-procedural.md` |
-| **Evaluación: fun vs polish = sesgo si métrica única** | `pipeline-mmo-procedural.md` |
-| **Comunidad vs jurados = resultados divergentes** | `pipeline-mmo-procedural.md` |
+| **Debuggers/parameter UIs para la IA** (UI > prompts) | `reglas-sistema.md` |
+| **Perlin noise = navaja suiza** (terreno, grass wind, trees, smoke, water, clouds) | `pipeline-assets.md` (perfil `entorno-procedural-infinito`), `pipeline-nivel.md` (perfil `procedural-asistido`) |
+| **Chunk loading + distance culling = mundo infinito viable en browser** | `pipeline-nivel.md` (perfil `procedural-asistido`) |
+| **Alpha maps > geometría para foliage** (árboles = plano + alpha map) | `pipeline-assets.md` (perfil `vegetacion-shader`) |
+| **Verticalidad = interés visual + gameplay (escalar con IK pie)** | `pipeline-assets.md` (perfil `personaje-3d-*`), `produccion-vfx.md` |
+| **Day/night + post-process + cartoon shader = "mitad del look"** | `produccion-vfx.md` |
+| **IK pie sí, mano no** (tradeoff velocidad/calidad) | `pipeline-assets.md` (perfil `personaje-3d-*`), `produccion-vfx.md` |
+| **Multiplayer = complejidad exponencial** (Colyseus ayuda pero no magia) | `herramientas-y-apis.md` (matriz capacidad), `pipeline-nivel.md` (perfil `procedural-asistido`) |
 | **IA degrada con codebase grande (contexto window)** | `reglas-sistema.md` |
-| **UI/debugger propio > prompts de texto** | `reglas-sistema.md` + `pipeline-mmo-procedural.md` |
+| **Debuggers/parameter UIs propios > prompts de texto** | `reglas-sistema.md` |
+| **Evaluación: fun vs polish = sesgo si métrica única** | `reglas-sistema.md` |
+
+| **IA degrada con codebase grande (contexto window)** | `reglas-sistema.md` |
 
 ### Lo que NO tomamos
 
