@@ -40,6 +40,7 @@ Registrada como hipótesis de terceros (`_framework/referencias/notas-creador/ta
 | VFX concepting (2D) | El agente genera conceptos 2D + timing + capas antes de implementar; validado por creador | pendiente |
 | Pipeline completo de personaje (partes → UV → textura → rig → anim → VFX → motor) | Agente genera partes + UV + mapas; humano ensambla en Blender (12 min) + rigging híbrido Mixamo+GPT; animaciones y VFX por agente especializado; integra en motor | pendiente (2 fuentes: tanda-05 + tanda-08) |
 | Pipeline Souls-like 72h (high-poly sculpt → bake → tileables → modular level → plantilla UE + MCP + agente navegador) | High-poly sculpt → retopo → bake (color+normal+AO) para héroes/jefe; tileables para entorno; modular level con primitivas+modificadores; plantilla UE + MCP + agente navegador (no constructor) | pendiente (tanda-09) |
+| Pure LLM prompting para juegos browser (Three.js/HTML) | Prompt corto + target visual + loop hasta score + play + score/revise + skill library + ship; sin motor, sin MCP, sin tools externas | pendiente (tanda-10) |
 | Arte y música | Rinde mal o inconsistente **hecho por el LLM**; el camino es generar assets con generadores especializados + remate humano. Ver `produccion-assets.md` | pendiente |
 | VFX/partículas en motores code-first | Vía código funciona bien en juegos chicos; con puente al sistema de partículas del motor, da base sólida que el humano retoca | pendiente |
 | Audio (SFX/música) | El agente **orquesta APIs de generación especializada** y elige el modelo; no genera audio "con el LLM" | pendiente |

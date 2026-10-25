@@ -23,6 +23,16 @@
 - **Un trabajo incompleto no se declara terminado.** Si falta una comprobación, se dice qué falta.
 - **El estado 5 solo lo pone el humano.** Ningún agente puede auto-aceptar. Si el agente cree que está listo, pasa a `PENDIENTE_APROBACION` y pide.
 
+## Conexión con prompting puro (browser games)
+
+El proceso de 7 pasos de `prompting-puro-browser.md` usa **score 1-10 + meta numérica** como criterio de avance entre estados:
+
+- Estado 3 (Implementado): el agente entrega build que corre.
+- Estado 4 (Verificado): el creador juega, da score 1-10, lista 2-4 problemas, fija meta (ej. 3/10 → 9/10) y tiempo (ej. 2h).
+- Estado 5 (Aceptado): el build revisado alcanza la meta y el creador lo aprueba.
+
+Los 6 tipos de pase de revisión (polish, specific issue, lock&focus, praise&gap, quick fix, prefilming) son **operacionalizaciones del tránsito 3→4→5**.
+
 ## Qué prueba cada tipo de evidencia
 
 Cada evidencia prueba **una cosa específica**. No se extrapola.

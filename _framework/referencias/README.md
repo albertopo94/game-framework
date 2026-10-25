@@ -259,3 +259,34 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 - Cifras de tiempo como presupuesto propio — datos de flujo experto con time-lapse.
 - "Join my course" — marketing.
 - Wireframe perfecto como requisito — descartado explícitamente para estáticos.
+
+---
+
+## Tanda 10 - Prompting strategy puro para juegos browser (video de terceros, canal distinto a 5-9)
+
+- **Archivo verbatim:** `notas-creador/tanda-10-prompting-strategy.md`
+- **Calidad de la evidencia: media.** Arcade público con decenas de builds jugables gratis (Three.js/HTML) — evidencia de que el método produce resultados. Contra: **vende sus skills por $9** ("creator bundle"); incentivo de mostrar método fluido. Transcripción limpia.
+- **Diferencia radical con tandas 5-9:** **no hay motor, no hay Blender, no hay MCP, no hay assets previos** — el LLM *es* el motor de desarrollo (Three.js/HTML en navegador). Enfoque "prompt-only".
+
+### Lo que tomamos (estructura)
+
+| Práctica | Va a |
+| :--- | :--- |
+| **7 pasos canónicos** (prompt + target + loop + play + score/revise + skills + ship) | `prompting-puro-browser.md` (proceso canónico) |
+| **6 tipos de prompt inicial** (oneliner, oneshot, clone, vision+lista, overnight, upgrade pass) | `prompting-puro-browser.md` §1 |
+| **4 tipos de referencia para target** (screen recording > imagen > mockup > investigación) | `prompting-puro-browser.md` §2 |
+| **Loop hasta meta numérica** ("run until 9/10" / "run X hours" / overnight) | `prompting-puro-browser.md` §3 |
+| **5 principios de revisión** (decir lo bueno, score 1-10, meta numérica, 2-4 problemas, tiempo acotado) | `prompting-puro-browser.md` §5 |
+| **6 tipos de pase de revisión** (polish, specific issue, lock&focus, praise&gap, quick fix, prefilming) | `prompting-puro-browser.md` §5 |
+| **Score 1-10 + meta numérica + 2-4 problemas + tiempo acotado** | `prompting-puro-browser.md` §5 / `escalas-aceptacion.md` |
+| **6 tipos de pase de revisión** (polish, specific issue, lock&focus, praise&gap, quick fix, prefilming) | `prompting-puro-browser.md` |
+| **Convertir victorias en skills reutilizables + apilar skills** | `prompting-puro-browser.md` §6 + `higiene-de-trabajo.md` §6 |
+| **Ship: showcase mode + playability pass + trailer 30s + arcade page** | `prompting-puro-browser.md` §7 |
+| **Palabras que pesan / palabras que sobran** (vocabulario de prompting efectivo) | `prompting-puro-browser.md` |
+
+### Lo que NO tomamos
+
+- **Precio del bundle ($9)** — marketing.
+- **Modelos específicos** (Opus 5.5, GPT-6, Astra, Kimi K3) — agnósticos; el patrón funciona con el "modelo frontera actual".
+- **Cifras de tiempo de builds específicos** — datos de su flujo, no presupuesto propio.
+- **Arcade propia** — infraestructura propia, no método.

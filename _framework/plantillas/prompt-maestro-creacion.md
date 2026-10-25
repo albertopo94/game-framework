@@ -63,6 +63,14 @@ Listar los subsistemas (por dimensión) que se van a construir con dueño propio
 - <subsistema> — dueño:
 ```
 
+## Relación con prompting puro (browser games)
+
+El proceso de 7 pasos de `prompting-puro-browser.md` (prompt + target + loop + play + score + skills + ship) **es una implementación concreta del modo Creación** para juegos browser/Three.js. Donde el prompt maestro define el contrato estático, el proceso de 7 pasos lo ejecuta dinámicamente con loop, scoring y skill library.
+
+## Advertencia
+
+El proceso de 7 pasos de `prompting-puro-browser.md` (prompt + target + loop + play + score + skills + ship) **es una implementación concreta del modo Creación** para juegos browser/Three.js. Donde el prompt maestro define el contrato estático, el proceso de 7 pasos lo ejecuta dinámicamente con loop, scoring y skill library.
+
 ## Advertencia
 
 Un prompt maestro **no sustituye los checkpoints**. Define el contrato inicial; el desarrollo que viene después sigue las puertas de calidad de `AGENTS.md` (concepto aprobado, diseño aprobado, etc.). "Un único prompt que lo crea todo" es un modo de arranque, no un modo de producción.

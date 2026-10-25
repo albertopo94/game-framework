@@ -43,7 +43,17 @@ Nada que traiga descargas, dependencias o comportamientos ocultos entra al frame
 - Un camino asistido (generación, proyección, integración externa) entra **marcado, opt-in y aislado** del núcleo: dependencias propias, activación propia, desactivable sin tocar el resto.
 - Se ejecuta **solo cuando la condición real se cumple**; si no hay referencia que medir, se saltea por completo.
 
-## 6. Edición por lotes: commitear antes, verificar después
+## 6. Convertir victorias en skills (biblioteca compuesta)
+
+Cuando una parte de un build destaca y se cree reusable, **se convierte en skill** y se guarda en la biblioteca del proyecto (o del creador). Reglas:
+
+- **No volver a resolver lo ya resuelto.** Skill = calidad garantizada + tiempo cero.
+- **Skills se apilan**: Voxel world + Character kit + Dark crawler = builds exponencialmente más rápidos.
+- **Skill = lección comprobada** que se promociona de `conocimiento/` (estado `comprobado`) a reutilizable.
+
+*(Origen: `prompting-puro-browser.md` §6; ver `conocimiento/`.)*
+
+## 7. Edición por lotes: commitear antes, verificar después
 
 Un script que reescribe archivos puede dejarlos **vacíos** si falla a mitad (`open(p,'w')` trunca al abrir, no al escribir). Regla barata:
 
@@ -53,12 +63,12 @@ Un script que reescribe archivos puede dejarlos **vacíos** si falla a mitad (`o
 
 *(Origen: incidente propio documentado en `conocimiento/truncado-por-script-de-edicion.md`.)*
 
-## 7. Límites declarados, no prometidos
+## 8. Límites declarados, no prometidos
 
 Todo documento que describe una capacidad del framework o del juego declara **dónde es fuerte, dónde es flojo y qué está explícitamente afuera**. El patrón de referencia divide en tres: *Strong / Stylized-only / Out of scope today*, con el análisis de por qué.
 
 Esto vale igual para nosotros: declarar límites es requisito de cualquier descripción de capacidad, incluida la de este framework (ver `_framework/README.md`). Una capacidad sin límites declarados es marketing, no documentación.
 
-## 8. Búsqueda antes de abrir
+## 9. Búsqueda antes de abrir
 
 Antes de registrar un bug o una propuesta: **buscar si ya existe**. Un duplicado cuesta dos veces: una para cerrarlo y otra para la conversación que genera.

@@ -17,6 +17,7 @@
 | Diseñar e implementar VFX (concepting → motor) | `produccion-vfx.md` |
 | Pipeline completo de personaje (partes → UV → textura → rig → anim → VFX → motor) | `pipeline-personaje.md` |
 | Proyecto completo bajo restricción de tiempo con plantilla + MCP + agente navegador | `pipeline-soulslike-72h.md` |
+| Desarrollo browser-game solo con prompting (Three.js, sin motor) | `prompting-puro-browser.md` |
 | Saber en qué fase estoy y qué sigue | `00-estado-produccion.md` del juego + `ciclo-produccion.md` |
 | Documentar una mecánica concreta | `plantillas/maquina-subsistema.md` |
 | Verificar que algo se ve o se comporta bien | `escalas-aceptacion.md` (protocolo de comparación justa) |

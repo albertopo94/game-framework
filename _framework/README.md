@@ -17,9 +17,10 @@ A diferencia del YouTube Creator Hub (donde roles y plantillas ya estaban estudi
 | `produccion-vfx.md` | Concepting 2D, VFX library, pipeline asset-optimizado, rigging híbrido, implementación en motor | 🟡 Hipótesis de terceros a verificar |
 | `pipeline-personaje.md` | Pipeline end-to-end de personaje: partes + smart UV → mapas desde color → rig híbrido → anim + VFX → motor | 🟡 Hipótesis de terceros a verificar |
 | `pipeline-soulslike-72h.md` | Nivel Souls-like jugable en 72h: high-poly bake → tileables → modular level → plantilla UE + MCP + agente navegador | 🟡 Hipótesis de terceros a verificar |
+| `prompting-puro-browser.md` | 7 pasos: prompt + target + loop + play + score/revise + skills + ship; solo LLM + Three.js | 🟡 Hipótesis de terceros a verificar |
 | `ciclo-produccion.md` | Ciclo macro de producción de un juego | 🚧 Borrador |
 | `roles/` | Roles que intervienen según tamaño/tipo de juego | 🚧 `roles/01-concepto-y-mercado.md`, `roles/02-diseno-juego.md`, `roles/05-release-distribucion.md` (01-02: tandas 1-3 + Mass Flux; 05: patrón de sus releases) |
-| `plantillas/` | Plantillas de pipeline por juego | 🚧 `plantillas/prompt-maestro-creacion.md` (arranque) + `plantillas/maquina-subsistema.md` (una por mecánica) + `plantillas/handoff-sesion.md` (traspaso) + `plantillas/propuesta-cambio.md` (scoping) + `plantillas/ficha-recurso-manual.md` (traspaso sin acceso) |
+| `plantillas/` | Plantillas de pipeline por juego | 🚧 `plantillas/prompt-maestro-creacion.md` (arranque) + `plantillas/maquina-subsistema.md` (una por mecánica) + `plantillas/handoff-sesion.md` (traspaso) + `plantillas/propuesta-cambio.md` (scoping) + `plantillas/ficha-recurso-manual.md` (traspaso sin acceso) 
 | `dimensiones-juego.md` | Las 7 dimensiones de un juego (concepto, arte, assets, mapas, bucle, combate, entrega) — checklist transversal de gates | ✅ `tanda-03` |
 | `referencias/` | Material externo conservado + ficha de análisis | ✅ `notas-creador/` (tandas verbatim) + `README.md` (análisis de Mass Flux GDD, mr-mak-workspace y las 5 tandas del creador) |
 | `herramientas-y-apis.md` | Directorio de herramientas por capability | ✅ Inicial (Blender MCP oficial como principal de assets) |
