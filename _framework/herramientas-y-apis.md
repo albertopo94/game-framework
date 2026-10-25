@@ -63,17 +63,13 @@ Registrada como hipótesis de terceros (`_framework/referencias/notas-creador/ta
 
 Antes de proponer un flujo concreto, el agente debe comprobar si la herramienta elegida lo ofrece. No se asumen capacidades por nombre.
 
-### Protocolo de handoff
+### Protocolo de traspaso cuando el agente no tiene acceso
 
-Cuando Blender MCP requiere interacción visual o ejecución manual:
+**No es exclusivo de Blender: aplica a cualquier herramienta que el agente no pueda ejecutar** (UI manual, login, editor de escritorio, web, compra). Regla y ficha completa en `AGENTS.md` regla 7 y `plantillas/ficha-recurso-manual.md`. Resumen:
 
-1. El agente entregar la **Ficha Técnica Inequívoca por Recurso** (heredada del YouTube Creator Hub):
-   - Tipo de recurso (modelo, textura, animación, iluminación, exportación).
-   - Parámetros necesarios (resolución, formato, spline, etc.).
-   - Prompt o especificación listos para copiar.
-   - Acción sugerida en la interfaz.
-2. El agente **no da instrucciones abstractas** ni arroja prompts sin clasificar.
-3. El resultado se registra en el registro de recursos del juego (`04-registro-recursos.md`, plantilla pendiente de pipeline) con licencia, origen y trazabilidad.
+1. El agente **no delega la tarea: entrega el paquete listo para un clic** — una ficha por recurso con tipo, herramienta, parámetros ya resueltos, contenido listo para pegar, pasos de interfaz, ruta de guardado y costo.
+2. Prohibido entregar instrucciones abstractas o listas de prompts sin clasificar.
+3. Al recibir el resultado, el agente lo verifica contra la ficha y lo registra en el registro de recursos del juego (`04-registro-recursos.md`, plantilla pendiente de pipeline) con licencia, origen y trazabilidad.
 
 ## Agregado por capability (pendiente del conocimiento del creador)
 

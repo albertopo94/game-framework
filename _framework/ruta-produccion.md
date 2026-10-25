@@ -23,6 +23,7 @@
 | Escribir las notas de una entrega | `roles/05-release-distribucion.md` §2 |
 | Registrar una lección aprendida | `conocimiento/README.md` |
 | Proponer un cambio al framework o a una decisión de diseño aprobada | `plantillas/propuesta-cambio.md` |
+| Entregar trabajo que requiere una herramienta que el agente no puede usar | `plantillas/ficha-recurso-manual.md` |
 | Registrar un bug, una auditoría o un hallazgo | `higiene-de-trabajo.md` §1 y §2 |
 | Escribir un commit o integrar trabajo de otro agente | `higiene-de-trabajo.md` §3 |
 | Planificar trabajo amplio en tajadas chicas | `roles/` correspondiente + `00-estado-produccion.md` hitos |

@@ -42,6 +42,9 @@ La acción concreta, sin que la próxima sesión tenga que deducirla.
 ## Evidencia
 Commits, capturas ON/OFF (misma cámara y acción), playtests, gates superados.
 
+## Fichas de recurso manual pendientes de entregar o recibir
+(acciones que requieren herramientas que el agente no puede usar; plantilla `ficha-recurso-manual.md`; la sesión que recibe no debe reconstruirlas del chat)
+
 ## Decisiones aceptadas (no re-litigar)
 ## Preguntas abiertas
 ## Procesos corriendo que no se pueden interrumpir

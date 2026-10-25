@@ -16,6 +16,7 @@ Protocolo para agentes de IA que trabajan en este repositorio.
 4. **Regla de N Alternativas:** Para decisiones creativas clave (nombres, conceptos, mecánicas núcleo, dirección de arte), presentar opciones fundamentadas antes de decidir.
 5. **Cambio de estructura = propuesta primero:** tocar `_framework/` (reglas, roles, plantillas, dimensiones) o revertir una decisión de diseño aprobada requiere antes una **propuesta de cambio** (`_framework/plantillas/propuesta-cambio.md`) con su bloque de “qué dejo afuera a propósito”.
 6. **Nunca se pide el proyecto entero en un solo paso:** el agente ejecuta **una tarea chica, la verifica, y sigue**. Un entregable que no cabe en una tarea verificable está mal cortado (ver Protocolo de Sesión). El prompt maestro define el contrato; no es una orden de construir todo.
+7. **Traspaso de herramientas sin acceso (paquete listo, nunca instrucciones abstractas):** cuando una acción requiere una herramienta que el agente no puede ejecutar (UI manual, login, software de escritorio, interfaz web), el agente **no delega la tarea: entrega el paquete terminado para un clic**. Ficha obligatoria por recurso en `_framework/plantillas/ficha-recurso-manual.md`. Prohibido arrojar listas de prompts sin clasificar o instrucciones del tipo "hacé unos prompts bonitos".
 
 ## Agnosticidad
 
@@ -51,8 +52,8 @@ Protocolo para agentes de IA que trabajan en este repositorio.
 ### Obligatoriedades del agente
 
 1. **Al terminar o pausar una feature** (incluido a mitad de camino), el agente **debe avisar** al creador: *"feature X completada/pausada; recomendá una nueva sesión para Y (o para lo que quieras)"*. Es una recomendación, no una obligación: el creador puede hacer un follow-up chico en la misma sesión si lo desea.
-2. **Antes de avisar**, el agente deja el traspaso completo en dos lugares (ver abajo) y **nunca** depende del chat para que la próxima sesión sepa qué hacer.
-3. **Al iniciar una sesión en un juego**, el agente lee en este orden: `00-estado-produccion.md` → última línea de `bitacora-sesiones.md` → verifica físicamente los entregables (completar casillas no equivale a haber demostrado el resultado).
+2. **Antes de avisar**, el agente deja el traspaso completo en los tres lugares de abajo y **nunca** depende del chat para que la próxima sesión sepa qué hacer.
+3. **Al iniciar una sesión en un juego**, el agente lee en este orden: handoff abierto (si existe) → `00-estado-produccion.md` → última línea de `bitacora-sesiones.md` → verifica físicamente los entregables (completar casillas no equivale a haber demostrado el resultado).
 
 ### Traspaso entre sesiones (dos archivos + handoff)
 
