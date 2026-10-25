@@ -49,4 +49,6 @@ Para audio (y análogo para otras familias de assets), el patrón que se propone
 - `montaje-de-niveles.md`: consume las piezas que este documento produce; comparte "pregunta de camino" y presupuesto de rendimiento.
 - `produccion-vfx.md`: asset preparado (UV, separación, naming, optimizado) es prerequisito para VFX que el agente pueda implementar.
 - `pipeline-personaje.md`: este documento detalla el pipeline de asset; el pipeline-personaje orquesta este + rig + anim + VFX.
+- `pipeline-soulslike-72h.md`: enfoque high-poly sculpt → retopo → bake completo para héroes/jefes (vs. atajos de color-map en tanda-08).
+- `pipeline-soulslike-72h.md`: tileables para entorno (Patina) + modular level design con primitivas + modificadores.
 - `produccion-vfx.md`: asset preparado (UV, separación, naming, optimizado) es prerequisito para VFX que el agente pueda implementar.

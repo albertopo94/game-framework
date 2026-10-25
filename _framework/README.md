@@ -16,6 +16,7 @@ A diferencia del YouTube Creator Hub (donde roles y plantillas ya estaban estudi
 | `montaje-de-niveles.md` | Kit + ensamblado de niveles: ancla de escala, grandes-primero, slop como fracaso, pasada de presentación | 🟡 Hipótesis de terceros a verificar |
 | `produccion-vfx.md` | Concepting 2D, VFX library, pipeline asset-optimizado, rigging híbrido, implementación en motor | 🟡 Hipótesis de terceros a verificar |
 | `pipeline-personaje.md` | Pipeline end-to-end de personaje: partes + smart UV → mapas desde color → rig híbrido → anim + VFX → motor | 🟡 Hipótesis de terceros a verificar |
+| `pipeline-soulslike-72h.md` | Nivel Souls-like jugable en 72h: high-poly bake → tileables → modular level → plantilla UE + MCP + agente navegador | 🟡 Hipótesis de terceros a verificar |
 | `ciclo-produccion.md` | Ciclo macro de producción de un juego | 🚧 Borrador |
 | `roles/` | Roles que intervienen según tamaño/tipo de juego | 🚧 `roles/01-concepto-y-mercado.md`, `roles/02-diseno-juego.md`, `roles/05-release-distribucion.md` (01-02: tandas 1-3 + Mass Flux; 05: patrón de sus releases) |
 | `plantillas/` | Plantillas de pipeline por juego | 🚧 `plantillas/prompt-maestro-creacion.md` (arranque) + `plantillas/maquina-subsistema.md` (una por mecánica) + `plantillas/handoff-sesion.md` (traspaso) + `plantillas/propuesta-cambio.md` (scoping) + `plantillas/ficha-recurso-manual.md` (traspaso sin acceso) |

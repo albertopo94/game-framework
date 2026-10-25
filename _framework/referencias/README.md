@@ -230,3 +230,32 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 - **Cifras de tiempo** ("12 min assembly", "2h animaciones", "4-6h baking ahorrado"): datos de un flujo experto con time-lapse; útiles como orden de magnitud, no como presupuesto propio hasta piloto.
 - **"Join my 3D AI course"**: marketing, no método.
 - **Trucos específicos** (knife tool elastic grab, boolean, UV packer addon): acompañan, no son método; la parte útil (saber el 10% que remata) ya está en `produccion-assets.md`.
+
+---
+
+## Tanda 09 - Souls-like jugable en 72 horas (video de terceros, mismo canal 5-8)
+
+- **Archivo verbatim:** `notas-creador/tanda-09-soulslike-72h.md`
+- **Calidad de la evidencia: alta.** Nivel Souls-like completo jugable en Unreal 5.8 (ubicación, jefe, personaje, iluminación, niebla, VFX, cinemáticas) construido y mostrado funcionando en 72h de ejecución. Contra: **vende curso 3D AI + workspace Mr. Mak** — incentivo de fluidez. **Ideación explícitamente excluida** (2-3 días extra). Transcripción limpia.
+- **Restricción declarada:** 72h ejecución pura; ideación = 2-3 días extra no contados.
+
+### Lo que tomamos (estructura)
+
+| Práctica | Va a |
+| :--- | :--- |
+| **High-poly sculpt → retopo → bake (color+normal+AO) para héroes/jefe**; tileables para entorno | `pipeline-soulslike-72h.md` |
+| **Texturas tileables (Patina) + displacement para superficies grandes**; no geometría | `pipeline-soulslike-72h.md` |
+| **Modular level design con primitivas + modificadores (array/curve)**; no IA placement | `pipeline-soulslike-72h.md` + `montaje-de-niveles.md` |
+| **Referencia de escala exportada del motor** antes de modelar | `pipeline-soulslike-72h.md` |
+| **Plantilla UE (Lyra/Souls) + MCP nativo + Vibe UE + agente navegador (Claude Code + Opus 5)**; agente NO construye, navega y sugiere | `pipeline-soulslike-72h.md` |
+| **Cámara / cinemáticas via agente (Opus 5)** — caso de uso sorpresa | `pipeline-soulslike-72h.md` |
+| **Ropa/física UE 5.8** (retargeting, cloth assets, colliders) | `pipeline-soulslike-72h.md` |
+| **Realidad económica**: Opus 5 API = fortuna; 72h = límite duro | `pipeline-soulslike-72h.md` |
+| **Honestidad de alcance**: 72h ejecución ≠ 72h totales (ideación 2-3 días extra) | `pipeline-soulslike-72h.md` |
+
+### Lo que NO tomamos
+
+- Nombres de productos (Tripo, Patina, Opus 5, Vibe UE, Ultra Dynamic Sky/Weather, Aqua Rig, etc.) — agenda de herramientas = criterios de `herramientas-y-apis.md`.
+- Cifras de tiempo como presupuesto propio — datos de flujo experto con time-lapse.
+- "Join my course" — marketing.
+- Wireframe perfecto como requisito — descartado explícitamente para estáticos.

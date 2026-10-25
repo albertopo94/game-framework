@@ -48,3 +48,9 @@ Si el agente hace un placement de borrador, se etiqueta como **propuesta (estado
 - `dimensiones-juego.md` #4 (mapas no procedurales): este documento es el "cómo" del armado manual asistido.
 - `produccion-assets.md`: genera las piezas que este documento ensambla; ambas comparten "camino más barato" y "presupuesto de rendimiento".
 - Matriz de capacidad (`herramientas-y-apis.md`): el diseño de niveles queda con **dos fuentes de terceros** marcando placement/ensamblado como punto débil del agente — sigue `pendiente`, pero la hipótesis se está densificando.
+
+## Dónde encaja (actualizado)
+
+| Documento | Relación |
+| :--- | :--- |
+| `pipeline-soulslike-72h.md` | Modular level design con primitivas + modificadores (array/curve); referencia de escala exportada del motor; tileables para grandes superficies |
