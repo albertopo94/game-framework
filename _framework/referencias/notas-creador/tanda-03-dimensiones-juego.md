@@ -1,0 +1,7 @@
+- Concepto original
+- dirección de arte, 
+- recursos (assets) y sprites, 
+- mapas no procedurales, 
+- bucle (loop) y controles, 
+- combate y profundidad, 
+- y entrega al usuario.

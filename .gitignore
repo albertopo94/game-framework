@@ -1,0 +1,32 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+
+# Builds de juegos (nunca versionar binarios)
+builds/
+exports/
+*.exe
+*.app
+*.apk
+*.zip
+
+# Engine local (Godot/Unity) - reglas locales de cada juego
+.godot/
+Library/
+Temp/
+Logs/
+UserSettings/
+
+# Credenciales
+.env
+*.key
+
+# Material de referencia de terceros: se analiza y se ficha, no se redistribuye.
+# El archivo original queda solo en el disco local del creador.
+_framework/referencias/*.docx
+_framework/referencias/*.pdf

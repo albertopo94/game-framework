@@ -1,0 +1,67 @@
+# Herramientas y APIs 🛠️
+
+> **Origen:** construido con el conocimiento del creador a medida que se incorpora. No se inventan herramientas aquí sin respaldo.
+> **Estado:** 🚧 en construcción. Cada entrada tiene un estado de validación en el entorno local.
+
+## Principio rector
+
+Las herramientas son **ejemplos, no dependencias obligatorias** (heredado del YouTube Creator Hub):
+
+- El framework enseña **métodos**; el producto concreto se decide según cada juego y las herramientas del creador.
+- **Partir de lo que el creador tiene:** el agente parte de las herramientas disponibles y preferidas.
+- **Recomendación debatible:** el agente puede proponer otra herramienta si existe una ventaja real, pero debe explicar qué mejora, qué pierde, qué costa y qué limitaciones tiene. El agente **no cambia de herramienta unilateralmente**.
+- **Comprobar la capacidad antes de proponer:** antes de proponer un flujo dependiente de una función específica, el agente debe comprobar si la herramienta elegida la ofrece o existe un procedimiento equivalente.
+- **Nunca asumir gratuidad:** ningún modo «Draft», «Preview» o «Borrador» es gratuito por definición; el costo real se registra en el registro de recursos del juego (`04-registro-recursos.md`, plantilla pendiente de pipeline) antes de escalar a la versión definitiva.
+
+## Categorías de herramientas
+
+| Categoría | Herramienta | Estado | Notas |
+| :--- | :--- | :--- | :--- |
+| **Engine** | Godot | ✅ Candidata privilegiada | Open source, ligero, 2D/3D |
+| **Engine** | Unity | ✅ Candidata privilegiada | Ecosistema amplio |
+| **Art / Modelado 3D** | **Blender MCP oficial** | ✅ **Herramienta principal de creación de assets** | MCP oficial de Blender. Para crear assets (modelado, texturas, iluminación, exportación) cuando el tipo de juego lo amerite. |
+| **Audio** | _pendiente del creador_ | ⏳ | |
+
+## Blender MCP oficial — creación de assets
+
+### Cuándo se usa
+
+- **Siempre que el tipo de juego lo amerite.** No es un estándar universal: un juego de pixel art 2D puro puede no necesitarlo; un juego 3D, un 2.5D pixel art con iluminación dinámica, o cualquier juego que requiera modelado/texturas sí.
+- La decisión la toma el **rol 01 (Concepto)** en conjunto con el **prompt maestro**: la dimensión 3 (Recursos/assets) y la dimensión 4 (Mapas) declaran si se requiere Blender MCP.
+- El agente **nunca asume** que un juego 2D no necesita Blender MCP. Consulta al creador o registra la decisión con justificación.
+
+### Capabilidades esperidas (a verificar en el entorno local)
+
+Antes de proponer un flujo concreto, el agente debe comprobar si la herramienta elegida lo ofrece. No se asumen capacidades por nombre.
+
+### Protocolo de handoff
+
+Cuando Blender MCP requiere interacción visual o ejecución manual:
+
+1. El agente entregar la **Ficha Técnica Inequívoca por Recurso** (heredada del YouTube Creator Hub):
+   - Tipo de recurso (modelo, textura, animación, iluminación, exportación).
+   - Parámetros necesarios (resolución, formato, spline, etc.).
+   - Prompt o especificación listos para copiar.
+   - Acción sugerida en la interfaz.
+2. El agente **no da instrucciones abstractas** ni arroja prompts sin clasificar.
+3. El resultado se registra en el registro de recursos del juego (`04-registro-recursos.md`, plantilla pendiente de pipeline) con licencia, origen y trazabilidad.
+
+## Agregado por capability (pendiente del conocimiento del creador)
+
+| Capability | Herramientas | Estado |
+| :--- | :--- | :--- |
+| Busca assets de stock | Coverr, Pexels, Pixabay, Openverse | ⏳ Pendiente |
+| Generación visual IA | _pendiente_ | ⏳ |
+| Audio / música | _pendiente_ | ⏳ |
+| Testing / QA | _pendiente_ | ⏳ |
+| Build / distribución | _pendiente_ | ⏳ |
+
+## Proactividad de herramientas
+
+Si el agente identifica una herramienta, biblioteca, CLI o recurso que resolvería un cuello de botella y no figura aquí, **la propone con justificación**. Pero **nunca la incorpora al catálogo de forma automática**: debe presentar la sugerencia al creador y, solo si el creador otorga su **visto bueno explícito**, registrarla aquí indicando su estado de validación en el entorno local.
+
+## Relación con otros documentos
+
+- `roles/01-concepto-y-mercado.md` §4: las herramientas se declaran por juego en Concepto.
+- `plantillas/prompt-maestro-creacion.md` §4: el prompt maestro lista las herramientas.
+- `00-estado-produccion.md`: cada juego declara su engine/art/audio ahí; eso es lo único que fija herramientas.
