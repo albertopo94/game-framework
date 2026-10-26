@@ -45,7 +45,7 @@ Registrada como hipótesis de terceros (`_framework/referencias/notas-creador/ta
 | Prototipo jugable en 2 días (plantilla UE + retarget + assets comprados) | Plantilla UE + AccuRig + retarget + Patina tileables + foliage/agua comprados; sin high-poly bake, sin rigging manual | pendiente (tanda-11) |
 | Arte y música | Rinde mal o inconsistente **hecho por el LLM**; el camino es generar assets con generadores especializados + remate humano. Ver `produccion-assets.md` | pendiente |
 | VFX/partículas en motores code-first | Vía código funciona bien en juegos chicos; con puente al sistema de partículas del motor, da base sólida que el humano retoca | pendiente |
-| Cloth simulation (Magica Cloth 2) | Unity: Magica Cloth 2 para tela, cadenas, telas; configurado por agente; auto-setup funcional | pendiente (tanda-13) |
+| Cloth simulation (Magica Cloth 2) | **Plugin de terceros (Asset Store, pago)**: Magica Cloth 2 simula tela/cabello/viento vía DOTS/Burst. No es oficial de Unity. | pendiente (tanda-13) |
 | Audio (SFX/música) | El agente **orquesta APIs de generación especializada** y elige el modelo; no genera audio "con el LLM" | pendiente |
 | ¿Es divertido? | **Nunca**: solo jugadores reales (**esta sí está confirmada**: es la regla de estado 5 de `escalas-aceptacion.md`) | confirmado |
 
@@ -56,9 +56,54 @@ Registrada como hipótesis de terceros (`_framework/referencias/notas-creador/ta
 | Categoría | Herramienta | Estado | Notas |
 | :--- | :--- | :--- | :--- |
 | **Engine** | Godot | ✅ Candidata privilegiada | Open source, ligero, 2D/3D |
-| **Engine** | Unity | ✅ Candidata privilegiada | Ecosistema amplio |
+| **Engine** | Unity | ✅ Candidata privilegiada | Ecosistema amplio. Puente a agentes vía **Unity CLI** (oficial); ver sección dedicada. |
 | **Art / Modelado 3D** | **Blender MCP oficial** | ✅ **Herramienta principal de creación de assets** | MCP oficial de Blender. Para crear assets (modelado, texturas, iluminación, exportación) cuando el tipo de juego lo amerite. |
 | **Audio** | _pendiente del creador_ | ⏳ | |
+
+## Unity CLI — puente oficial a agentes
+
+> **Verificado 2026-10-27** contra docs oficiales de Unity (`docs.unity.com/en-us/unity-cli`).
+
+| Componente | Qué es | Estado |
+| :--- | :--- | :--- |
+| **Unity CLI** | Binario standalone: instala editors, gestiona proyectos/templates/assets, abre editor headless (`--args "-batchmode -nographics"`), builda, corre tests. | ✅ **Oficial, producción** |
+| **`com.unity.pipeline`** | Paquete UPM que se agrega al proyecto (`unity pipeline install`, una vez). Habla con cualquier editor corriendo sobre su Pipeline server. | ✅ **Oficial, resuelto del registry UPM** |
+| **Modo MCP del CLI** | Expone cada comando (built-in, custom, `eval`) a agentes vía MCP. Requiere Unity 6+. | ✅ **Oficial** |
+| **`unity-agent-plugin`** | Skills oficiales mantenidas por los equipos de Unity, para Claude Code / Codex / Grok. | ✅ **Oficial** |
+| **MCP server in-editor** (`com.unity.ai.assistant`) | El MCP que venía dentro del asistente de IA del editor. | ⛔ **DEPRECADO — reemplazado por el CLI** |
+
+### Dos marchas del agente
+
+Los docs describen dos modos, y esta distinción importa para nuestro framework:
+
+- **Comandos deterministas nombrados** → pasos repetibles (build, test, abrir escena).
+- **`eval`** → C# arbitrario *token-gated* para cuando no existe comando aún. Caso de uso documentado: el agente usa `eval` para cambiar algo, corre un comando determinista para ejercitarlo, toma un screenshot y lo compara contra el prompt, iterando hasta que coincide.
+
+### Reglas operativas heredadas
+
+- **El editor debe estar corriendo**, pero puede ser **headless** (`-batchmode -nographics`), así que un agente opera sin GUI. Esto satisface el criterio de capacidad «editor controlable por script o puente» de arriba.
+- **No asumir capacidades por nombre:** antes de proponer un flujo con `eval` o un comando concreto, verificar que exista en la versión instalada.
+- **Costo:** `eval` consume tokens del presupuesto del proyecto; no es gratis ni ilimitado (principio rector).
+- **Unreal tiene su propio MCP nativo** (tanda-09); **no confundirlos**. Lo que dice la tanda-09 sobre «MCP nativo 5.8» aplica a Unreal, no a Unity.
+
+### Verificación pendiente
+
+Instalación real, comandos disponibles y comportamiento en headless se confirman practicando en un juego real; mientras tanto esto planifica, no manda.
+
+## Unity CLI — Referencias oficiales
+
+| Enlace | Qué es | Cuándo consultar |
+| :--- | :--- | :--- |
+| [Unity CLI Overview](https://docs.unity.com/en-us/unity-cli) | Landing oficial | Primera vez |
+| [Use Unity CLI](https://docs.unity.com/en-us/unity-cli/use-unity-cli) | Guía de uso | Primera vez / onboarding |
+| [CLI Reference](https://docs.unity.com/en-us/unity-cli/unity-cli-reference) | Tabla completa de comandos | Buscar comando/flags |
+| [Replace MCP Server](https://docs.unity.com/en-us/unity-cli/replace-mcp-server-unity-cli) | Migración MCP → CLI | Si usabas el MCP in-editor |
+| [Pipeline Package](https://docs.unity.com/en-us/unity-cli/unity-pipeline/unity-pipeline-package) | Qué expone `com.unity.pipeline` | Integrar agente |
+| [Release Notes](https://docs.unity.com/en-us/unity-cli/release-notes) | Changelog | Version pinning |
+
+> **Regla:** Estos son enlaces de **referencia**, no tutoriales. El framework enseña *métodos*; la doc oficial enseña *sintaxis*.
+
+Ver lista completa en `_framework/referencias/unity-cli-links.md`.
 
 ## Blender MCP oficial — creación de assets
 
