@@ -475,3 +475,35 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 ### Conclusión del análisis
 
 **Es la primera vez que la documentación externa nos señala una falta estructural propia** y no solo prácticas a adoptar: nuestro archivo de reglas tenía **ciclo de entrada y ninguno de salida**. El fix es un criterio de redacción, un presupuesto y una ruta de retiro. Quedó además abierta una auditoría explícita para el cierre del primer piloto: 23 reglas nunca violadas no son 23 reglas comprobadas.
+
+---
+
+## Tanda 17 — Mi flujo con agentes (video de terceros, canal individual)
+
+- **Archivo verbatim:** `notas-creador/tanda-17-agent-workflow.md`
+- **Qué es:** video de un creador individual compartiendo su flujo personal con Claude Code / Codex. Recomienda suscripciones específicas ($200/mes), modelos (Opus) y configs de effort.
+- **Calidad de la evidencia: media-baja.** Testimonio de práctica personal, sin métricas, sin builds mostrados, sin comparativas. Útil como referencia de "cómo lo hace uno", no como dato verificable.
+
+### Lo que NO se toma (y por qué)
+
+| Qué | Por qué |
+| :--- | :--- |
+| Recomendación de suscripción $200/mes (Claude Max / GPT Max) | Agnosticidad: el framework decide herramientas por capacidades + costo verificado, no por plan de suscripción |
+| Opus, effort settings, "ultra code" | Modelos y configs específicos → agnóstico |
+| "Hagan que la herramienta se pague sola cancelando gimnasios/seguros" | Anécdota personal, no método de game dev |
+| "Unity porque los agentes están mejor entrenados" | Opinión sin evidencia comparativa; nuestro criterio = code-first + capacidades verificadas |
+| F10 pop-up / TikTok-driven development / Chris | Nombres propios y features de su herramienta, no generalizable |
+| RTS en 8h con networking Steam | Afirmación sin evidencia mostrada |
+| Diseño por dictado de voz → AI pregunta | Encaja con lo que ya tenemos (`plantillas/propuesta-cambio.md` "haz preguntas", gate de comprensión de `ruta-produccion.md`); no agrega gate nuevo |
+| Ciclo build → playtest tool → reporte → iterar | Equivalente en motor del loop browser (score 1-10) que ya está en `prompting-puro-browser.md` §5-7 y `escalas-aceptacion.md` |
+
+### Lo que corrobora (ya estaba)
+
+- "No copy-paste, usa agente" → `AGENTS.md` regla 6
+- "Design before implementation" → `roles/02-diseno-juego.md` + prompt-maestro
+- Unity skills / CLI → `pipeline-unity-cli.md` + `herramientas-y-apis.md`
+- Build demo → iterate → `ciclo-produccion.md` + `escalas-aceptacion.md`
+
+### Conclusión
+
+**Nada nuevo que adoptar.** La tanda valida dirección del framework pero no aporta patrones que no estén ya destilados. Se conserva el verbatim en `notas-creador/` y la ficha aquí; cero ediciones en el framework.
