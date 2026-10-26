@@ -49,6 +49,20 @@ Protocolo para agentes de IA que trabajan en este repositorio.
 
 **Una sesión = una feature.** Feature = una tajada verificable del juego: se completa en una sesión, tiene evidencia concreta (gate superado, commit jugable) y mapea a 1-N dimensiones/subsistemas. Si no cabe en una sesión, está mal cortada: se divide, no se alarga el chat.
 
+### Disparador de cierre por degradación de contexto
+
+**Si antes de terminar la feature el contexto del chat se degrada**, la sesión se cierra con handoff aunque la feature no haya llegado al gate.
+
+Señales de degradación (cualquiera basta para cerrar):
+
+- El agente **repite preguntas** que ya respondió en la misma sesión
+- El agente **mezcla decisiones viejas** con la tarea actual (usa referencias de una feature anterior como si fueran de la actual)
+- El agente **no recuerda** un entregable que acaba de validar en el chat
+- El medidor interno del agente (si lo tiene) indica que el thread está impactando calidad
+- El creador nota que el agente **responde más lento, más vago o más genérico**
+
+**La regla:** cerrar antes que alargar. Un handoff limpio recupera; un chat degradado contamina lo que viene. *(Origen: changelog de asistente comercial para motores — 07/29/2025 "threads largos no son recomendados; empezar thread nuevo al cambiar de tarea" + 01/06/2026 medidor de impacto del tamaño del thread en calidad de respuesta)*
+
 ### Obligatoriedades del agente
 
 1. **Al terminar o pausar una feature** (incluido a mitad de camino), el agente **debe avisar** al creador: *"feature X completada/pausada; recomendá una nueva sesión para Y (o para lo que quieras)"*. Es una recomendación, no una obligación: el creador puede hacer un follow-up chico en la misma sesión si lo desea.

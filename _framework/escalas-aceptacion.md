@@ -43,6 +43,7 @@ Cada evidencia prueba **una cosa específica**. No se extrapola.
 | Un render aislado | La apariencia de un objeto | Que se vea así dentro del juego |
 | Una captura de pantalla | Un instante | Una transición en el tiempo, animación, rendimiento |
 | Un vídeo en slow-motion | Un detalle de diagnóstico | El feel a velocidad de juego normal |
+| **Una captura de pantalla** | **Puede mentir incluso del instante que muestra** | Que el render final coincida; shaders/efectos pueden renderizar frames adelante y la captura no reflejar lo que el jugador ve |
 | Hashes, contadores, valores guardados | Cableado e inputs sin cambios | Calidad visual ni diversión |
 | Un prototipo feo | Que la mecánica funciona | Que la calidad sea la objetivo |
 | Una prueba en navegador | El comportamiento en navegador | El costo de render nativo |
