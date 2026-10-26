@@ -357,39 +357,6 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 
 ---
 
-## Tanda 12 - MMO Procedural Browser en 30 días (Game Jam)
-
-- **Archivo verbatim:** `notas-creador/tanda-12-mmo-gamejam.md`
-- **Calidad de la evidencia: alta.** MMO jugable en navegador (Three.js) con mundo infinito procedural, multiplayer, survival, building, climbing — construido en 30 días y mostrado funcionando. Contra: **vende curso** — incentivo de fluidez. **Restricción:** 30 días, 90% IA.
-- **Resultado:** 1º en votación comunitaria (4.6/5, 310 reviews); no top 30 en jurados expertos (2 personas cortaron 900 juegos). Un jurado en live dijo "top 10/top 3".
-
-### Lo que tomamos (estructura)
-
-| Práctica | Va a |
-| :--- | :--- |
-| **Debuggers/parameter UIs para la IA** (UI > prompts) | `reglas-sistema.md` |
-| **Perlin noise = navaja suiza** (terreno, grass wind, trees, smoke, water, clouds) | `pipeline-assets.md` (perfil `entorno-procedural-infinito`), `pipeline-nivel.md` (perfil `procedural-asistido`) |
-| **Chunk loading + distance culling = mundo infinito viable en browser** | `pipeline-nivel.md` (perfil `procedural-asistido`) |
-| **Alpha maps > geometría para foliage** (árboles = plano + alpha map) | `pipeline-assets.md` (perfil `vegetacion-shader`) |
-| **Verticalidad = interés visual + gameplay (escalar con IK pie)** | `pipeline-assets.md` (perfil `personaje-3d-*`), `produccion-vfx.md` |
-| **Day/night + post-process + cartoon shader = "mitad del look"** | `produccion-vfx.md` |
-| **IK pie sí, mano no** (tradeoff velocidad/calidad) | `pipeline-assets.md` (perfil `personaje-3d-*`), `produccion-vfx.md` |
-| **Multiplayer = complejidad exponencial** (librería networking ayuda pero no magia) | `herramientas-y-apis.md` (matriz capacidad), `pipeline-nivel.md` (perfil `procedural-asistido`) |
-| **IA degrada con codebase grande (contexto window)** | `reglas-sistema.md` |
-| **Debuggers/parameter UIs propios > prompts de texto** | `reglas-sistema.md` |
-| **Evaluación: fun vs polish = sesgo si métrica única** | `reglas-sistema.md` |
-
-| **IA degrada con codebase grande (contexto window)** | `reglas-sistema.md` |
-
-### Lo que NO tomamos
-
-- **Nombres de productos** (Three.js, librería networking, Perlin noise libs, Opus 5, etc.) — agenda de herramientas = criterios de `herramientas-y-apis.md`.
-- **Cifras de tiempo** ("30 días", "7 días multiplayer") — datos de flujo experto con time-lapse; útiles como orden de magnitud, no presupuesto propio.
-- **"Join my course"** — marketing.
-- **Resultados de premios** — no son metodología.
-
----
-
 ## Tanda 15 - Unity CLI + Agente (Kimi K3) (video de terceros, canal distinto a 5-14)
 
 - **Archivo verbatim:** `notas-creador/tanda-15-unity-cli-kimi.md`
@@ -422,3 +389,36 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 ### Conclusión del análisis
 
 **Evidencia de alta calidad para Unity CLI como puente de agente oficial** (reemplazo de MCP in-editor). La comparación real entre Unity CLI (code-first) y Unreal Engine MCP (blueprint-heavy) valida la regla de "motores code-first = menos fricción para agentes" (ya registrada en tanda-05). Los dead-ends de Unreal (Niagara crashes, 7h por test) son útiles como datos de mercado, no como dogma.
+
+---
+
+## Tanda 16 — Panel: desarrolladores muestran su flujo con IA (video de terceros, canal distinto a los anteriores)
+
+- **Archivo verbatim:** `notas-creador/tanda-16-panel-workflow-studios.md`
+- **Qué es:** podcast con tres personas: un desarrollador contratado que produce juegos educativos, un **empleado de una herramienta comercial de IA para motores** (community/support) y un moderador de un subreddit grande de game dev.
+- **Calidad de la evidencia: baja-media.** Es una **conversación, no un build**. Sin métricas, sin costos, sin tiempos de modelo verificables — solo afirmaciones ("una hora o dos", "hubiera llevado semanas").
+- **Conflicto de interés: el más alto de las tandas analizadas.** No es "vende un curso": uno de los participantes **trabaja en el producto que se muestra**, y el segmento central es una demo de sus features (páginas de proyecto, skills, sub-agentes, plan mode, prototipos web).
+- **Aclaración relevante:** el producto mostrado es **funcionalmente un homólogo de este framework** (asistente consciente del proyecto, skills, sub-agentes, plan retomable). Nuestro marco no adopta productos de terceros, así que no se adopta.
+
+### Lo que tomamos (4 piezas, todas agnósticas)
+
+| Práctica | Va a | Qué resuelve |
+| :--- | :--- | :--- |
+| **Prototipo desechable fuera del motor antes de implementar** (validar la mecánica en una página/script barato; el motor responde otra pregunta) | `ruta-produccion.md` §Gate | El greybox es obligatorio *dentro* del motor; esta es una pregunta anterior y más barata |
+| **Restricciones duras como insumo de generación**, no filtro posterior (build <30 MB, hardware bajo, interacción prohibida, "se aprende jugando") | `roles/01-concepto-y-mercado.md` §2.1 | Generar ideas y recién después filtrar desperdicia la generación |
+| **Bucle con revisor externo:** responder → reescribir **solo la sección afectada** → re-prototipar lo cambiante → generar evidencia nueva → reenviar | `escalas-aceptacion.md` §Bucle con revisor externo | "Ya lo arreglé" no sube ningún estado; sin evidencia reenviada la ronda no terminó |
+| **El entorno de desarrollo no es el entorno objetivo** (funcionaba en editor y navegador de escritorio; se rompía solo en el teléfono) | `escalas-aceptacion.md` §El entorno donde se desarrolló | El estado 4 no se infla con evidencia tomada en otro entorno |
+
+### Lo que NO tomamos
+
+- **La herramienta comercial mostrada** (asistente con skills, páginas de proyecto, plan mode, prototipos web): es un producto de terceros cuyo empleado la está demostrando. **Funcionalmente es lo que este framework intenta ser** — lo cual la confirma como dirección, pero no como dependencia adoptable.
+- **Modelos concretos** (grande orquestando / chico codificando): cuando se les pregunta si el sub-agente barato realmente ahorra plata, el propio usuario responde **"no puedo responder, es la primera vez que lo hago"** y el moderador duda. **Cero evidencia → no se adopta ni se registra como hipótesis de costo.**
+- **GDD en documento externo del navegador**: nuestro GDD vive en el repo del juego (`00-estado-produccion.md` + `plantillas/`). Cambiar de storage sin evidencia es churn.
+- **La prueba en una segunda máquina con red separada**: útil, pero es setup de hardware; la regla general (evidencia en red/dispositivo real) ya quedó capturada en `escalas-aceptacion.md` sin prescribir infraestructura.
+- **El debate "la IA reemplaza tu conocimiento" vs "la experiencia importa"**: sin resolución, no es método.
+- **El juego de palabras casero y sus assets comprados**: anécdota de sobremesa.
+- **"Los indies sin experiencia ceden demasiado control sin verificar"**: corrobora `escalas-aceptacion.md`, no agrega nada nuevo.
+
+### Conclusión del análisis
+
+**Es la tanda con menos evidencia técnica y más conflicto de interés de las 16.** Su valor no está en lo que el producto muestra, sino en cuatro prácticas que aparecieron de pasada en boca de un desarrollador contratado: prototipar barato afuera del motor, usar las restricciones como combustible de la generación, cerrar cada ronda de feedback con evidencia reenviada, y no confiar en la evidencia tomada en el entorno de desarrollo. Las cuatro son agnósticas y ya fueron integradas.

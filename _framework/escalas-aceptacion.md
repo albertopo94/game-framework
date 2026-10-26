@@ -1,7 +1,7 @@
 # Escalera de Aceptación 🪜
 
 > **Documento canónico.** Define qué significa "está listo" y en qué punto está cada cosa.
-> **Origen:** destilación del flujo de trabajo de `mr-mak-workspace` (ver `referencias/README.md`).
+> **Origen:** destilación del flujo de trabajo de `mr-mak-workspace` + reglas de evidencia de `notas-creador/tanda-16-panel-workflow-studios.md` (ver `referencias/README.md`).
 > **Regla madre:** una cosa es que algo exista, otra que el agente lo haya verificado, y otra muy distinta que el creador lo haya aceptado. **Confundir estos estados es la principal fuente de autoengaño en trabajo con agentes.**
 
 ## Los 5 estados
@@ -46,9 +46,28 @@ Cada evidencia prueba **una cosa específica**. No se extrapola.
 | Hashes, contadores, valores guardados | Cableado e inputs sin cambios | Calidad visual ni diversión |
 | Un prototipo feo | Que la mecánica funciona | Que la calidad sea la objetivo |
 | Una prueba en navegador | El comportamiento en navegador | El costo de render nativo |
+| Una prueba **en el editor** | Que la feature existe en entorno de desarrollo | Que funciona en el build, ni en el dispositivo objetivo |
+| Una prueba en **desktop / localhost** | El comportamiento en escritorio y red local | El comportamiento en el dispositivo y la red objetivo |
 | **El juego real, corriendo** | Timing, limpieza, costo, feel | La aceptación estética del creador |
 
 **Doctrina:** un diagrama puede proponer apariencia; **solo el motor prueba timing de eventos, limpieza y costo de render.** Ninguna prueba de agente reemplaza la aceptación humana, y ninguna aceptación humana reemplaza la prueba en el motor.
+
+### El entorno donde se desarrolló no es el entorno objetivo
+
+**Regla:** cada evidencia prueba el entorno donde se tomó, y nada más. Que algo funcione en el editor, en desktop o en la red local **no** es evidencia de que funcione en el build final, en el dispositivo o en una red real.
+
+Casos típicos donde el entorno de desarrollo miente:
+
+| Se probó en | No prueba | Fractura habitual |
+| :--- | :--- | :--- |
+| Editor | El build | Diferencias de configuración de build, optimizaciones, APIs recortadas |
+| Navegador de escritorio | Móvil | Eventos de toque/arrastre distintos, viewport, rendimiento |
+| Localhost | Multiplayer real | Latencia, orden de mensajes, dos clientes en hosts separados |
+| Un solo dispositivo | La familia de dispositivos | Comportamiento táctil, escala de UI, memoria |
+
+**Consecuencia práctica:** si la plataforma objetivo del juego está declarada en `00-estado-produccion.md`, el estado 4 exige evidencia **en esa plataforma** (o en un emulador/perfil declarado explícitamente como sustituto). Si no se puede producir esa evidencia, la entrega se declara con el hueco en "qué NO se validó" — nunca se infla el estado a 4 con evidencia de otro entorno.
+
+*(Origen: `_framework/referencias/notas-creador/tanda-16-panel-workflow-studios.md` — build que funcionaba en editor y navegador de escritorio y se rompía solo en el navegador del teléfono.)*
 
 ## Toda entrega declara qué NO se validó
 
@@ -72,6 +91,27 @@ Cuando la verificación es "¿esto se ve/comporta mejor que antes?", el side-by-
 - Si se inyecta input sintético, separarlo del input físico y restaurar la configuración al terminar.
 - La comparación no debe cambiar el gameplay subyacente: se comprueba que no lo cambió.
 
+## Bucle con revisor externo (cliente, QA, otro humano)
+
+Cuando el trabajo pasa por un revisor externo (cliente, publisher, QA, otro desarrollador) que devuelve observaciones, **el estado no sube hasta que la evidencia nueva fue reenviada**. Un mensaje diciendo "ya lo arreglé" no mueve nada.
+
+El bucle completo, por cada ronda de feedback:
+
+1. **Recibir** las observaciones y separarlas: qué es cambio de diseño, qué es bug, qué es pregunta. Si una observación no es accionable, se pregunta en vez de interpretar.
+2. **Responder con propuesta concreta**, no con explicación defensiva: qué se cambia y por qué eso resuelve la observación.
+3. **Reescribir solo la sección afectada** del documento vigente (GDD, spec, subsistema). No se reescribe el documento entero ni se reabre lo ya aprobado — corrección dirigida, no reinicio.
+4. **Re-prototipar solo lo que cambió**, no todo el diseño.
+5. **Generar evidencia nueva** de esa corrección (captura, build, grabación) y **reenviarla**. Sin el paso 5 la ronda no terminó.
+6. Si el revisor vuelve con más observaciones, se repite desde 1. Cada ronda se registra en la bitácora con qué cambió y qué evidencia se mandó.
+
+**Reglas duras del bucle:**
+
+- La aprobación del revisor externo **tampoco es estado 5 del creador**. Es una puerta externa: necesaria, no suficiente.
+- El documento vigente refleja el **último estado aprobado**, no la última discusión. Lo que está en negociación va en la bitácora.
+- Una ronda que solo cambió texto no exige re-verificación de gameplay; una que cambió una mecánica **sí** vuelve a `ruta-produccion.md` §Gate.
+
+*(Origen: `_framework/referencias/notas-creador/tanda-16-panel-workflow-studios.md` — varias rondas de feedback externo sobre el documento de diseño, con mockups regenerados en cada envío.)*
+
 ## Evidencia que se deja registrada
 
 Para cada verificación: **revisión de origen (commit), configuración exacta, escenario usado, tipo de captura, observaciones y problemas restantes.** Un video corto para movimiento, una imagen para detalle. Se conserva la captura original más una copia ligera de revisión, con procedencia; no se recomprime una y otra vez una entrega ya comprimida.
@@ -82,3 +122,5 @@ Para cada verificación: **revisión de origen (commit), configuración exacta, 
 - `plantillas/sub-sistema-juego.md`: el estado de la mecánica (diseñada/prototipada/...) es **ortogonal** a la escalera. Una mecánica puede estar `Integrada` (estado 3) y `PENDIENTE_APROBACION` (todavía no llegó a 5).
 - `ciclo-produccion.md`: ningún gate cierra en estado 4; el gate exige estado 5 del creador.
 - `AGENTS.md`: los checkpoints humanos son exactamente la transición 4 → 5.
+- `ruta-produccion.md` §Gate: el prototipo desechable valida la mecánica **antes** de que exista algo que llegar a los estados 3-5.
+- `roles/01-concepto-y-mercado.md` §2.1: las restricciones duras se entregan como insumo al generar, antes de la escalera.

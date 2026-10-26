@@ -9,6 +9,7 @@
 | :--- | :--- |
 | Arrancar un proyecto de cero (contrato inicial) | `plantillas/prompt-maestro-creacion.md` |
 | Validar o matar una idea de juego | `roles/01-concepto-y-mercado.md` |
+| Validar una mecánica antes de implementarla en el motor | prototipo desechable (§Gate arriba) + `roles/02-diseno-juego.md` |
 | Diseñar mecánicas, sistemas, tema interpretado | `roles/02-diseno-juego.md` + `plantillas/sub-sistema-juego.md` |
 | Fijar o revisar estética | `banco-visual.md` + `reglas-sistema.md` (referencia visual) |
 | Decidir motor, art o audio | `herramientas-y-apis.md` |
@@ -27,6 +28,8 @@
 | Saber en qué fase estoy y qué sigue | `00-estado-produccion.md` del juego + `ciclo-produccion.md` |
 | Documentar una mecánica concreta | `plantillas/sub-sistema-juego.md` |
 | Verificar que algo se ve o se comporta bien | `escalas-aceptacion.md` (protocolo de comparación justa) |
+| Responder feedback de un revisor/cliente externo | `escalas-aceptacion.md` §Bucle con revisor externo |
+| Decidir si alcanza el estado 4 en la plataforma objetivo | `escalas-aceptacion.md` §El entorno donde se desarrolló no es el entorno objetivo |
 | Decir si algo "está listo" | `escalas-aceptacion.md` (los 5 estados) |
 | Cerrar una sesión / pasarle el trabajo a otra | `plantillas/handoff-sesion.md` + `bitacora-sesiones.md` |
 | Ver a qué dimensión apunta un trabajo | `dimensiones-juego.md` |
@@ -38,6 +41,21 @@
 | Registrar un bug, una auditoría o un hallazgo | `higiene-de-trabajo.md` §1 y §2 |
 | Escribir un commit o integrar trabajo de otro agente | `higiene-de-trabajo.md` §3 |
 | Planificar trabajo amplio en tajadas chicas | `roles/` correspondiente + `00-estado-produccion.md` hitos |
+
+## Gate: prototipo desechable antes del motor
+
+Antes de implementar una mecánica **en el motor**, se valida **fuera del motor** en un prototipo desechable (página web, script suelto, mockup jugable). El criterio que separa las dos etapas:
+
+- **El prototipo responde "¿esta mecánica funciona?"** — reglas, ritmo, decisión del jugador, qué se siente. Barato: se tira y se rehace sin costo de escena, materiales ni pipeline.
+- **El motor responde "¿funciona acá?"** — timing de eventos, limpieza, costo de render (doctrina de `escalas-aceptacion.md`).
+
+**Regla:** una mecánica no entra al motor hasta que su prototipo desechable respondió la primera pregunta. El greybox sigue siendo obligatorio *dentro* del motor; el prototipo es una pregunta **anterior y más barata**, no un reemplazo.
+
+- El prototipo **es desechable**: no se optimiza, no se le hacen assets, no se refactoriza. Se extrae la lógica validada y se tira el resto.
+- Si la mecánica no pasa el prototipo, **no se gastó una sesión de motor**.
+- No aplica a todo: una mecánica que solo existe como interacción con capacidades del motor (física, navegación, iluminación) no tiene versión desechable. Se declara y se va directo al greybox.
+
+*(Origen: `_framework/referencias/notas-creador/tanda-16-panel-workflow-studios.md` — prototipos web como paso previo a implementar en motor.)*
 
 ## Reglas del router
 

@@ -27,6 +27,26 @@ Cada juego declara explícitamente lo que **no** puede ser. Ejemplos comunes:
 
 Estas restricciones son **contrato**: no se negocián en silencio.
 
+### 2.1 Las restricciones son insumo de generación, no solo un filtro posterior
+
+Las restricciones duras se **escriben antes** de pedir ideas y se **entregan al modelo junto con el pedido**, no después, para "corregir lo que salió mal". Generar primero y filtrar después produce opciones que hay que descartar casi todas; declarar el piso antes produce opciones que ya nacen adentro del rectángulo.
+
+Se entregan como catálogo cerrado, con números cuando existan:
+
+| Tipo de restricción | Ejemplo concreto |
+| :--- | :--- |
+| **Técnica de build** | tamaño descomprimido < 30 MB; build web; sin dependencias nativas |
+| **Hardware objetivo** | corre fluido en hardware bajo; sin acelere de GPU dedicado |
+| **Interacción prohibida** | sin drag-and-drop; sin teclado físico requerido |
+| **Obligación de diseño** | no puede ser quiz ni presentación; el concepto se aprende **jugando**, no haciendo clic |
+| **Público / contexto de uso** | sesión de N minutos; uso en aula; sin cuenta previa |
+
+**Regla:** quien genera las ideas recibe las restricciones; **quien decide no**. Se generan varias candidatas (5-10) bajo las mismas restricciones, el humano elige, y las elegidas pasan al diseño. El modelo propone el espacio; el criterio de elección sigue siendo humano (ver §6 y `escalas-aceptacion.md` estado 5).
+
+> Cuanto más dura y numérica la restricción, más útil la generación. "Que sea simple" no filtra nada; "<30 MB en Chromebook" elimina el 90 % del espacio de diseño solo.
+
+*(Origen: `_framework/referencias/notas-creador/tanda-16-panel-workflow-studios.md` — ideas de juego generadas a partir de restricciones duras de plataforma y objetivo pedagógico.)*
+
 ## 3. Assets requeridos
 
 Lista concreta de lo que el juego necesita, no lo que el agente elija:
@@ -71,7 +91,7 @@ Esto no es copiar: es la puerta de originalidad de `reglas-sistema.md` aplicada 
 Para que el Concepto se considere `APROBADO`:
 
 - [ ] Referencia visual primaria registrada (enlace o descripción concreta)
-- [ ] Restricciones duras escritas
+- [ ] Restricciones duras escritas **y entregadas como insumo al generar ideas** (§2.1)
 - [ ] Lista de assets requeridos
 - [ ] Herramientas declaradas por juego
 - [ ] Scope acotado y escrito
