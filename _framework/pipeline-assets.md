@@ -12,8 +12,12 @@
 | **personaje-3d-hero** | Protagonista, jefes, NPCs importantes | Alta (hero quality) | High-poly sculpt → retopo → bake completo (color+normal+AO) → texturizado low-poly |
 | **personaje-3d-secondary** | NPCs, enemigos genéricos | Media (game-ready) | Smart mesh + UV → mapas desde color map → retopo opcional |
 | **personaje-3d-stylized** | RTS, top-down, low-poly | Velocidad > detalle | Smart mesh + color map → normal/roughness/metallic desde color → decimate |
+| **personaje-2d-en-3d** | Octopath/FFT style: 2D sprites en mundo 3D | Alpha maps + billboard + InstancedMesh | Smart UV + alpha maps + blend shapes |
+| **entorno-procedural-infinito** | MMO browser, mundos infinitos | Perlin noise + chunk loading + InstancedMesh | Perlin noise 3D/2D, chunk system, distance culling, InstancedMesh |
+| **sprite-pipeline-navegador** | Sprites 2D para juegos browser (Spriterrific) | Alpha maps + billboard + blend shapes + InstancedMesh |
 | **entorno-procedural-infinito** | MMO browser, mundos infinitos | Perlin noise + chunk loading + InstancedMesh | Perlin noise 3D/2D, chunk system, distance culling, InstancedMesh |
 | **vegetacion-shader** | Grama, árboles, bushes | Shader-based (GPU) | Alpha maps, vertex shader wind, InstancedMesh, distance culling |
+| **sprites-2d-en-3d** | Sprites 2D en mundo 3D (Octopath style) | Alpha maps + billboard + InstancedMesh + blend shapes |
 | **agent-sandbox-artist** | Agente artista con sandbox propio (modelado, texturizado, rigging, anim, VFX) | Sandbox aislado, herramientas propias, experiencia acumulada, self-healing, blend shapes, decoupling |
 | **entorno-procedural-infinito** | MMO browser, mundos infinitos | Perlin noise + chunk loading + InstancedMesh | Perlin noise 3D/2D, chunk system, distance culling, InstancedMesh |
 | **vegetacion-shader** | Grama, árboles, bushes | Shader-based (GPU) | Alpha maps, vertex shader wind, InstancedMesh, distance culling |

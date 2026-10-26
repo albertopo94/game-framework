@@ -69,6 +69,20 @@ Todo documento que describe una capacidad del framework o del juego declara **d�
 
 Esto vale igual para nosotros: declarar límites es requisito de cualquier descripción de capacidad, incluida la de este framework (ver `_framework/README.md`). Una capacidad sin límites declarados es marketing, no documentación.
 
-## 9. Búsqueda antes de abrir
+## 8. Dogfooding (comer tu propio perro)
+
+**Usa tus propias herramientas para construir tus propios juegos.** Cuando construyes una herramienta (ej. Spriterrific), **úsala tú primero** en un juego real. Los bugs que encuentres (3 manos, dirección errónea, walk cycles rotos) son los mismos que tendrán tus usuarios. Fixearlos en la herramienta beneficia a todos.
+
+*(Origen: `pipeline-navegador.md` §Spriterrific; tanda-13 §Patrón: Agente Auto-Curativo)*
+
+## 10. Búsqueda antes de abrir
+
+## 11. Mobile-first por defecto (si aplica)
+
+Si el juego corre en navegador/móvil: **diseña para touch primero** (virtual analog stick, portrait mode, PWA, wake lock). El desktop es superset; lo que funciona en móvil funciona en desktop, no al revés.
+
+*(Origen: `pipeline-navegador.md` §Optimizaciones Móvil)*
+
+## 11. Búsqueda antes de abrir
 
 Antes de registrar un bug o una propuesta: **buscar si ya existe**. Un duplicado cuesta dos veces: una para cerrarlo y otra para la conversación que genera.
