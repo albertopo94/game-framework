@@ -422,3 +422,28 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 ### Conclusión del análisis
 
 **Es la tanda con menos evidencia técnica y más conflicto de interés de las 16.** Su valor no está en lo que el producto muestra, sino en cuatro prácticas que aparecieron de pasada en boca de un desarrollador contratado: prototipar barato afuera del motor, usar las restricciones como combustible de la generación, cerrar cada ronda de feedback con evidencia reenviada, y no confiar en la evidencia tomada en el entorno de desarrollo. Las cuatro son agnósticas y ya fueron integradas.
+
+---
+
+## Documentación externa: sistema de "skills" de un asistente comercial para motores
+
+- **Fuente:** documentación pública de un asistente de IA con conciencia de proyecto para motor de juegos (página de fundamentos sobre *skills*). **No se copia el producto ni sus skills**; se conserva solo esta ficha, igual que con Mass Flux y mr-mak-workspace.
+- **Por qué se analiza:** es el homólogo comercial más cercano a lo que este framework intenta ser, así que su documentación sirve como contraste de arquitectura, no como dependencia.
+- **Regla aplicada:** se adoptan **criterios conceptuales**, nunca features ni formatos de producto.
+
+### Lo que tomamos (1 criterio)
+
+| Criterio | Va a | Qué resuelve |
+| :--- | :--- | :--- |
+| **Clasificación referencia vs. procedimiento**: un doc de referencia que se llenó de pasos ejecutables (o una plantilla que se convirtió en checklist) denuncia un procedimiento mal archivado. El disparador es la **frecuencia**: si el mismo procedimiento se reescribe a mano, hay que fijarlo | `_framework/README.md` §Referencia o procedimiento | Nuestros dos disparadores de promoción (evidencia de un hallazgo / resultado que destacó) no cubrían "esto se reconstruye cada sesión" |
+
+### Lo que NO tomamos
+
+- **El sistema de skills como tal** (carpeta con instrucciones + scripts, instalación, `/command`, permisos heredados del MCP, edición como diff): ya lo tenemos como concepto en `higiene-de-trabajo.md` §6 y `prompting-puro-browser.md` §6. La implementación es del producto.
+- **Los skills default listados** (UI, pools, changelog, onboarding): recetas de motor específicas, algunas ni siquiera agnósticas.
+- **Sus limitaciones declaradas** (JS-only, sin filesystem/red/shell, no compartibles en team): son limitaciones de su sandbox, no metodología.
+- **Candidato anotado, no adoptado:** *"si importás un skill de otra herramienta, verificá que no use comandos de shell antes de ejecutarlo"*. Sensato y alineado con `higiene-de-trabajo.md` §5, pero hoy estamos bajo el límite de **no automatización antes del primer piloto**. Se reevalúa con el piloto.
+
+### Conclusión del análisis
+
+**Su documentación confirma la dirección del framework** (router por entregable, skills apilables, edición como diff, permisos explícitos) y aporta **un solo criterio que nos faltaba**: distinguir qué documentos son referencia y cuáles son procedimiento, y tratar la repetición manual de una secuencia como señal de que ese procedimiento nunca se fijó.

@@ -50,6 +50,7 @@ Cuando una parte de un build destaca y se cree reusable, **se convierte en skill
 - **No volver a resolver lo ya resuelto.** Skill = calidad garantizada + tiempo cero.
 - **Skills se apilan**: Voxel world + Character kit + Dark crawler = builds exponencialmente más rápidos.
 - **Skill = lección comprobada** que se promociona de `conocimiento/` (estado `comprobado`) a reutilizable.
+- **Un disparador distinto, la frecuencia:** si la misma secuencia de pasos se reescribe a mano en más de una sesión, eso solo basta para fijarla como **procedimiento con orden fijo**, aunque no haya evidencia de que "salió bien". Ver `_framework/README.md` §Referencia o procedimiento.
 
 *(Origen: `prompting-puro-browser.md` §6; ver `conocimiento/`.)*
 

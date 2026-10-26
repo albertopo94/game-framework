@@ -26,7 +26,7 @@ A diferencia del YouTube Creator Hub (donde roles y plantillas ya estaban estudi
 | `roles/` | Roles que intervienen según tamaño/tipo de juego | 🚧 `roles/01-concepto-y-mercado.md`, `roles/02-diseno-juego.md`, `roles/05-release-distribucion.md` (01-02: tandas 1-3 + Mass Flux; 05: patrón de sus releases) |
 | `plantillas/` | Plantillas de pipeline por juego | 🚧 `plantillas/prompt-maestro-creacion.md` (arranque) + `plantillas/sub-sistema-juego.md` (una por mecánica) + `plantillas/handoff-sesion.md` (traspaso) + `plantillas/propuesta-cambio.md` (scoping) + `plantillas/ficha-recurso-manual.md` (traspaso sin acceso)  + `plantillas/agente-artista.md` (pendiente) + `plantillas/spriterrific.md` (pendiente)
 | `dimensiones-juego.md` | Las 7 dimensiones de un juego (concepto, arte, assets, mapas, bucle, combate, entrega) — checklist transversal de gates | ✅ `tanda-03` |
-| `referencias/` | Material externo conservado + ficha de análisis | ✅ `notas-creador/` (tandas verbatim) + `README.md` (análisis de Mass Flux GDD, mr-mak-workspace y las 5 tandas del creador) |
+| `referencias/` | Material externo conservado + ficha de análisis | ✅ `notas-creador/` (tandas verbatim) + `README.md` (análisis de Mass Flux GDD, mr-mak-workspace, las 16 tandas del creador y documentación externa de herramientas) |
 | `herramientas-y-apis.md` | Directorio de herramientas por capability | ✅ Inicial (MCP de modelado 3D como principal de assets) |
 
 ## Modos de trabajo
@@ -57,11 +57,38 @@ Nada de lo “débil” se rellena inventando: espera conocimiento del creador o
 
 Nada se agrega a `roles/` o `plantillas/` sin que respalde conocimiento del creador o evidencia de la práctica real. Menos estructura real y probada > más estructura inventada.
 
+## Referencia o procedimiento (no las dos cosas mezcladas)
+
+Todo documento operativo declara a cuál de los dos tipos pertenece. Un doc que mezcla los dos es un doc mal archivado.
+
+| Tipo | Qué contiene | Cómo lo usa el agente |
+| :--- | :--- | :--- |
+| **Referencia** | Hechos, criterios, definiciones, límites. Responde *qué es verdad*. | Lee y decide. **No hay orden**: se saltean secciones sin daño. |
+| **Procedimiento** | Pasos con **orden fijo** y **una salida nombrada por paso**. Responde *cómo se hace*. | Ejecuta en orden. Omitir un paso es un defecto, no una optimización. |
+
+**Diagnóstico de deterioro.** Un documento de referencia que se fue llenando de pasos ejecutables, o una plantilla que en vez de campos para completar empezó a tener checklist, está avisando que adentro hay un procedimiento mal archivado. Se separa: la información queda en referencia, los pasos salen a un procedimiento explícito.
+
+> Señal inequívoca: si ante una tarea el agente **vuelve a derivar el orden de los pasos** leyendo prosa, eso es un procedimiento que nadie fijó. La prosa deja reconstruir el orden en cada sesión; un procedimiento lo congela.
+
+**Cómo se crea un procedimiento** — el disparador de **frecuencia**, hermano del de evidencia:
+
+| Disparador | Qué promueve | Dónde |
+| :--- | :--- | :--- |
+| Evidencia repetida de un **hallazgo** | Que algo **es verdad** → regla | `conocimiento/`: `observación` → `comprobado` → `regla-candidata` |
+| Un **resultado** que destacó | Que algo **salió bien** → reutilizable | `higiene-de-trabajo.md` §6 |
+| Un **procedimiento que se re-escribe a mano** (misma secuencia de instrucciones en más de una sesión) | Que algo **se está reconstruyendo** → procedimiento con orden fijo | Este apartado |
+
+Un procedimiento se escribe en el documento del juego si es específico del juego, o en `_framework/` si es transversal. **No se automatiza**: sigue siendo un documento que el agente lee y ejecuta en orden, no un script. El límite sigue vigente: **nada de automatización ni herramientas propias antes del primer juego piloto** (ver §Qué este framework NO es).
+
+*(Origen del criterio de clasificación: análisis de la documentación de un asistente comercial para motores; ver la ficha en `_framework/referencias/README.md` §Documentación externa. Solo se adopta el criterio conceptual: la herramienta y su sistema de skills no se adoptan.)*
+
 ## Dónde vive cada tipo de contenido
 
 | Si es... | Va en |
 | :--- | :--- |
 | El método de trabajo | `_framework/` |
+| Un procedimiento reutilizable transversal | `_framework/`, como documento de tipo **procedimiento** |
+| Un procedimiento específico de un juego | Su carpeta en `mis-juegos/` |
 | Una lección aprendida haciendo un juego | `conocimiento/` |
 | Material externo que se conserva tal cual | `_framework/referencias/` |
 | El estado o la historia de un juego concreto | Su carpeta en `mis-juegos/` |

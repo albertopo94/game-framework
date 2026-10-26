@@ -59,10 +59,11 @@ Antes de implementar una mecánica **en el motor**, se valida **fuera del motor*
 
 ## Reglas del router
 
-1. **Existir no significa estar disponible.** Que un documento, skill, motor o herramienta exista en el repo **no significa que esté instalado, con cuenta activa o editor conectado**. Antes de proponer un flujo, el agente inspecciona la capacidad real en el entorno.
-2. **Empezar por el entregable, no por la herramienta.** Primero: "¿qué resultado necesita el creador ahora?". Después: "¿con qué lo hago?".
-3. **Un trabajo puede cruzar varios documentos.** Diseñar una mecánica usa rol 02 + plantilla de subsistema + banco-visual + dimensiones. Se leen todos los que aplican, no el primero que aparece.
-4. **Si no hay documento para la necesidad, se registra el hueco** en `ciclo-produccion.md` §Qué falta definir. No se improvisa una estructura nueva en silencio.
+1. **Un entregable puede requerir un procedimiento, no solo lectura.** Si el router enruta a un documento y ese documento no fija el **orden** de los pasos, hay un hueco: se registra (regla 5) y, una vez la misma secuencia se repite en más de una sesión, se promueve a procedimiento según `_framework/README.md` §Referencia o procedimiento.
+2. **Existir no significa estar disponible.** Que un documento, skill, motor o herramienta exista en el repo **no significa que esté instalado, con cuenta activa o editor conectado**. Antes de proponer un flujo, el agente inspecciona la capacidad real en el entorno.
+3. **Empezar por el entregable, no por la herramienta.** Primero: "¿qué resultado necesita el creador ahora?". Después: "¿con qué lo hago?".
+4. **Un trabajo puede cruzar varios documentos.** Diseñar una mecánica usa rol 02 + plantilla de subsistema + banco-visual + dimensiones. Se leen todos los que aplican, no el primero que aparece.
+5. **Si no hay documento para la necesidad, se registra el hueco** en `ciclo-produccion.md` §Qué falta definir. No se improvisa una estructura nueva en silencio.
 
 ## Planificar: entregables, no llamadas a herramientas
 
