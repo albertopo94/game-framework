@@ -40,8 +40,8 @@ Lista concreta de lo que el juego necesita, no lo que el agente elija:
 
 - Engine, art, audio. Cada juego las declara en su `00-estado-produccion.md`.
 - Godot, Unity y Blender son candidatas privilegiadas, no estándar impuesto.
-- **Blender MCP oficial** es la herramienta principal de creación de assets (modelado, texturas, iluminación, exportación). Se usa **siempre que el tipo de juego lo amerite** — no es un estándar universal: un pixel art 2D puro puede no necesitarlo, pero un 3D, un 2.5D pixel art con iluminación dinámica o cualquier juego que requiera modelado/texturas sí. La decisión la toma el rol 01 junto con el prompt maestro (dimensión 3 y 4); el agente **nunca asume** que un juego 2D no necesita Blender MCP.
-- Antes de proponer un flujo concreto con Blender MCP, el agente debe **comprobar si la herramienta elegida ofrece esa capacidad** en el entorno local. No se asumen capacidades por nombre.
+- **MCP de modelado 3D** es la herramienta principal de creación de assets (modelado, texturas, iluminación, exportación). Se usa **siempre que el tipo de juego lo amerite** — no es un estándar universal: un pixel art 2D puro puede no necesitarlo, pero un 3D, un 2.5D pixel art con iluminación dinámica o cualquier juego que requiera modelado/texturas sí. La decisión la toma el rol 01 junto con el prompt maestro (dimensión 3 y 4); el agente **nunca asume** que un juego 2D no necesita MCP de modelado 3D.
+- Antes de proponer un flujo concreto con MCP de modelado 3D, el agente debe **comprobar si la herramienta elegida ofrece esa capacidad** en el entorno local. No se asumen capacidades por nombre.
 - Catálogo completo: `_framework/herramientas-y-apis.md`.
 
 ## 5. Scope (fija aquí, no en producción)

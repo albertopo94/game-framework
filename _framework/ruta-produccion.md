@@ -17,8 +17,8 @@
 | Diseñar e implementar VFX (concepting → motor) | `produccion-vfx.md` |
 | Pipeline completo de personaje (partes → UV → textura → rig → anim → VFX → motor) | `pipeline-assets.md` (perfil `personaje-3d-hero` / `personaje-3d-secondary` / `personaje-3d-stylized`) |
 | Proyecto completo bajo restricción de tiempo con plantilla + MCP + agente navegador | `pipeline-assets.md` (perfil `entorno-unique` + `pipeline-nivel.md` perfil `modular-manual`) |
-| Desarrollo browser-game solo con prompting (Three.js, sin motor) | `prompting-puro-browser.md` |
-| Juego navegador/móvil (Rust/WASM/Three.js + librería networking + herramienta de sprites 2D) | `pipeline-navegador.md` |
+| Desarrollo browser-game solo con prompting (framework WebGL, sin motor) | `prompting-puro-browser.md` |
+| Juego navegador/móvil (Rust/WASM/framework WebGL + librería networking + herramienta de sprites 2D) | `pipeline-navegador.md` |
 | Pipeline personaje con agente artista especializado | `agentes-especializados.md` |
 | Pipeline personaje con agente artista especializado | `agentes-especializados.md` |
 | Pipeline personaje con agente artista especializado | `agentes-especializados.md` |

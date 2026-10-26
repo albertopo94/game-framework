@@ -65,11 +65,11 @@ Listar los subsistemas (por dimensión) que se van a construir con dueño propio
 
 ## Relación con prompting puro (browser games)
 
-El proceso de 7 pasos de `prompting-puro-browser.md` (prompt + target + loop + play + score + skills + ship) **es una implementación concreta del modo Creación** para juegos browser/Three.js. Donde el prompt maestro define el contrato estático, el proceso de 7 pasos lo ejecuta dinámicamente con loop, scoring y skill library.
+El proceso de 7 pasos de `prompting-puro-browser.md` (prompt + target + loop + play + score + skills + ship) **es una implementación concreta del modo Creación** para juegos browser/framework WebGL. Donde el prompt maestro define el contrato estático, el proceso de 7 pasos lo ejecuta dinámicamente con loop, scoring y skill library.
 
 ## Advertencia
 
-El proceso de 7 pasos de `prompting-puro-browser.md` (prompt + target + loop + play + score + skills + ship) **es una implementación concreta del modo Creación** para juegos browser/Three.js. Donde el prompt maestro define el contrato estático, el proceso de 7 pasos lo ejecuta dinámicamente con loop, scoring y skill library.
+El proceso de 7 pasos de `prompting-puro-browser.md` (prompt + target + loop + play + score + skills + ship) **es una implementación concreta del modo Creación** para juegos browser/framework WebGL. Donde el prompt maestro define el contrato estático, el proceso de 7 pasos lo ejecuta dinámicamente con loop, scoring y skill library.
 
 ## Advertencia
 

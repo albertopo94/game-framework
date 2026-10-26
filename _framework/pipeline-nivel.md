@@ -13,7 +13,7 @@
 | **modular-asistido** | Top-down, RTS, City builder | Primitivas + Array/Curve + agente coloca bajo supervisión | Balance |
 | **tilemap-2d** | 2D platformer, RPG, roguelike | Tilemap + autotiling + reglas de adyacencia | Velocidad > control fino |
 | **procedural-asistido** | Roguelike, survival, infinite runner | Reglas procedurales + semilla + validación humana | Velocidad > control |
-| **navegador-pwa** | Juegos browser/móvil (PWA) | Rust/WASM + Three.js + librería networking + herramienta de sprites 2D | Mobile-first, touch-first |
+| **navegador-pwa** | Juegos browser/móvil (PWA) | Rust/WASM + framework WebGL + librería networking + herramienta de sprites 2D | Mobile-first, touch-first |
 | **arena-sandbox** | Battle royale, MMO, open world | Terreno procedural + zones + POIs colocados manualmente | Control en POIs, velocidad en relleno |
 
 ---
@@ -160,7 +160,7 @@
 | `ciclo-produccion.md` | Fases Prototipo / Producción / QA |
 | `escalas-aceptacion.md` | Estados de aceptación por nivel |
 | `conocimiento/` | Lecciones aprendidas por perfil |
-| `pipeline-navegador.md` | Pipeline completo navegador: Rust/WASM + Three.js + librería networking + herramienta de sprites 2D |
+| `pipeline-navegador.md` | Pipeline completo navegador: Rust/WASM + framework WebGL + librería networking + herramienta de sprites 2D |
 | `agentes-especializados.md` | Agente artista especializado: sandbox isolation, self-healing, blend shapes, decoupling |
 
 ---

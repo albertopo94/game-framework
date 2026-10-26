@@ -40,7 +40,7 @@ Registrada como hipótesis de terceros (`_framework/referencias/notas-creador/ta
 | VFX concepting (2D) | El agente genera conceptos 2D + timing + capas antes de implementar; validado por creador | pendiente |
 | Pipeline completo de personaje (partes → UV → textura → rig → anim → VFX → motor) | Agente genera partes + UV + mapas; humano ensambla en Blender (12 min) + rigging híbrido servicio de auto-rigging+GPT; animaciones y VFX por agente especializado; integra en motor | pendiente (2 fuentes: tanda-05 + tanda-08) |
 | Pipeline Souls-like 72h (high-poly sculpt → bake → tileables → modular level → plantilla UE + MCP + agente navegador) | High-poly sculpt → retopo → bake (color+normal+AO) para héroes/jefe; tileables para entorno; modular level con primitivas+modificadores; plantilla UE + MCP + agente navegador (no constructor) | pendiente (tanda-09) |
-| Pure LLM prompting para juegos browser (Three.js/HTML) | Prompt corto + target visual + loop hasta score + play + score/revise + skill library + ship; sin motor, sin MCP, sin tools externas | pendiente (tanda-10) |
+| Pure LLM prompting para juegos browser (framework WebGL/HTML) | Prompt corto + target visual + loop hasta score + play + score/revise + skill library + ship; sin motor, sin MCP, sin tools externas | pendiente (tanda-10) |
 | Agentes especializados con sandbox (artist agent, character pipeline) | Sandbox aislado, herramientas propias, experiencia acumulada, self-healing, blend shapes, decoupling body/equipment | pendiente (tanda-13) |
 | Prototipo jugable en 2 días (plantilla UE + retarget + assets comprados) | Plantilla UE + herramienta de auto-rigging + retarget + generador de texturas PBR tileables tileables + foliage/agua comprados; sin high-poly bake, sin rigging manual | pendiente (tanda-11) |
 | Arte y música | Rinde mal o inconsistente **hecho por el LLM**; el camino es generar assets con generadores especializados + remate humano. Ver `produccion-assets.md` | pendiente |
@@ -57,7 +57,7 @@ Registrada como hipótesis de terceros (`_framework/referencias/notas-creador/ta
 | :--- | :--- | :--- | :--- |
 | **Engine** | Godot | ✅ Candidata privilegiada | Open source, ligero, 2D/3D |
 | **Engine** | Unity | ✅ Candidata privilegiada | Ecosistema amplio. Puente a agentes vía **Unity CLI** (oficial); ver sección dedicada. |
-| **Art / Modelado 3D** | **Blender MCP oficial** | ✅ **Herramienta principal de creación de assets** | MCP oficial de Blender. Para crear assets (modelado, texturas, iluminación, exportación) cuando el tipo de juego lo amerite. |
+| **Art / Modelado 3D** | **MCP de modelado 3D** | ✅ **Herramienta principal de creación de assets** | MCP oficial de Blender. Para crear assets (modelado, texturas, iluminación, exportación) cuando el tipo de juego lo amerite. |
 | **Audio** | _pendiente del creador_ | ⏳ | |
 
 ## Unity CLI — puente oficial a agentes
@@ -105,13 +105,13 @@ Instalación real, comandos disponibles y comportamiento en headless se confirma
 
 Ver lista completa en `_framework/referencias/unity-cli-links.md`.
 
-## Blender MCP oficial — creación de assets
+## MCP de modelado 3D — creación de assets
 
 ### Cuándo se usa
 
 - **Siempre que el tipo de juego lo amerite.** No es un estándar universal: un juego de pixel art 2D puro puede no necesitarlo; un juego 3D, un 2.5D pixel art con iluminación dinámica, o cualquier juego que requiera modelado/texturas sí.
-- La decisión la toma el **rol 01 (Concepto)** en conjunto con el **prompt maestro**: la dimensión 3 (Recursos/assets) y la dimensión 4 (Mapas) declaran si se requiere Blender MCP.
-- El agente **nunca asume** que un juego 2D no necesita Blender MCP. Consulta al creador o registra la decisión con justificación.
+- La decisión la toma el **rol 01 (Concepto)** en conjunto con el **prompt maestro**: la dimensión 3 (Recursos/assets) y la dimensión 4 (Mapas) declaran si se requiere MCP de modelado 3D.
+- El agente **nunca asume** que un juego 2D no necesita MCP de modelado 3D. Consulta al creador o registra la decisión con justificación.
 
 ### Capabilidades esperidas (a verificar en el entorno local)
 

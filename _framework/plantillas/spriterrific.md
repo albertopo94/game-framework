@@ -14,7 +14,7 @@ Herramienta **propia del creador** para generar sprites 2D game-ready desde prom
 | **Prompt → Character sheet** | Genera walk, run, idle, attack, interact, etc. |
 | **Prompt → Fix animaciones** | "He faces wrong way / three hands" → re-genera |
 | **Blend shapes support** | Muscle size, face variation, equipment swap |
-| **Export** | PNG sequences / atlas JSON listo para Three.js / Unity / Godot |
+| **Export** | PNG sequences / atlas JSON listo para framework WebGL / Unity / Godot |
 | **API key en env var** | Cero config, prompt en agente |
 
 ---

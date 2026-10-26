@@ -30,7 +30,7 @@ Un hallazgo de auditoría o review se marca como **confirmado** solo si pasó un
 
 ## 4. Verde no significa probado
 
-Un check que **se salteó** casos no probó esos casos. Referencia explícita de su propia doc: *"without it they skip, so a green run has not proven the emitted Three.js compiles."*
+Un check que **se salteó** casos no probó esos casos. Referencia explícita de su propia doc: *"without it they skip, so a green run has not proven the emitted framework WebGL compiles."*
 
 - Cuando una verificación no cubrió algo, se dice. Un "pasó" que saltó el 80 % de los casos es más peligroso que un "falló".
 - En `escalas-aceptacion.md` esto es evidencia negativa obligatoria; acá es disciplina de commit y de tracker.

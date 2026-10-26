@@ -1,6 +1,6 @@
 # Estrategia de Prompting Puro para Juegos en Navegador 🎮
 
-> **Estado: hipótesis de terceros, a verificar en nuestro entorno.** Destilado de `_framework/referencias/notas-creador/tanda-10-prompting-strategy.md` (video de un creador que construye juegos completos en Three.js/HTML **solo con prompting estratégico** — sin motores, sin MCPs, sin herramientas externas. Evidencia: arcade jugable público con decenas de builds; contra: **vende sus skills por $9** — incentivo de mostrar fluidez). Los nombres de productos no entran; las prácticas, con verificación pendiente.
+> **Estado: hipótesis de terceros, a verificar en nuestro entorno.** Destilado de `_framework/referencias/notas-creador/tanda-10-prompting-strategy.md` (video de un creador que construye juegos completos en framework WebGL/HTML **solo con prompting estratégico** — sin motores, sin MCPs, sin herramientas externas. Evidencia: arcade jugable público con decenas de builds; contra: **vende sus skills por $9** — incentivo de mostrar fluidez). Los nombres de productos no entran; las prácticas, con verificación pendiente.
 > **Diferencia clave con tandas 5-9:** aquí **no hay motor, no hay Blender, no hay MCP** — el LLM *es* el motor de desarrollo. El framework agnóstico debe contemplar este modo "prompt-only".
 
 ## El Proceso de 7 Pasos (núcleo del método)
@@ -116,7 +116,7 @@
 ## Andamiaje Técnico (lo que el creador usa pero no enseña a fondo)
 
 - **Modelos:** Opus 5.5, GPT-6, Astra, Kimi K3, Sonnet, etc.
-- **Entorno:** Three.js / HTML / browser arcade (sin motor, sin MCP)
+- **Entorno:** framework WebGL / HTML / browser arcade (sin motor, sin MCP)
 - **Skills:** biblioteca propia ($9 bundle) — Voxel world, Character kit, Dark crawler kit, etc.
 - **Arcade propio:** página web donde publica y deja jugar gratis
 
@@ -131,8 +131,8 @@
 | `escalas-aceptacion.md` | Score 1-10 + meta numérica = implementación del estado 4 (verificado por agente) → 5 (aceptado por humano) |
 | `higiene-de-trabajo.md` §6 | Skills = lecciones comprobadas que se promueven de `conocimiento/` a reutilizables |
 | `produccion-assets.md` / `produccion-vfx.md` | Enfoque opuesto: aquí **no hay assets previos**, el LLM genera todo en runtime |
-| `ciclo-produccion.md` | Este es un **ciclo alternativo** para juegos browser/Three.js; fases: Prompt → Target → Loop → Play → Score → Skill → Ship |
-| `herramientas-y-apis.md` | Nueva categoría: "Pure LLM prompting for browser games" (Three.js, HTML Canvas, WebGL) |
+| `ciclo-produccion.md` | Este es un **ciclo alternativo** para juegos browser/framework WebGL; fases: Prompt → Target → Loop → Play → Score → Skill → Ship |
+| `herramientas-y-apis.md` | Nueva categoría: "Pure LLM prompting for browser games" (framework WebGL, HTML Canvas, WebGL) |
 
 ---
 
@@ -147,4 +147,4 @@
 
 ## Verificación Pendiente
 
-Cada afirmación de capacidad se confirma o descarta practicando en un juego real (browser/Three.js), y se registra en `conocimiento/`. Mientras tanto, esto planifica, no manda.
+Cada afirmación de capacidad se confirma o descarta practicando en un juego real (browser/framework WebGL), y se registra en `conocimiento/`. Mientras tanto, esto planifica, no manda.

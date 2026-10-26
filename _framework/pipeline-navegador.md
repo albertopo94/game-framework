@@ -26,7 +26,7 @@
 | **2. Mockups + Floor plans** | GPT-Image / Codex image gen → 4 mockups + floor plans | GPT-Image, Codex | ~1-2h |
 | **3. Assets 3D (Blender)** | Props, entorno, baking → GLTF/GLB | Blender + pipeline-assets.md | ~2-4h |
 | **4. Sprites 2D (herramienta de sprites 2D)** | Character sheets + animaciones (walk, run, idle, interact) | herramienta de sprites 2D + agente | ~1-2h |
-| **6. Ensamblaje en motor** | Three.js + GLTF load + scene setup | Three.js + agente | ~2-4h |
+| **6. Ensamblaje en motor** | framework WebGL + GLTF load + scene setup | framework WebGL + agente | ~2-4h |
 | **7. Multiplayer** | Autoritativo, WebSocket, client-side prediction | Librería networking (ver `herramientas-y-apis.md`) + self-host | ~4-8h |
 | **7. Polish + Mobile** | Touch controls (analog stick virtual), portrait mode, PWA | CSS + JS + Service Worker | ~2h |
 | **7. Deploy** | Railway / Vercel / Netlify / GitHub Pages | CI/CD | ~15 min |
@@ -56,7 +56,7 @@
 | **Prompt → Character sheet** | Genera walk, run, idle, attack, interact, etc. |
 | **Prompt → Fix animaciones** | "He faces wrong way / three hands" → re-genera |
 | **Blend shapes support** | Muscle size, face variation, equipment swap |
-| **Export** | PNG sequences / atlas JSON listo para Three.js |
+| **Export** | PNG sequences / atlas JSON listo para framework WebGL |
 | **API key en env var** | Cero config, prompt en agente |
 
 **Regla:** *Dogfooding obligatorio.* El creador usa su propia herramienta → encuentra bugs (3 manos, dirección errónea) → fixea la herramienta.
@@ -125,8 +125,8 @@
 | `pipeline-assets.md` | Perfil `personaje-3d-stylized` (2D en 3D), `vegetacion-shader`, `entorno-procedural-infinito` |
 | `pipeline-nivel.md` | Perfil `procedural-asistido` + `arena-sandbox` (chunk loading) |
 | `produccion-vfx.md` | Alpha maps, grass shader, day/night, cartoon shader |
-| `herramientas-y-apis.md` | Matriz: Rust/WASM, Three.js, **Networking librería** (ver tabla comparativa), herramienta de sprites 2D |
-| `ruta-produccion.md` | Fila: "Juego navegador (Rust/WASM/Three.js + networking lib)" |
+| `herramientas-y-apis.md` | Matriz: Rust/WASM, framework WebGL, **Networking librería** (ver tabla comparativa), herramienta de sprites 2D |
+| `ruta-produccion.md` | Fila: "Juego navegador (Rust/WASM/framework WebGL + networking lib)" |
 | `escalas-aceptacion.md` | Multiplayer = gate más difícil (sync, lag, prediction) |
 | `conocimiento/` | Lecciones: modelos pequeños sirven, dogfooding, cost tracking |
 
@@ -134,4 +134,4 @@
 
 ## Verificación Pendiente
 
-Cada afirmación de capacidad se confirma o descarta practicando en un juego real (Three.js + librería networking), y se registra en `conocimiento/`. Mientras tanto, esto planifica, no manda.
+Cada afirmación de capacidad se confirma o descarta practicando en un juego real (framework WebGL + librería networking), y se registra en `conocimiento/`. Mientras tanto, esto planifica, no manda.
