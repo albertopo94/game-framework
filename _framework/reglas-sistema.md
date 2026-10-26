@@ -2,6 +2,8 @@
 
 Reglas operativas para agentes. Se expanden con el conocimiento del creador.
 
+> **Este documento tiene un tope y las reglas mueren.** Leer §Cómo se escribe, cuánto mide y cómo muere una regla antes de agregar nada.
+
 ## Reglas heredadas del YouTube Creator Hub (aplican igual)
 
 1. **Regla de N Alternativas** para decisiones creativas clave: nombre, concepto, mecánicas núcleo, dirección de arte, dirección de marketing.
@@ -30,3 +32,50 @@ Reglas operativas para agentes. Se expanden con el conocimiento del creador.
 - **No inventar preferencias del creador:** si falta una preferencia, gusto o decisión del creador, se pregunta; no se inventa una biografía ni un gusto por defecto. Lo que no está en `conocimiento/`, en el juego o en sus notas no existe. *(Origen: destilación de `mr-mak-workspace`)*
 - **El handoff es el input de arranque:** una sesión nueva empieza leyendo el handoff de la sesión anterior (si quedó trabajo abierto), además de `00-estado-produccion.md` y `bitacora-sesiones.md`. El traspaso vive en disco, nunca en la memoria del chat. *(Origen: destilación de `mr-mak-workspace`; ver `plantillas/handoff-sesion.md`)*
 - **Separar ejecución de aceptación:** "el job se envió", "el build se preparó", "el agente lo verificó" son frases incompletas. Cada resultado se declara con su estado en la escalera de aceptación (`escalas-aceptacion.md`); ninguna de esas tres frases equivale a "entregado" ni a "aprobado". *(Origen: destilación de `mr-mak-workspace`)*
+
+## Cómo se escribe, cuánto mide y cómo muere una regla
+
+Una lista de reglas que solo crece deja de ser una lista y pasa a ser decorado. Este documento tiene tres controles: redacción, presupuesto y retiro.
+
+### 1. Redacción
+
+Una regla se escribe como instrucción a un miembro nuevo del equipo, no como valor declarado.
+
+| Requisito | Regla que cumple | Regla que NO cumple |
+| :--- | :--- | :--- |
+| **Verbo decisivo + objeto concreto** | "Ningún binario al repo de trabajo." | "Escribí buen código." |
+| **La violación es observable** | "Ningún gate de fase cierra sin comparativa side-by-side contra la referencia declarada." | "Poné esfuerzo en la calidad." |
+| **Afirmativa, con el caso bueno descripto** | "Por defecto los assets son handcrafted; lo procedural se pide explícito." | "Evitá assets feos o genéricos." |
+| **Con ejemplo real cuando el criterio es de forma** | "Referencia visual = vídeo, imagen o juego real mostrado." | "Tené buen gusto visual." |
+
+- **Test mínimo:** si no se puede escribir una frase que describa cómo se ve **violar** la regla, eso no es una regla: es una preferencia. Va a `conocimiento/` o se pregunta.
+- **Sin contraejemplos sueltos.** Describir el patrón incorrecto le da algo concreto para imitar; se describe el patrón correcto.
+- **La condición no vive en la regla.** Si una regla empieza con "si…", la mayoría de las veces la condición pertenece al router (`ruta-produccion.md`) o al juego (`00-estado-produccion.md`), y la regla queda incondicional. Excepción legítima: la regla cuyo objeto **es** la condición (ej. autonomía proporcional al riesgo).
+- **Sin contradicciones.** Ante dos reglas que chocan, se resuelve **ahora** y se deja escrito cuál manda; no se deja que el agente elija en cada sesión.
+- **Toda regla cita su origen** (tanda, `conocimiento/`, práctica propia). Una regla sin origen no se agrega.
+
+### 2. Presupuesto
+
+- **El tope lo pone la atención del agente, no la paciencia del creador.** Cada regla compite con las otras 22 por el mismo contexto: cuanto más larga la lista, más reglas se cumplen por suerte.
+- **Agregar una regla es una decisión del creador** (idéntico a promocionar una `regla-candidata`), y al proponerla **se nombra qué otra se revisa**: se retira, se fusiona, o se explica por qué ninguna.
+- **Fusionar antes que acumular.** Varias reglas del mismo origen y el mismo objeto se escriben como una con incisos. *(Ejemplo real de este archivo: "assets handcrafted por defecto" y "niveles no procedurales por defecto" son una regla con dos objetos.)*
+- **Lo específico del juego no sube acá.** Una restricción de un juego va en su `00-estado-produccion.md`; si se repite en tres juegos, recién ahí es candidata a regla del sistema.
+
+### 3. Retiro
+
+**Una regla puede estar equivocada y hay que poder decirlo.** La evidencia de retiro es una regla que se violó **por seguirla**, no una que molestó.
+
+| Señal de retiro | Qué se hace |
+| :--- | :--- |
+| La práctica de un juego la contradice | Se pasa a `RETIRO` con fecha, evidencia y qué la reemplaza |
+| Está fusionada en otra | Se marca `RETIRO` apuntando a la regla que la absorbió |
+| Depende de algo que ya no existe (herramienta, motor, límite del piloto) | Se marca `RETIRO` con el motivo |
+| Nadie la viola porque nadie la lee | Candidata a fusión o a bajar de categoría |
+
+- **No se borra: se marca.** El texto retirado queda visible con `~~tachado~~` + `RETIRO (fecha, motivo)` — la trazabilidad manda sobre la limpieza (ver `higiene-de-trabajo.md`).
+- **Retirar también es decisión del creador.** Un agente propone el retiro con la evidencia; no auto-retira.
+- **Revisión obligatoria tras el primer piloto.** Hoy el documento tiene **23 reglas** y ninguna violada todavía: sin juego real, ninguna fue tensada. Al cerrar el piloto se revisa la lista completa: qué reglas se cumplieron solas, cuáles se violaron, cuáles nadie usó. Eso, no la intuición, decide qué se va.
+
+### 4. Cómo se promueve (recap)
+
+`conocimiento/` (`regla-candidata`) → **el creador aprueba** → entra acá con origen, redacción según §1 y **hueco nombrado** según §2. Al subir, se parte la entrada: **el hecho** queda como referencia y **el procedimiento** va a su documento (ver `_framework/README.md` §Referencia o procedimiento). La promoción no borra la entrada original: queda como historial enlazado.

@@ -447,3 +447,31 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 ### Conclusión del análisis
 
 **Su documentación confirma la dirección del framework** (router por entregable, skills apilables, edición como diff, permisos explícitos) y aporta **un solo criterio que nos faltaba**: distinguir qué documentos son referencia y cuáles son procedimiento, y tratar la repetición manual de una secuencia como señal de que ese procedimiento nunca se fijó.
+
+---
+
+## Documentación externa: "Workspace Rules" de un asistente comercial para motores
+
+- **Fuente:** página de fundamentos sobre reglas persistentes del mismo asistente analizado en §Documentación externa (skills). **No se copia el producto ni su configuración**; se conserva solo esta ficha.
+- **Por qué se analiza:** es el documento homólogo a nuestro `reglas-sistema.md`, y expone un problema que ese archivo tenía y no estaba nombrado: cómo se escribe, cuánto debe medir y cómo muere una regla.
+- **Regla aplicada:** se adoptan criterios de redacción y ciclo de vida. Lo que es modelo de permisos de un producto multiusuario no se adopta.
+
+### Lo que tomamos (3 criterios → 1 sección)
+
+| Criterio | Va a | Qué resuelve |
+| :--- | :--- | :--- |
+| **Presupuesto:** la lista de reglas tiene un techo porque cada regla compite por el mismo contexto; "cuantas menos, mejor" | `reglas-sistema.md` §Presupuesto | `reglas-sistema.md` tenía 23 reglas y ningún criterio de tamaño |
+| **Retiro:** "no set-and-forget"; las reglas viejas se limpian para hacer lugar | `reglas-sistema.md` §Retiro | Ninguna regla nuestra podía morir; el doc solo crecía |
+| **Redacción:** imperativo, violación observable, ejemplo real, sin antiejemplos sueltos, sin contradicción | `reglas-sistema.md` §Redacción | Varias de nuestras reglas eran valores declarados, no instrucciones verificables |
+
+### Lo que NO tomamos
+
+- **Reglas por workspace, privadas vs compartidas, "Shared Page" con @mention, reglas por subcarpeta:** modelo de permisos de un producto para equipos. Somos un creador + sus agentes; no hay a quién compartirle nada.
+- **"Se inyectan en el system prompt con peso extra":** mecanismo de producto. La autoridad de nuestras reglas la define `AGENTS.md`, no la posición en un prompt.
+- **"Nunca reglas condicionales (IF/SHOULD), el agente no las sigue de forma fiable":** afirmación empírica sin evidencia, presentada como "best practice". La tensión con `AGENTS.md` §Niveles de autonomía (que **es** condicional y funciona) la resolvimos así: **"si puede escribirse sin condición, que no la tenga; la condición vive en el router o en `00-estado-produccion.md`, no en la regla"**. Criterio adoptado, prohibición descartada.
+- **"Usá MAYÚSCULAS y palabras fuertes (ALWAYS, CRITICAL)":** decoración de énfasis. La autoridad de una regla en este repo no depende de su tipografía.
+- **"No pidas que escriba tus reglas":** adoptado **por práctica**, no por texto: nuestra regla de origen en `conocimiento/` ya prohíbe que el agente se auto-promueva reglas.
+
+### Conclusión del análisis
+
+**Es la primera vez que la documentación externa nos señala una falta estructural propia** y no solo prácticas a adoptar: nuestro archivo de reglas tenía **ciclo de entrada y ninguno de salida**. El fix es un criterio de redacción, un presupuesto y una ruta de retiro. Quedó además abierta una auditoría explícita para el cierre del primer piloto: 23 reglas nunca violadas no son 23 reglas comprobadas.
