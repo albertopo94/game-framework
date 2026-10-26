@@ -13,7 +13,7 @@
 | **Compilación** | `wasm-pack` / `cargo` | WASM nativo, sin runtime pesado |
 | **Graphics API** | WebGPU + WebGL fallback | WebGPU = performance; WebGL = compatibilidad universal |
 | **Runtime** | Navegador (desktop + mobile) | Zero install, zero deploy friction |
-| **Multiplayer** | Colyseus (WebSocket) + Railway (self-host) | WebSocket nativo, autoritativo, escalable |
+| **Multiplayer** | WebSocket nativo + librería de networking (ver `herramientas-y-apis.md`) | WebSocket nativo, autoritativo, escalable |
 | **Sprite Pipeline** | Spriterrific (custom tool) + alpha maps | 2D en 3D, batching, InstancedMesh |
 
 ---
@@ -27,7 +27,7 @@
 | **3. Assets 3D (Blender)** | Props, entorno, baking → GLTF/GLB | Blender + pipeline-assets.md | ~2-4h |
 | **4. Sprites 2D (Spriterrific)** | Character sheets + animaciones (walk, run, idle, interact) | Spriterrific + agente | ~1-2h |
 | **6. Ensamblaje en motor** | Three.js + GLTF load + scene setup | Three.js + agente | ~2-4h |
-| **7. Multiplayer (Colyseus)** | Autoritativo, WebSocket, client-side prediction | Colyseus + Railway self-host | ~4-8h |
+| **7. Multiplayer** | Autoritativo, WebSocket, client-side prediction | Librería networking (ver `herramientas-y-apis.md`) + self-host | ~4-8h |
 | **7. Polish + Mobile** | Touch controls (analog stick virtual), portrait mode, PWA | CSS + JS + Service Worker | ~2h |
 | **7. Deploy** | Railway / Vercel / Netlify / GitHub Pages | CI/CD | ~15 min |
 
@@ -63,17 +63,21 @@
 
 ---
 
-## Multiplayer Browser (Colyseus + WebSocket)
+## Networking Patterns (Genéricos, no atados a librería)
 
-| Técnica | Qué resuelve |
-| :--- | :--- |
-| **Client-side prediction** | Input inmediato → predicción local → corrección servidor → 0 lag percibido |
-| **Server reconciliation** | Servidor autoritativo corrige posición cada N ticks |
-| **Entity interpolation** | Suavizado visual de otras entidades (lerp entre snapshots) |
-| **Single seed para NPCs** | Mismo seed = misma simulación determinista en todos clientes (0 bandwidth para IA) |
-| **Position compression** | Enviar solo `uint16` (x, y) + `uint8` (dir) en vez de `float32` × 3 |
-| **Interest management** | Solo enviar entidades en viewport + margin (interest area) |
-| **Snapshot interpolation** | Buffer de 2-3 snapshots → interpolación suave |
+| Patrón | Qué resuelve | Aplicable a |
+| :--- | :--- | :--- |
+| **Client-side prediction** | Input inmediato → predicción local → corrección servidor → 0 lag percibido | Cualquier librería WebSocket |
+| **Server reconciliation** | Servidor autoritativo corrige posición cada N ticks | Cualquier servidor autoritativo |
+| **Entity interpolation** | Suavizado visual de otras entidades (lerp entre snapshots) | Cualquier arquitectura |
+| **Single seed para NPCs** | Mismo seed = misma simulación determinista en todos clientes (0 bandwidth para IA) | Simulaciones deterministas |
+| **Position compression** | Enviar solo `uint16` (x, y) + `uint8` (dir) en vez de `float32` × 3 | Cualquier protocolo binario |
+| **Interest management** | Solo enviar entidades en viewport + margin (interest area) | Mundos grandes |
+| **Snapshot interpolation** | Buffer de 2-3 snapshots → interpolación suave | Cualquier arquitectura basada en snapshots |
+| **Single seed para NPCs** | Mismo seed = misma simulación determinista en todos clientes (0 bandwidth para IA) | Simulaciones deterministas |
+| **Position compression** | Enviar solo `uint16` (x, y) + `uint8` (dir) en vez de `float32` × 3 | Cualquier protocolo binario |
+| **Interest management** | Solo enviar entidades en viewport + margin (interest area) | Mundos grandes |
+| **Snapshot interpolation** | Buffer de 2-3 snapshots → interpolación suave | Cualquier arquitectura basada en snapshots |
 
 ---
 
@@ -108,7 +112,7 @@
 | Haiku 5.5 no acierta a la primera | Requiere más iteraciones que Sol; "doesn't get things as right first time" |
 | Spriterrific walk cycles | Aún falla a veces (3 manos, dirección errónea) → dogfooding fixea |
 | Multiplayer > 1000 concurrentes | No probado; "might make game very busy" |
-| Self-hosted Colyseus en Railway | Funciona pero requiere config de WebSocket + SSL |
+| Self-hosted networking en Railway | Funciona pero requiere config de WebSocket + SSL |
 | Mobile Safari WebGPU | Parcial; WebGL fallback obligatorio |
 
 ---
@@ -121,8 +125,8 @@
 | `pipeline-assets.md` | Perfil `personaje-3d-stylized` (2D en 3D), `vegetacion-shader`, `entorno-procedural-infinito` |
 | `pipeline-nivel.md` | Perfil `procedural-asistido` + `arena-sandbox` (chunk loading) |
 | `produccion-vfx.md` | Alpha maps, grass shader, day/night, cartoon shader |
-| `herramientas-y-apis.md` | Matriz: Rust/WASM, Three.js, Colyseus, Spriterrific |
-| `ruta-produccion.md` | Fila: "Juego navegador (Rust/WASM/Three.js + Colyseus)" |
+| `herramientas-y-apis.md` | Matriz: Rust/WASM, Three.js, **Networking librería** (ver tabla comparativa), Spriterrific |
+| `ruta-produccion.md` | Fila: "Juego navegador (Rust/WASM/Three.js + networking lib)" |
 | `escalas-aceptacion.md` | Multiplayer = gate más difícil (sync, lag, prediction) |
 | `conocimiento/` | Lecciones: modelos pequeños sirven, dogfooding, cost tracking |
 
@@ -130,4 +134,4 @@
 
 ## Verificación Pendiente
 
-Cada afirmación de capacidad se confirma o descarta practicando en un juego real (Three.js + Colyseus), y se registra en `conocimiento/`. Mientras tanto, esto planifica, no manda.
+Cada afirmación de capacidad se confirma o descarta practicando en un juego real (Three.js + librería networking), y se registra en `conocimiento/`. Mientras tanto, esto planifica, no manda.

@@ -339,7 +339,7 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 | **Verticalidad = interés visual + gameplay (escalar con IK pie)** | `pipeline-assets.md` (perfil `personaje-3d-*`), `produccion-vfx.md` |
 | **Day/night + post-process + cartoon shader = "mitad del look"** | `produccion-vfx.md` |
 | **IK pie sí, mano no** (tradeoff velocidad/calidad) | `pipeline-assets.md` (perfil `personaje-3d-*`), `produccion-vfx.md` |
-| **Multiplayer = complejidad exponencial** (Colyseus ayuda pero no magia) | `herramientas-y-apis.md` (matriz capacidad), `pipeline-nivel.md` (perfil `procedural-asistido`) |
+| **Multiplayer = complejidad exponencial** (librería networking ayuda pero no magia) | `herramientas-y-apis.md` (matriz capacidad), `pipeline-nivel.md` (perfil `procedural-asistido`) |
 | **IA degrada con codebase grande (contexto window)** | `reglas-sistema.md` |
 | **Debuggers/parameter UIs propios > prompts de texto** | `reglas-sistema.md` |
 | **Evaluación: fun vs polish = sesgo si métrica única** | `reglas-sistema.md` |
@@ -350,7 +350,7 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 
 ### Lo que NO tomamos
 
-- **Nombres de productos** (Three.js, Colyseus, Perlin noise libs, Opus 5, etc.) — agenda de herramientas = criterios de `herramientas-y-apis.md`.
+- **Nombres de productos** (Three.js, librería networking, Perlin noise libs, Opus 5, etc.) — agenda de herramientas = criterios de `herramientas-y-apis.md`.
 - **Cifras de tiempo** ("30 días", "7 días multiplayer") — datos de flujo experto con time-lapse; útiles como orden de magnitud, no presupuesto propio.
 - **"Join my course"** — marketing.
 - **Resultados de premios** — no son metodología.
@@ -374,7 +374,7 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 | **Verticalidad = interés visual + gameplay (escalar con IK pie)** | `pipeline-assets.md` (perfil `personaje-3d-*`), `produccion-vfx.md` |
 | **Day/night + post-process + cartoon shader = "mitad del look"** | `produccion-vfx.md` |
 | **IK pie sí, mano no** (tradeoff velocidad/calidad) | `pipeline-assets.md` (perfil `personaje-3d-*`), `produccion-vfx.md` |
-| **Multiplayer = complejidad exponencial** (Colyseus ayuda pero no magia) | `herramientas-y-apis.md` (matriz capacidad), `pipeline-nivel.md` (perfil `procedural-asistido`) |
+| **Multiplayer = complejidad exponencial** (librería networking ayuda pero no magia) | `herramientas-y-apis.md` (matriz capacidad), `pipeline-nivel.md` (perfil `procedural-asistido`) |
 | **IA degrada con codebase grande (contexto window)** | `reglas-sistema.md` |
 | **Debuggers/parameter UIs propios > prompts de texto** | `reglas-sistema.md` |
 | **Evaluación: fun vs polish = sesgo si métrica única** | `reglas-sistema.md` |
@@ -383,7 +383,7 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 
 ### Lo que NO tomamos
 
-- **Nombres de productos** (Three.js, Colyseus, Perlin noise libs, Opus 5, etc.) — agenda de herramientas = criterios de `herramientas-y-apis.md`.
+- **Nombres de productos** (Three.js, librería networking, Perlin noise libs, Opus 5, etc.) — agenda de herramientas = criterios de `herramientas-y-apis.md`.
 - **Cifras de tiempo** ("30 días", "7 días multiplayer") — datos de flujo experto con time-lapse; útiles como orden de magnitud, no presupuesto propio.
 - **"Join my course"** — marketing.
 - **Resultados de premios** — no son metodología.
