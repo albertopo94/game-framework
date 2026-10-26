@@ -174,6 +174,7 @@ Ver `produccion-vfx.md` para pipeline completo. Resumen:
 | Documento | Relación |
 | :--- | :--- |
 | `pipeline-nivel.md` | Consume assets; define placement strategies |
+| `pipeline-unity-cli.md` | Si el motor es Unity 6000+: CLI como puente de agente, MCP nativo |
 | `produccion-vfx.md` | Perfil vfx-simple/complex |
 | `montaje-de-niveles.md` | Ensambla assets en nivel |
 | `dimensiones-juego.md` #3, #4, #6 | Assets, mapas, combate/VFX |

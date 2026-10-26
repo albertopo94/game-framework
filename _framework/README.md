@@ -18,6 +18,7 @@ A diferencia del YouTube Creator Hub (donde roles y plantillas ya estaban estudi
 | `pipeline-assets.md` (perfil `personaje-3d-hero` / `personaje-3d-secondary` / `personaje-3d-stylized`) | Pipeline end-to-end de personaje: partes + smart UV → mapas desde color → rig híbrido → anim + VFX → motor | 🟡 Hipótesis de terceros a verificar |
 | `pipeline-assets.md` (perfil `entorno-unique` + `pipeline-nivel.md` perfil `modular-manual`) | Nivel Souls-like jugable en 72h: high-poly bake → tileables → modular level → plantilla UE + MCP + agente navegador | 🟡 Hipótesis de terceros a verificar |
 | `prompting-puro-browser.md` | 7 pasos: prompt + target + loop + play + score/revise + skills + ship; solo LLM + framework WebGL | 🟡 Hipótesis de terceros a verificar |
+| `pipeline-unity-cli.md` | Pipeline Unity 6000+ CLI + agente (Kimi K3 / Opus / etc.); code-first, MCP nativo | 🟡 Hipótesis de terceros a verificar |
 | `pipeline-navegador.md` | Pipeline completo navegador: Rust/WASM + framework WebGL + librería networking + herramienta de sprites 2D | 🟡 Hipótesis de terceros a verificar |
 | `agentes-especializados.md` | Patrones de agentes especializados: artist agent sandbox, self-healing, blend shapes, decoupling | 🟡 Hipótesis de terceros a verificar |
 | `pipeline-assets.md` (perfil `prototipo-rapido`) | Prototipo jugable 2 días: plantilla UE + herramienta de auto-rigging + retarget + generador de texturas PBR tileables + foliage/agua comprados | 🟡 Hipótesis de terceros a verificar |

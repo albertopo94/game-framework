@@ -153,6 +153,7 @@
 | Documento | Relación |
 | :--- | :--- |
 | `pipeline-assets.md` | Proveedor de piezas (kit) |
+| `pipeline-unity-cli.md` | Si el motor es Unity 6000+: CLI como puente de agente, MCP nativo |
 | `produccion-vfx.md` | Iluminación, niebla, atmósfera, VFX ambientales |
 | `dimensiones-juego.md` #4 | Mapas/niveles (layout, progresión, densidad) |
 | `herramientas-y-apis.md` | Criterios de selección (motor, editor, terrain tools) |

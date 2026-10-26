@@ -85,6 +85,7 @@ Los docs describen dos modos, y esta distinción importa para nuestro framework:
 - **No asumir capacidades por nombre:** antes de proponer un flujo con `eval` o un comando concreto, verificar que exista en la versión instalada.
 - **Costo:** `eval` consume tokens del presupuesto del proyecto; no es gratis ni ilimitado (principio rector).
 - **Unreal tiene su propio MCP nativo** (tanda-09); **no confundirlos**. Lo que dice la tanda-09 sobre «MCP nativo 5.8» aplica a Unreal, no a Unity.
+- **Evidencia tanda-15**: Unity CLI + Kimi K3 = $8-23/test, 2-8h por test jugable. Unreal MCP = 3-7h por test, crashes de editor (Niagara, memoria), 7h+ por test complejo. **Code-first (Unity CLI/Godot) = menos fricción que blueprint-heavy (Unreal)**.
 
 ### Verificación pendiente
 

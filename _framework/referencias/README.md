@@ -387,3 +387,38 @@ Su valor no es el contenido de ningún juego (el "My Dream Game" es un ejemplo e
 - **Cifras de tiempo** ("30 días", "7 días multiplayer") — datos de flujo experto con time-lapse; útiles como orden de magnitud, no presupuesto propio.
 - **"Join my course"** — marketing.
 - **Resultados de premios** — no son metodología.
+
+---
+
+## Tanda 15 - Unity CLI + Agente (Kimi K3) (video de terceros, canal distinto a 5-14)
+
+- **Archivo verbatim:** `notas-creador/tanda-15-unity-cli-kimi.md`
+- **Calidad de la evidencia: alta.** 10+ tests completos mostrados en pantalla, costos reales documentados ($8-23 por test), tiempos reales, modelo específico (Kimi K3 local). Contra: **vende curso Unity + IA** — incentivo de fluidez. Transcripción limpia.
+- **Enfoque:** Unity CLI (reemplazo oficial de MCP in-editor) vs Unreal Engine MCP. Comparación real entre code-first vs blueprint-heavy.
+
+### Lo que tomamos (estructura)
+
+| Práctica | Va a |
+| :--- | :--- |
+| **Unity CLI oficial (MCP in-editor deprecado)** — `unity pipeline install` + `com.unity.pipeline` + modo MCP del CLI | `pipeline-unity-cli.md` (sección Unity CLI oficial) |
+| **Code-first engines (Unity CLI, Godot) > blueprint-heavy (Unreal)** para agentes | `pipeline-unity-cli.md` (regla central) |
+| **Agente ve runtime + screenshots + logs = loop de feedback completo** | `pipeline-unity-cli.md` (hallazgos clave) |
+| **Unity 6000+ requerido para CLI** (limitación declarada) | `pipeline-unity-cli.md` (restricción) |
+| **Unreal Engine MCP: lento, buggy, crashes de editor (Niagara, memoria)** | `pipeline-unity-cli.md` (dead-ends) |
+| **Costos reales: $8-23 por test completo** | `pipeline-unity-cli.md` (tabla de costos) |
+| **Tiempos reales: 2-8h por test jugable** | `pipeline-unity-cli.md` (tabla de tiempos) |
+| **Agente haciendo shaders complejos (dissolve, lava, hologram, toon, waves) = iteraciones visuales necesarias** | `pipeline-unity-cli.md` (dead-ends) |
+| **NavMesh/NavMesh agents vía agente = funciona pero requiere iteraciones de balance** | `pipeline-unity-cli.md` (dead-ends) |
+| **Niagara FX en Unreal = crashes de memoria, inestable** | `pipeline-unity-cli.md` (dead-ends) |
+
+### Lo que NO tomamos
+
+- **Modelo específico (Kimi K3)** — agnóstico; el patrón funciona con el "modelo frontera actual".
+- **Precios de suscripción/API** — cifras de flujo ajeno, no presupuesto propio.
+- **"Join my course" / "subscribe"** — marketing.
+- **Comparaciones "X es mejor que Y" sin contexto** — el criterio es code-first > blueprint-heavy, no "Unity > Unreal".
+- **Cifras de tiempo como presupuesto propio** — datos de flujo experto con time-lapse.
+
+### Conclusión del análisis
+
+**Evidencia de alta calidad para Unity CLI como puente de agente oficial** (reemplazo de MCP in-editor). La comparación real entre Unity CLI (code-first) y Unreal Engine MCP (blueprint-heavy) valida la regla de "motores code-first = menos fricción para agentes" (ya registrada en tanda-05). Los dead-ends de Unreal (Niagara crashes, 7h por test) son útiles como datos de mercado, no como dogma.
