@@ -14,7 +14,7 @@ Cuando se implemente, debe definir la configuración y handoff para un agente ar
 | **Nombre del agente** | Identificador único (ej. `artist-agent-v1`) |
 | **Dominio** | Qué cubre: modelado, texturizado, rigging, animación, VFX, UI |
 | **Sandbox** | Herramientas, configuración, APIs, credenciales aisladas |
-| **Habilidades** | Lista de skills disponibles (Blender, Tripo, Spriterrific, Mixamo, etc.) |
+| **Habilidades** | Lista de skills disponibles (Blender, generador 3D, herramienta de sprites 2D, servicio de auto-rigging, etc.) |
 | **Formato de handoff** | Ficha técnica por recurso (ver `plantillas/ficha-recurso-manual.md`) |
 | **Criterios de aceptación** | Qué valida el humano antes de aceptar (estado 5 de `escalas-aceptacion.md`) |
 | **Costo estimado** | Créditos/USD estimados por asset tipo |

@@ -71,9 +71,9 @@ Esto vale igual para nosotros: declarar límites es requisito de cualquier descr
 
 ## 8. Dogfooding (comer tu propio perro)
 
-**Usa tus propias herramientas para construir tus propios juegos.** Cuando construyes una herramienta (ej. Spriterrific), **úsala tú primero** en un juego real. Los bugs que encuentres (3 manos, dirección errónea, walk cycles rotos) son los mismos que tendrán tus usuarios. Fixearlos en la herramienta beneficia a todos.
+**Usa tus propias herramientas para construir tus propios juegos.** Cuando construyes una herramienta (ej. herramienta de sprites 2D), **úsala tú primero** en un juego real. Los bugs que encuentres (3 manos, dirección errónea, walk cycles rotos) son los mismos que tendrán tus usuarios. Fixearlos en la herramienta beneficia a todos.
 
-*(Origen: `pipeline-navegador.md` §Spriterrific; tanda-13 §Patrón: Agente Auto-Curativo)*
+*(Origen: `pipeline-navegador.md` §herramienta de sprites 2D; tanda-13 §Patrón: Agente Auto-Curativo)*
 
 ## 10. Búsqueda antes de abrir
 

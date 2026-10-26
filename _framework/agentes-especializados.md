@@ -87,7 +87,7 @@ El flujo usa **6 prompts secuenciales**, cada uno con **alcance acotado y objeti
 | Item | Costo |
 | :--- | :--- |
 | **Opus 5.5** (setting 2nd highest, no Ultracode) | ~55 créditos total (1 generación completa) |
-| **Tripo** | Free tier suficiente (créditos gratis) |
+| **generador 3D** | Free tier suficiente (créditos gratis) |
 | **Tiempo** | "Couple hours running in background while other stuff is going on" |
 
 **Regla:** *Siempre reporta costo real (créditos/USD/tiempo), no "es gratis". Registra en `00-estado-produccion.md`.*

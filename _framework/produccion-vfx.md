@@ -55,7 +55,7 @@ El VFX del personaje (Dread) funciona porque el asset está **preparado para ser
 - Mesh separado en partes lógicas (cuerpo, cabeza, ramas, hojas).
 - UVs inteligentes (smart UV) y mapas de color limpias → permiten color correction, metallic/roughness por agente.
 - Hojas como **objetos/materiales separados** (no unidos al cuerpo) → animables por viento, cambio de color, transparencia, exportables para VFX de partículas.
-- Rig en partes: Mixamo/AccuRig para lo humanoide; GPT para lo custom (ramas, raíces) — partes separadas, **un solo armature al exportar**.
+- Rig en partes: servicio de auto-rigging/herramienta de auto-rigging para lo humanoide; GPT para lo custom (ramas, raíces) — partes separadas, **un solo armature al exportar**.
 - Mesh optimizado (decimate a ~1k polys por roca) + normal map bakeado desde high poly.
 
 > **Regla:** *un asset que el agente no puede leer/editar limpiamente es un bloqueo de VFX.* La preparación del asset (UV, separación, naming, optimización) es **trabajo previo al VFX**, no parte del VFX.
@@ -64,17 +64,17 @@ El VFX del personaje (Dread) funciona porque el asset está **preparado para ser
 
 - Color base generado por AI (Gemini/Nano Banana) → retoque puntual en **Moondiff** (paint over áreas rotas, detalles, logos) → **bake** de color correction (gamma, contraste, RGB curves) a textura final.
 - PBR: roughness/metallic pintados a mano en *texture paint* (fill brush con valores) → para control fino que AI no da.
-- Seamless textures para superficies grandes: **Patina AI** / *seamless texture AI* → preview 3D + mapas (base, normal, roughness, metallic, height/displacement).
+- Seamless textures para superficies grandes: **generador de texturas PBR tileables** / *seamless texture AI* → preview 3D + mapas (base, normal, roughness, metallic, height/displacement).
 
 ## Rigging híbrido: estándar + agente
 
-- Parte humanoide: **Mixamo / AccuRig** (automático, probado).
+- Parte humanoide: **servicio de auto-rigging / herramienta de auto-rigging** (automático, probado).
 - Partes custom (ramas, raíces, hojas): **GPT** escribe el script de rigging (huesos, pesos, constraints) → se revisa en Blender.
 - **Un armature único al exportar** (todo bajo el mismo root) aunque el rig se haya hecho en partes.
 
 ## Animación: referencias → agente → corrección
 
-- Recolecta **referencias de video** (Mixamo, clips de juegos, video AI generados con Kling/Runway/Hunyuan).
+- Recolecta **referencias de video** (servicio de auto-rigging, clips de juegos, video AI generados con Kling/Runway/Hunyuan).
 - Para lo custom: **video AI como referencia de movimiento** (aunque falla en cosas complejas como movimiento de raíces) → se entrega a GPT como "mira este video, haz la animación" → GPT escribe el código/keys y **lo hace mejor que el video AI**.
 - Herramienta de apoyo: **plugin casero** (click "set pose" en timeline) para dar feedback preciso al agente ("en frame 12 la rama está muy baja").
 
@@ -127,7 +127,7 @@ El agente (GPT) recibe el VFX concept + asset preparado + animaciones y **escrib
 
 ## Productos nombrados (excluidos deliberadamente)
 
-Tripo P2, Nano Banana Pro, Moondiff, Mixamo, AccuRig, Astra (plugin rigging), Kling/Runway/Hunyuan (video AI), Jean Moreno's Cartoon Effects, Patina AI, Motive, 3DI Studio, Houdini, Ultra Dynamic Sky/Weather. **No entran al catálogo**: el video vende un curso y tiene sponsors. Si un juego necesita la capacidad, la herramienta se evalúa contra `herramientas-y-apis.md` con nombre verificado en fuente.
+generador 3D, Nano Banana Pro, Moondiff, servicio de auto-rigging, herramienta de auto-rigging, Astra (plugin rigging), Kling/Runway/Hunyuan (video AI), Jean Moreno's Cartoon Effects, generador de texturas PBR tileables, Motive, 3DI Studio, Houdini, Ultra Dynamic Sky/Weather. **No entran al catálogo**: el video vende un curso y tiene sponsors. Si un juego necesita la capacidad, la herramienta se evalúa contra `herramientas-y-apis.md` con nombre verificado en fuente.
 
 ## Verificación pendiente
 

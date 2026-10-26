@@ -14,7 +14,7 @@
 | **personaje-3d-stylized** | RTS, top-down, low-poly | Velocidad > detalle | Smart mesh + color map → normal/roughness/metallic desde color → decimate |
 | **personaje-2d-en-3d** | Octopath/FFT style: 2D sprites en mundo 3D | Alpha maps + billboard + InstancedMesh | Smart UV + alpha maps + blend shapes |
 | **entorno-procedural-infinito** | MMO browser, mundos infinitos | Perlin noise + chunk loading + InstancedMesh | Perlin noise 3D/2D, chunk system, distance culling, InstancedMesh |
-| **sprite-pipeline-navegador** | Sprites 2D para juegos browser (Spriterrific) | Alpha maps + billboard + blend shapes + InstancedMesh |
+| **sprite-pipeline-navegador** | Sprites 2D para juegos browser (herramienta de sprites 2D) | Alpha maps + billboard + blend shapes + InstancedMesh |
 | **entorno-procedural-infinito** | MMO browser, mundos infinitos | Perlin noise + chunk loading + InstancedMesh | Perlin noise 3D/2D, chunk system, distance culling, InstancedMesh |
 | **vegetacion-shader** | Grama, árboles, bushes | Shader-based (GPU) | Alpha maps, vertex shader wind, InstancedMesh, distance culling |
 | **sprites-2d-en-3d** | Sprites 2D en mundo 3D (Octopath style) | Alpha maps + billboard + InstancedMesh + blend shapes |
@@ -22,7 +22,7 @@
 | **entorno-procedural-infinito** | MMO browser, mundos infinitos | Perlin noise + chunk loading + InstancedMesh | Perlin noise 3D/2D, chunk system, distance culling, InstancedMesh |
 | **vegetacion-shader** | Grama, árboles, bushes | Shader-based (GPU) | Alpha maps, vertex shader wind, InstancedMesh, distance culling |
 | **entorno-procedural-infinito** | MMO browser, mundos infinitos | Perlin noise + chunk loading + InstancedMesh | Perlin noise 3D/2D, chunk system, distance culling, InstancedMesh |
-| **entorno-tileable** | Suelos, muros, arena, arena, rocas grandes | Tileable PBR | Patina AI / seamless texture AI → tileable + displacement |
+| **entorno-tileable** | Suelos, muros, arena, arena, rocas grandes | Tileable PBR | generador de texturas PBR tileables / seamless texture AI → tileable + displacement |
 | **entorno-modular** | Muros, cercas, postes, props repetibles | Modular + cohesivo | Piezas base + array/curve modifiers en Blender/UE |
 | **entorno-unique** | Hero props, landmark, cueva, jefe | Alta (hero) | High-poly sculpt → retopo → bake completo |
 | **vfx-simple** | Partículas, trails, impactos simples | Funcional | Código en motor + texturas generadas |
@@ -38,11 +38,11 @@
 | :--- | :--- | :--- | :--- |
 | **1. Concepto + Referencias** | Imágenes, moodboard, planos, blueprints | Humano | Generador imágenes, moodboard, investigación |
 | **2. Separación de partes** | Divide asset en componentes lógicos (cabeza/cuerpo/accesorios; base/accesorios/foliage) | Humano decide, Agente ejecuta | — |
-| **3. Generación geometría** | Según perfil: high-poly sculpt / smart mesh / primitivas | Agente | Sculpt tool / Tripo / generador 3D / primitivas motor |
+| **3. Generación geometría** | Según perfil: high-poly sculpt / smart mesh / primitivas | Agente | Sculpt tool / generador 3D / generador 3D / primitivas motor |
 | **4. UV + Retopo** | Según perfil: xatlas / Smart UV / UV Packer / decimate / retopo manual | Agente + Humano | xatlas / Smart UV Project / UV Packer / decimate / retopo tool |
-| **5. Bake / Mapas** | Según perfil: high-poly bake (color+normal+AO) / mapas desde color map / tileable PBR | Agente | Cycles bake / color-map generation / Patina AI |
+| **5. Bake / Mapas** | Según perfil: high-poly bake (color+normal+AO) / mapas desde color map / tileable PBR | Agente | Cycles bake / color-map generation / generador de texturas PBR tileables |
 | **6. Texturizado final** | Roughness/metallic/emissive + retoque humano | Agente + Humano | Texture paint / Moondiff / generador PBR |
-| **7. Ensamblaje / Rigging** | Según perfil: single armature / partes separadas / primitivas | Humano + Agente | Blender / AccuRig / Mixamo / agente rigging |
+| **7. Ensamblaje / Rigging** | Según perfil: single armature / partes separadas / primitivas | Humano + Agente | Blender / herramienta de auto-rigging / servicio de auto-rigging / agente rigging |
 | **8. Validación en motor** | Import, LOD, materiales, colisiones, performance | Humano + Agente | Motor (UE/Unity/Godot) + agente validación |
 
 ---
@@ -54,12 +54,12 @@
 | Paso | Específico |
 | :--- | :--- |
 | Geometría | High-poly sculpt en Blender (elastic grab, pinceles) → combina partes en high-poly único |
-| Retopo | Tripo (quads) o Blender (retopo manual donde falle adherence) |
+| Retopo | generador 3D (quads) o Blender (retopo manual donde falle adherence) |
 | UV | xatlas interno o Smart UV Project + UV Packer addon |
 | Bake | **Normal + AO + Color + roughness/metallic opcional** en Cycles |
 | Color bake | Si high-poly está bien → **no retexturizar low-poly** |
 | Flexibilidad | Ajustar roughness/metallic on-the-fly en low-poly sin rebakear |
-| Rigging | Híbrido: Mixamo/AccuRig (cuerpo) + Agente (partes custom: alas, cola, cabello) → **single armature** |
+| Rigging | Híbrido: servicio de auto-rigging/herramienta de auto-rigging (cuerpo) + Agente (partes custom: alas, cola, cabello) → **single armature** |
 | Animación | Referencias video → Agente genera → feedback visual (plugin "set pose") |
 | VFX | Concepting 2D → VFX concept (HTML viz + timing) → implementación en motor |
 
@@ -67,10 +67,10 @@
 
 | Paso | Específico |
 | :--- | :--- |
-| Geometría | Smart mesh (Tripo P2, 4 variantes poly count) + multi-view (back/side obligatorio) |
+| Geometría | Smart mesh (generador 3D, 4 variantes poly count) + multi-view (back/side obligatorio) |
 | UV | Smart UV (prerequisito) |
 | Mapas | Normal/roughness/metallic **desde color map** (minutos vs horas baking) |
-| Rigging | AccuRig (gratis) → export UE5 skeleton → retarget en motor |
+| Rigging | herramienta de auto-rigging (gratis) → export UE5 skeleton → retarget en motor |
 | Animación | Retarget de plantilla UE (15 min/personaje) |
 
 ### 3. personaje-3d-stylized (RTS, top-down, low-poly)
@@ -81,14 +81,14 @@
 | UV | Smart UV |
 | Mapas | Normal/roughness/metallic **desde color map** |
 | Retopo | Decimate en Blender (target poly count por propósito) |
-| Rigging | AccuRig (cuerpo) + Agente (partes custom: alas, cola) → single armature |
+| Rigging | herramienta de auto-rigging (cuerpo) + Agente (partes custom: alas, cola) → single armature |
 | Animación | Retarget de plantilla UE (15 min/personaje) |
 
 ### 4. entorno-tileable (suelos, muros, arena, rocas grandes)
 
 | Paso | Específico |
 | :--- | :--- |
-| Generación | **Patina AI / Seamless Texture AI** (pay-per-use, ~8¢/gen) → base color + normal + roughness + AO + height/displacement |
+| Generación | **generador de texturas PBR tileables / Seamless Texture AI** (pay-per-use, ~8¢/gen) → base color + normal + roughness + AO + height/displacement |
 | Aplicación | UV tileable + displacement map en motor |
 | Variación | Área circular repetida en UV → "no es solo un área, van en círculos" |
 | Proyección | Imagen 2D → UV cilíndrica (ej. área circular jefe) |
@@ -137,7 +137,7 @@ Ver `produccion-vfx.md` para pipeline completo. Resumen:
 | **Generar variantes poly count y elegir** | 4 variantes poly count por parte → elegir por wireframe + uso final (LOD implícito) |
 | **Mapas desde color map = ahorro masivo** | Horas baking → minutos; requiere buen UV |
 | **Emissive/glow via mask en motor** | No se pinta en textura; se hace en motor |
-| **Rigging híbrido: estándar + agente** | Estándar automático (Mixamo/AccuRig) + Agente para custom → single armature |
+| **Rigging híbrido: estándar + agente** | Estándar automático (servicio de auto-rigging/herramienta de auto-rigging) + Agente para custom → single armature |
 | **Ajustes finos: nativo > agente** | Sculpt grab / knife / boolean en Blender (5 seg) vs horas agente |
 | **Animación: video ref → agente → corrección por pose** | Feedback visual (plugin "set pose") > descripción verbal |
 | **VFX concept = HTML viz + timing** | Valida idea antes de código |
